@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google tag (gtag.js) — isaacmath.kr 전용 GA4 속성. faithreason.kr 측정 ID를 재사용하지 말 것 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JS3GE709TF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JS3GE709TF');
+</script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2084707405154770"
+        crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>평행선 강의노트 PRO | 1-2</title>
+<style>
+  :root {
+    --bg:#0b1220; --bg2:#0f1830; --card:rgba(30,41,66,0.55); --card-solid:#162038;
+    --border:rgba(148,163,184,0.18); --text:#e7ecf3; --muted:#9aa7bd;
+    --green:#34d399; --green-d:#059669; --blue:#60a5fa; --orange:#fbbf24;
+    --red:#f87171; --purple:#c4b5fd; --gold:#fbbf24;
+  }
+  html.light {
+    --bg:#f3f5f9; --bg2:#eef1f7; --card:#ffffff; --card-solid:#ffffff;
+    --border:#e2e8f0; --text:#1a202c; --muted:#5b6675;
+    --green:#0f9d63; --blue:#2563eb; --orange:#c2870b; --red:#dc2626; --purple:#7c3aed;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic','맑은 고딕',sans-serif;
+    background:radial-gradient(1200px 600px at 80% -10%, rgba(52,211,153,0.10), transparent 60%),
+      radial-gradient(900px 500px at -10% 10%, rgba(96,165,250,0.10), transparent 55%), var(--bg);
+    color:var(--text); line-height:1.7; -webkit-font-smoothing:antialiased; transition:background .3s,color .3s; }
+  p { margin-bottom:10px; } strong { color:var(--text); }
+  ul,ol { padding-left:20px; } li { margin-bottom:6px; } sup { font-size:.7em; } em { color:var(--muted); font-style:italic; }
+
+  .progress-bar { position:fixed; top:0; left:0; height:3px; width:0%;
+    background:linear-gradient(90deg,var(--green),var(--gold)); z-index:300; transition:width .1s; }
+
+  .page-header { position:relative; overflow:hidden; border-bottom:1px solid var(--border); }
+  .page-header::before { content:""; position:absolute; inset:0;
+    background:linear-gradient(135deg, rgba(52,211,153,0.16), rgba(96,165,250,0.10) 50%, transparent); }
+  .page-header-inner { position:relative; max-width:820px; margin:0 auto; padding:48px 24px 34px; }
+  .brandline { display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+  .pro-badge { font-size:11px; font-weight:800; letter-spacing:.08em; color:#1a1205;
+    background:linear-gradient(135deg,#fde68a,var(--gold)); padding:4px 10px; border-radius:6px; }
+  .brandline .label { font-size:13px; color:var(--muted); letter-spacing:.02em; }
+  .page-header h1 { font-size:32px; font-weight:800; letter-spacing:-0.03em; line-height:1.2; }
+  .page-header .sub { margin-top:10px; color:var(--muted); font-size:15px; }
+  .header-tools { display:flex; gap:8px; margin-top:18px; align-items:center; flex-wrap:wrap; }
+  .mini-btn { font-size:12.5px; color:var(--text); background:var(--card); border:1px solid var(--border);
+    padding:7px 12px; border-radius:8px; cursor:pointer; backdrop-filter:blur(6px); transition:.15s; }
+  .mini-btn:hover { border-color:var(--green); color:var(--green); }
+
+  .achieve { max-width:820px; margin:18px auto 0; padding:0 24px; }
+  .achieve-card { background:var(--card); border:1px solid var(--border); border-radius:16px;
+    padding:16px 20px; backdrop-filter:blur(10px); display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+  .ring { --p:0; width:54px; height:54px; border-radius:50%; flex-shrink:0;
+    background:conic-gradient(var(--green) calc(var(--p)*1%), rgba(148,163,184,0.18) 0);
+    display:flex; align-items:center; justify-content:center; }
+  .ring span { width:42px; height:42px; border-radius:50%; background:var(--bg2);
+    display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:800; color:var(--green); }
+  .achieve-text { flex:1; min-width:160px; }
+  .achieve-text .t { font-weight:700; font-size:15px; } .achieve-text .d { font-size:13px; color:var(--muted); }
+  .badges { display:flex; gap:6px; flex-wrap:wrap; }
+  .ach-badge { font-size:11px; font-weight:700; padding:5px 9px; border-radius:20px;
+    background:rgba(148,163,184,0.12); color:var(--muted); border:1px solid var(--border); }
+  .ach-badge.on { background:rgba(251,191,36,0.16); color:var(--gold); border-color:rgba(251,191,36,0.4); }
+
+  .toc { position:sticky; top:0; z-index:200; background:rgba(11,18,32,0.82); backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--border); display:flex; justify-content:center; gap:2px; overflow-x:auto; padding:0 16px; }
+  html.light .toc { background:rgba(243,245,249,0.85); }
+  .toc a { padding:14px 10px; font-size:12.5px; color:var(--muted); text-decoration:none; white-space:nowrap;
+    border-bottom:2px solid transparent; transition:.2s; }
+  .toc a:hover { color:var(--green); } .toc a.active { color:var(--green); border-bottom-color:var(--green); }
+
+  .content { max-width:820px; margin:0 auto; padding:34px 24px 90px; }
+
+  .section { position:relative; background:var(--card); border:1px solid var(--border); border-radius:18px;
+    padding:30px 30px 26px; margin-bottom:22px; backdrop-filter:blur(10px); box-shadow:0 10px 30px rgba(0,0,0,0.25); }
+  html.light .section { box-shadow:0 6px 20px rgba(15,23,42,0.06); }
+  .section-head { display:flex; align-items:center; gap:12px; margin-bottom:18px; }
+  .section-num { width:30px; height:30px; border-radius:9px; flex-shrink:0; font-size:14px; font-weight:800;
+    color:#04140d; background:linear-gradient(135deg,var(--green),var(--green-d)); display:flex; align-items:center; justify-content:center; }
+  .section-title { font-size:21px; font-weight:800; letter-spacing:-0.02em; }
+  .complete-btn { margin-left:auto; font-size:12.5px; font-weight:700; padding:8px 14px; border-radius:9px; cursor:pointer;
+    border:1px solid var(--border); background:transparent; color:var(--muted); transition:.15s; white-space:nowrap; }
+  .complete-btn:hover { border-color:var(--green); color:var(--green); }
+  .section.done { border-color:rgba(52,211,153,0.45); }
+  .section.done .complete-btn { background:rgba(52,211,153,0.14); color:var(--green); border-color:rgba(52,211,153,0.45); }
+
+  .box { border-radius:12px; padding:15px 18px; margin:14px 0; border:1px solid var(--border);
+    border-left-width:4px; background:rgba(148,163,184,0.06); }
+  .box-green { border-left-color:var(--green); background:rgba(52,211,153,0.08); }
+  .box-blue { border-left-color:var(--blue); background:rgba(96,165,250,0.08); }
+  .box-orange { border-left-color:var(--orange); background:rgba(251,191,36,0.08); }
+  .box-red { border-left-color:var(--red); background:rgba(248,113,113,0.08); }
+  .box-purple { border-left-color:var(--purple); background:rgba(196,181,253,0.08); }
+  .box-title { font-weight:800; font-size:13px; margin-bottom:6px; }
+  .box-green .box-title{color:var(--green);} .box-blue .box-title{color:var(--blue);}
+  .box-orange .box-title{color:var(--orange);} .box-red .box-title{color:var(--red);} .box-purple .box-title{color:var(--purple);}
+
+  .special-table { width:100%; border-collapse:collapse; margin:14px 0; font-size:14.5px; border-radius:10px; overflow:hidden; }
+  .special-table th { background:rgba(52,211,153,0.16); color:var(--green); padding:10px 12px; text-align:center; font-weight:700; }
+  .special-table td { padding:10px 12px; text-align:center; border-bottom:1px solid var(--border); }
+  .table-wrap { overflow-x:auto; margin:14px 0; }
+  .table-wrap .special-table { margin:0; }
+
+  .formula-big { background:linear-gradient(135deg, rgba(52,211,153,0.10), rgba(196,181,253,0.10));
+    border:2px solid var(--purple); border-radius:14px; padding:22px; text-align:center; margin:16px 0; }
+  .formula-big .f-title { font-size:13px; font-weight:800; color:var(--purple); margin-bottom:10px; }
+  .formula-big .f-body { font-size:20px; font-weight:800; line-height:1.8; }
+
+  .diagram-wrap { text-align:center; margin:16px 0; }
+  .diagram-wrap svg { max-width:100%; height:auto; width:100%; display:block; margin:0 auto; }
+
+  .stepbox { background:rgba(148,163,184,0.06); border-radius:10px; padding:14px 18px; margin:10px 0; border-left:4px solid var(--purple); }
+  .stepbox .step-header { font-size:12px; font-weight:800; color:var(--purple); margin-bottom:6px; }
+
+  .solution { border:1px dashed var(--border); border-radius:12px; padding:16px 18px; margin:14px 0; background:rgba(196,181,253,0.05); }
+  .sol-head { display:flex; align-items:center; gap:8px; font-weight:800; font-size:14px; color:var(--purple); }
+  .sol-q { margin:6px 0 12px; font-weight:600; }
+  .step { display:none; padding:10px 14px; margin:8px 0; border-radius:10px; background:rgba(148,163,184,0.07); border-left:3px solid var(--purple); font-size:14.5px; }
+  .step.show { display:block; animation:fade .3s ease; }
+  @keyframes fade { from{opacity:0; transform:translateY(4px);} to{opacity:1; transform:none;} }
+  .step .s-label { font-size:11px; font-weight:800; color:var(--purple); letter-spacing:.04em; }
+  .reveal-btn { margin-top:8px; font-size:13px; font-weight:700; padding:9px 16px; border-radius:9px; cursor:pointer; border:1px solid var(--purple); color:var(--purple); background:transparent; transition:.15s; }
+  .reveal-btn:hover { background:rgba(196,181,253,0.14); } .reveal-btn:disabled { opacity:.4; cursor:default; }
+
+  .quiz { background:rgba(148,163,184,0.06); border:1px solid var(--border); border-radius:14px; padding:18px; margin:14px 0; }
+  .quiz-q { font-weight:700; margin-bottom:12px; }
+  .quiz-row { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+  .quiz-input { width:150px; padding:9px 12px; font-size:15px; border-radius:9px; border:1px solid var(--border); background:var(--bg2); color:var(--text); }
+  .quiz-input:focus { outline:none; border-color:var(--green); }
+  .quiz-submit { padding:9px 18px; font-size:14px; font-weight:700; border-radius:9px; cursor:pointer; color:#04140d; background:linear-gradient(135deg,var(--green),var(--green-d)); border:none; }
+  .quiz-hint { font-size:12.5px; color:var(--muted); margin-top:8px; }
+  .quiz-fb { margin-top:10px; font-size:13.5px; font-weight:700; display:none; }
+  .quiz-fb.show { display:block; } .quiz-fb.ok { color:var(--green); } .quiz-fb.ng { color:var(--red); }
+
+  .wrongnote { background:var(--card); border:1px solid var(--border); border-radius:18px; padding:24px 28px; margin-bottom:22px; backdrop-filter:blur(10px); }
+  .wrongnote h2 { font-size:18px; font-weight:800; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  .wrongnote .empty { color:var(--muted); font-size:14px; margin-top:8px; }
+  .wrong-item { padding:12px 14px; border-radius:10px; background:rgba(248,113,113,0.08); border-left:3px solid var(--red); margin-top:10px; font-size:14px; }
+  .wrong-item .wq { font-weight:600; } .wrong-item .wa { font-size:13px; color:var(--muted); margin-top:4px; }
+  .clear-btn { margin-top:14px; font-size:12.5px; padding:7px 12px; border-radius:8px; cursor:pointer; border:1px solid var(--border); background:transparent; color:var(--muted); }
+  .review-btn { margin-top:14px; margin-right:8px; font-size:12.5px; font-weight:700; padding:8px 14px; border-radius:8px; cursor:pointer; border:1px solid var(--purple); background:transparent; color:var(--purple); }
+  .review-btn.done { background:rgba(196,181,253,0.16); }
+
+  .gate { background:var(--card); border:1px solid var(--border); border-radius:18px; padding:28px 30px; margin-bottom:22px; backdrop-filter:blur(10px); }
+  .gate h2 { font-size:19px; font-weight:800; display:flex; align-items:center; gap:8px; }
+  .gate .desc { color:var(--muted); font-size:14px; margin-top:6px; }
+  .checklist { list-style:none; padding:0; margin:18px 0; }
+  .checklist li { display:flex; align-items:center; gap:12px; padding:12px 14px; border:1px solid var(--border); border-radius:10px; margin-bottom:8px; font-size:14px; background:rgba(148,163,184,0.05); }
+  .checklist li .mark { width:24px; height:24px; border-radius:50%; border:2px solid var(--muted); flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:13px; color:var(--muted); font-weight:800; }
+  .checklist li.ok .mark { border-color:var(--green); background:var(--green); color:#04140d; }
+  .checklist li.ok { border-color:rgba(52,211,153,0.4); }
+  .start-btn { display:inline-block; margin-top:6px; padding:13px 24px; border-radius:11px; font-weight:800; font-size:15px; border:none; cursor:pointer; transition:.15s; }
+  .start-btn.locked { background:rgba(148,163,184,0.15); color:var(--muted); cursor:not-allowed; }
+  .start-btn.open { background:linear-gradient(135deg,var(--green),var(--green-d)); color:#04140d; box-shadow:0 6px 18px rgba(52,211,153,0.25); }
+
+  .practice-wrap { display:none; }
+  .practice-title { font-size:24px; font-weight:800; letter-spacing:-0.02em; margin:8px 0 4px; }
+  .practice-sub { color:var(--muted); font-size:14px; margin-bottom:18px; }
+  .pset { position:relative; background:var(--card); border:1px solid var(--border); border-radius:18px; padding:24px 28px; margin-bottom:20px; backdrop-filter:blur(10px); }
+  .pset-head { display:flex; align-items:center; gap:12px; margin-bottom:6px; flex-wrap:wrap; }
+  .diff-badge { font-size:12px; font-weight:800; padding:5px 12px; border-radius:20px; }
+  .diff-basic { background:rgba(96,165,250,0.16); color:var(--blue); }
+  .diff-applied { background:rgba(251,191,36,0.16); color:var(--orange); }
+  .diff-hard { background:rgba(196,181,253,0.16); color:var(--purple); }
+  .pset-title { font-size:18px; font-weight:800; }
+  .pcount { margin-left:auto; font-size:13px; color:var(--muted); font-weight:700; }
+  .pcount.clear { color:var(--green); }
+  .lockmsg { display:none; color:var(--muted); font-size:14px; padding:16px 0 2px; }
+  .pset.locked .pbody { display:none; }
+  .pset.locked .lockmsg { display:block; }
+  .pset.locked { opacity:.9; }
+  .prob { background:rgba(148,163,184,0.06); border:1px solid var(--border); border-radius:12px; padding:14px 16px; margin:10px 0; }
+  .prob .pq { font-weight:600; margin-bottom:10px; font-size:14.5px; }
+  .prob .pnum { color:var(--green); font-weight:800; margin-right:6px; }
+
+  .toast { position:fixed; left:50%; bottom:32px; transform:translateX(-50%) translateY(12px); z-index:400;
+    background:var(--card-solid); border:1px solid var(--border); color:var(--text); padding:12px 18px; border-radius:12px;
+    font-size:13.5px; font-weight:700; box-shadow:0 10px 30px rgba(0,0,0,0.35); opacity:0; transition:opacity .3s, transform .3s; max-width:90vw; text-align:center; }
+  .toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
+  .toast.ok { border-color:rgba(52,211,153,0.5); } .toast.ng { border-color:rgba(248,113,113,0.5); }
+  .confetti-canvas { position:fixed; inset:0; pointer-events:none; z-index:390; }
+  @keyframes wrongflash { 0%{box-shadow:0 0 0 0 rgba(248,113,113,0);} 30%{box-shadow:0 0 0 3px rgba(248,113,113,0.55);} 100%{box-shadow:0 0 0 0 rgba(248,113,113,0);} }
+  .wrongnote.flash { animation:wrongflash .7s ease; }
+
+  @media (max-width:600px) {
+    .page-header-inner{padding:32px 16px 24px;} .page-header h1{font-size:24px;}
+    .content{padding:24px 16px 70px;} .section,.gate,.pset,.wrongnote{padding:22px 18px;}
+  }
+  @media print {
+    :root{--bg:#fff;--bg2:#fff;--card:#fff;--card-solid:#fff;--border:#cbd5e1;--text:#111827;--muted:#475569;--green:#0f9d63;--blue:#2563eb;--orange:#c2870b;--red:#dc2626;--purple:#7c3aed;--gold:#b45309;}
+    body{background:#fff; color:#000;}
+    .progress-bar,.toc,.header-tools,.complete-btn,.reveal-btn,.quiz-submit,.clear-btn,.review-btn,.achieve,.start-btn{display:none!important;}
+    .section,.wrongnote,.gate,.pset{box-shadow:none; border:1px solid #ccc; backdrop-filter:none; break-inside:avoid;}
+    .step{display:block!important;} .practice-wrap{display:block!important;} .pset.locked .pbody{display:block!important;} .lockmsg{display:none!important;}
+  }
+  .site-foot{margin:40px auto 0;padding:22px 20px 30px;border-top:1px solid var(--border);
+    text-align:center;font-size:12.5px;color:var(--muted);line-height:1.9;}
+  .site-foot a{color:var(--muted);text-decoration:none;border-bottom:1px dashed var(--border);}
+  .site-foot a:hover{color:var(--green);border-color:var(--green);}
+  .site-foot .sep{margin:0 8px;opacity:.5;}
+</style>
+</head>
+<body>
+<div class="progress-bar" id="pbar"></div>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="brandline">
+      <span class="pro-badge">PRO</span>
+      <span class="label">Isaac Math 1-2 강의노트 · 프리미엄</span>
+    </div>
+    <h1>평행선</h1>
+    <div class="sub">동위각·엇각의 뜻부터 평행선의 성질(동위각·엇각이 같다)과 그 역, 시험 단골 유형인 꺾인 선(보조선 긋기)까지 — 개념 → 본문 퀴즈 → 오답 정리 → 연습문제(기본·응용·심화)까지 한 파일로</div>
+    <div class="header-tools">
+      <button class="mini-btn" onclick="location.href='index.html'">← 학기 목차</button>
+      <button class="mini-btn" onclick="toggleTheme()" id="themeBtn">☀️ 라이트 모드</button>
+      <button class="mini-btn" onclick="window.print()">🖨️ 인쇄 / PDF 저장</button>
+      <button class="mini-btn" onclick="resetAll()">↺ 진행 초기화</button>
+    </div>
+  </div>
+</header>
+
+<div class="achieve">
+  <div class="achieve-card">
+    <div class="ring" id="ring"><span id="ringTxt">0%</span></div>
+    <div class="achieve-text">
+      <div class="t" id="achTitle">학습 진행률</div>
+      <div class="d" id="achDesc">각 섹션을 끝내면 완료 버튼을 눌러 진행률을 채워보세요.</div>
+    </div>
+    <div class="badges">
+      <span class="ach-badge" id="b_first">🔰 첫 완료</span>
+      <span class="ach-badge" id="b_half">🔥 절반 돌파</span>
+      <span class="ach-badge" id="b_master">🏆 단원 마스터</span>
+    </div>
+  </div>
+</div>
+
+<nav class="toc" id="toc">
+  <a href="#s1" class="tlink">① 동위각·엇각</a>
+  <a href="#s2" class="tlink">② 동측내각·외각</a>
+  <a href="#s3" class="tlink">③ 평행선의 성질</a>
+  <a href="#s4" class="tlink">④ 평행선의 조건</a>
+  <a href="#s5" class="tlink">⑤ 보조선 긋기</a>
+  <a href="#s6" class="tlink">⑥ 계단형 활용</a>
+  <a href="#wrong" class="tlink">📕 오답노트</a>
+  <a href="#gate" class="tlink">✏️ 연습문제</a>
+</nav>
+
+<div class="content">
+
+  <section class="section" id="s1">
+    <div class="section-head"><span class="section-num">1</span><span class="section-title">교각과 동위각·엇각의 뜻</span>
+      <button class="complete-btn" onclick="toggleDone('s1')">완료하기</button></div>
+    <p>지난 단원 <strong>기본 도형</strong>과 <strong>위치 관계</strong>에 이어, 이번엔 <strong>평행선과 각</strong>을 다룹니다. 앞으로 배울 합동·닮음·삼각형·사각형 단원 전체에서 각은 항상 평행선과 맞물려 등장하기 때문에, 이 단원은 특히 꼼꼼히 짚어야 해요.</p>
+    <p>직선 1, 직선 2를 먼저 그리고, 이 둘을 동시에 가로지르는 직선 3을 그으면 교점이 두 군데 생기고, 각 교점마다 4개씩 총 <strong>8개의 교각</strong>이 생겨요.</p>
+    <div class="diagram-wrap">
+<svg viewBox="0 0 300 320" xmlns="http://www.w3.org/2000/svg">
+  <line x1="20" y1="100" x2="280" y2="100" stroke="#9aa7bd" stroke-width="2"/>
+  <line x1="20" y1="220" x2="280" y2="220" stroke="#9aa7bd" stroke-width="2"/>
+  <line x1="60" y1="20" x2="240" y2="300" stroke="#9aa7bd" stroke-width="2"/>
+  <circle cx="111.4" cy="100.0" r="3" fill="#9aa7bd"/>
+  <circle cx="188.6" cy="220.0" r="3" fill="#9aa7bd"/>
+  <text x="15" y="95" font-size="13" fill="#9aa7bd" text-anchor="end">1</text>
+  <text x="15" y="215" font-size="13" fill="#9aa7bd" text-anchor="end">2</text>
+  <text x="45" y="12" font-size="13" fill="#9aa7bd">3</text>
+  <text x="84.0" y="85.0" font-size="16" font-weight="700" fill="#e7ecf3" text-anchor="middle" dominant-baseline="middle">A</text>
+  <text x="119.6" y="85.0" font-size="16" font-weight="700" fill="#e7ecf3" text-anchor="middle" dominant-baseline="middle">B</text>
+  <text x="138.9" y="115.0" font-size="16" font-weight="700" fill="#e7ecf3" text-anchor="middle" dominant-baseline="middle">C</text>
+  <text x="103.2" y="115.0" font-size="16" font-weight="700" fill="#e7ecf3" text-anchor="middle" dominant-baseline="middle">D</text>
+  <text x="161.1" y="205.0" font-size="16" font-weight="700" fill="#e7ecf3" text-anchor="middle" dominant-baseline="middle">E</text>
+  <text x="196.8" y="205.0" font-size="16" font-weight="700" fill="#e7ecf3" text-anchor="middle" dominant-baseline="middle">F</text>
+  <text x="216.0" y="235.0" font-size="16" font-weight="700" fill="#e7ecf3" text-anchor="middle" dominant-baseline="middle">G</text>
+  <text x="180.4" y="235.0" font-size="16" font-weight="700" fill="#e7ecf3" text-anchor="middle" dominant-baseline="middle">H</text>
+</svg>
+    </div>
+    <div class="box box-green"><div class="box-title">🔑 동위각(同位角) — 같은 위치의 각</div>
+      <p style="margin:0;">두 교점에서 <strong>같은 위치(같은 방향)</strong>에 있는 각끼리의 관계예요. B는 첫 번째 교점의 오른쪽 위, F는 두 번째 교점의 오른쪽 위 — 위치가 같으니 B와 F는 동위각. <strong>A-E, B-F, C-G, D-H</strong>, 총 <strong>네 쌍</strong>이 생겨요.</p></div>
+    <div class="box box-blue"><div class="box-title">💡 엇각(-角) — 엇갈린 위치의 각</div>
+      <p style="margin:0;">직선 1, 2의 <strong>안쪽</strong>에 있는 네 각(C, D, E, F) 중 서로 대각선으로 엇갈린 두 각의 관계. <strong>D-F, C-E</strong>, 총 <strong>두 쌍</strong>뿐이에요.</p></div>
+    <div class="box box-red"><div class="box-title">🚨 주의 — 엇각은 '안쪽'끼리만!</div>
+      <p style="margin:0;">바깥쪽 A와 G도 대각선으로 엇갈려 보이지만 <strong>엇각이라 부르지 않아요.</strong> 엇각은 반드시 두 직선의 <strong>안쪽</strong> 네 각(C, D, E, F) 사이에서만 정의됩니다.</p></div>
+    <div class="quiz" data-qid="b1" data-ans="8" data-type="num">
+      <div class="quiz-q">Q. 직선 1, 2를 직선 3이 가로지를 때 생기는 교각은 모두 몇 개인가요?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="개"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b2" data-ans="4" data-type="num">
+      <div class="quiz-q">Q. 위 그림에서 동위각은 모두 몇 쌍인가요?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="쌍"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+
+  <section class="section" id="s2">
+    <div class="section-head"><span class="section-num">2</span><span class="section-title">동측내각과 동측외각 (참고)</span>
+      <button class="complete-btn" onclick="toggleDone('s2')">완료하기</button></div>
+    <p>교과서에서 따로 강조하지는 않지만 알아두면 좋은 이름이 두 가지 더 있어요. <strong>외우지 않아도 괜찮지만</strong>, 안쪽·바깥쪽 각을 구분하는 감각을 기르는 데 도움이 됩니다.</p>
+    <div class="box box-blue"><div class="box-title">💡 동측내각 — 같은 쪽 안쪽 각</div>
+      <p style="margin:0;">두 직선의 <strong>안쪽</strong> 네 각(C, D, E, F) 중, 직선 3을 기준으로 <strong>같은 쪽</strong>에 있는 두 각끼리. <strong>C-F</strong>(오른쪽), <strong>D-E</strong>(왼쪽) — 두 쌍.</p></div>
+    <div class="box box-blue"><div class="box-title">💡 동측외각 — 같은 쪽 바깥쪽 각</div>
+      <p style="margin:0;">두 직선의 <strong>바깥쪽</strong> 네 각(A, B, G, H) 중 같은 쪽끼리. <strong>B-G</strong>(오른쪽), <strong>A-H</strong>(왼쪽) — 역시 두 쌍.</p></div>
+    <div class="box box-purple"><div class="box-title">🔮 심화 참고 — 동측내각의 합</div>
+      <p style="margin:0;">두 직선이 <strong>평행</strong>하면, 동측내각(또는 동측외각) 한 쌍의 합은 항상 <strong>180°</strong>예요. 심화 연습문제에서 다시 확인해볼게요.</p></div>
+    <div class="quiz" data-qid="b3" data-ans="2" data-type="num">
+      <div class="quiz-q">Q. 엇각은 모두 몇 쌍인가요?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="쌍"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b4" data-ans="안쪽" data-type="text">
+      <div class="quiz-q">Q. 동측내각은 두 직선의 안쪽과 바깥쪽 중 어디에 있는 각들인가요?</div>
+      <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+
+  <section class="section" id="s3">
+    <div class="section-head"><span class="section-num">3</span><span class="section-title">평행선의 성질 — 동위각과 엇각은 서로 같다</span>
+      <button class="complete-btn" onclick="toggleDone('s3')">완료하기</button></div>
+    <p>지금까지는 두 직선이 평행한지 상관없이 <strong>위치 관계</strong>만 얘기했어요. 그런데 두 직선이 <strong>평행</strong>하면 아주 중요한 성질이 생깁니다.</p>
+    <div class="formula-big"><div class="f-title">📐 핵심 공식</div>
+      <div class="f-body">두 직선이 평행하면<br>동위각끼리 크기가 같다 · 엇각끼리 크기가 같다</div></div>
+    <p>평행선 l, m을 직선 n이 가로지르고, 한 각(B)이 45°라고 해봅시다.</p>
+    <div class="diagram-wrap">
+<svg viewBox="0 0 420 320" xmlns="http://www.w3.org/2000/svg">
+  <line x1="20" y1="100" x2="400" y2="100" stroke="#9aa7bd" stroke-width="2"/>
+  <line x1="20" y1="220" x2="400" y2="220" stroke="#9aa7bd" stroke-width="2"/>
+  <line x1="293.6" y1="36.4" x2="46.4" y2="283.6" stroke="#9aa7bd" stroke-width="2"/>
+  <circle cx="230.0" cy="100.0" r="3" fill="#9aa7bd"/>
+  <circle cx="110.0" cy="220.0" r="3" fill="#9aa7bd"/>
+  <path d="M 353,93 L 360,100 L 353,107" stroke="#34d399" stroke-width="2" fill="none"/>
+  <path d="M 353,213 L 360,220 L 353,227" stroke="#34d399" stroke-width="2" fill="none"/>
+  <polyline points="252.0,100.0 252.0,98.9 251.9,97.8 251.8,96.8 251.6,95.7 251.3,94.7 251.1,93.6 250.7,92.6 250.3,91.6 249.9,90.6 249.4,89.6 248.9,88.7 248.3,87.8 247.7,86.9 247.0,86.0 246.3,85.2 245.6,84.4" fill="none" stroke="#34d399" stroke-width="2"/>
+  <text x="220.9" y="78.0" font-size="16" font-weight="700" fill="#e7ecf3" text-anchor="middle" dominant-baseline="middle">A</text>
+  <text x="261.4" y="87.0" font-size="16" font-weight="800" fill="#34d399" text-anchor="middle" dominant-baseline="middle">B</text>
+  <text x="239.1" y="122.0" font-size="16" font-weight="700" fill="#e7ecf3" text-anchor="middle" dominant-baseline="middle">C</text>
+  <text x="198.6" y="113.0" font-size="16" font-weight="700" fill="#e7ecf3" text-anchor="middle" dominant-baseline="middle">D</text>
+  <text x="100.9" y="198.0" font-size="16" font-weight="700" fill="#e7ecf3" text-anchor="middle" dominant-baseline="middle">E</text>
+  <text x="141.4" y="207.0" font-size="16" font-weight="800" fill="#60a5fa" text-anchor="middle" dominant-baseline="middle">F</text>
+  <text x="119.1" y="242.0" font-size="16" font-weight="700" fill="#e7ecf3" text-anchor="middle" dominant-baseline="middle">G</text>
+  <text x="78.6" y="233.0" font-size="16" font-weight="700" fill="#e7ecf3" text-anchor="middle" dominant-baseline="middle">H</text>
+</svg>
+    </div>
+    <p>B=45°가 주어지면 <strong>평각</strong>(합 180°)으로 A=135°, <strong>맞꼭지각</strong>(서로 같음)으로 D=45°, C=135°가 정해져요. <strong>동위각</strong> E-A, F-B, G-C, H-D가 각각 같으므로 나머지도 자동으로 정해지죠. 8개의 각은 결국 <strong>45° 아니면 135°</strong> 두 종류뿐이에요.</p>
+    <div class="table-wrap"><table class="special-table">
+      <tr><th>각</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th></tr>
+      <tr><td>크기</td><td>135°</td><td>45°</td><td>135°</td><td>45°</td><td>135°</td><td>45°</td><td>135°</td><td>45°</td></tr>
+    </table></div>
+    <div class="quiz" data-qid="b5" data-ans="같다" data-type="text">
+      <div class="quiz-q">Q. 위 그림에서 B와 F는 동위각 관계입니다. 둘의 크기 관계는? ("같다"/"다르다")</div>
+      <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b6" data-ans="같다" data-type="text">
+      <div class="quiz-q">Q. D와 F는 엇각 관계입니다. 둘의 크기 관계는? ("같다"/"다르다")</div>
+      <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+
+  <section class="section" id="s4">
+    <div class="section-head"><span class="section-num">4</span><span class="section-title">평행선이 되기 위한 조건 (역도 성립!)</span>
+      <button class="complete-btn" onclick="toggleDone('s4')">완료하기</button></div>
+    <p>방금 배운 성질은 거꾸로도 성립해요. <strong>동위각이나 엇각의 크기가 같으면, 그 두 직선은 평행</strong>이라고 판단할 수 있습니다.</p>
+    <div class="formula-big"><div class="f-title">📐 평행선이 되기 위한 조건 (역)</div>
+      <div class="f-body">동위각의 크기가 같다 ⟹ 두 직선은 평행하다<br>엇각의 크기가 같다 ⟹ 두 직선은 평행하다</div></div>
+    <p>직선 l과 n이 만나서 생긴 각 A가 85°, 직선 m과 n이 만나서 생긴 각 F(동위각 위치)가 105°일 때, l과 m은 평행일까요?</p>
+    <div class="diagram-wrap">
+<svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
+  <line x1="20.0" y1="100.0" x2="380.0" y2="100.0" stroke="#9aa7bd" stroke-width="2"/>
+  <line x1="72.6" y1="195.7" x2="348.4" y2="244.3" stroke="#9aa7bd" stroke-width="2"/>
+  <line x1="192.2" y1="10.3" x2="218.3" y2="309.7" stroke="#9aa7bd" stroke-width="2"/>
+  <circle cx="200.0" cy="100.0" r="3" fill="#9aa7bd"/>
+  <circle cx="210.5" cy="220.0" r="3" fill="#9aa7bd"/>
+  <text x="15.0" y="104.0" font-size="13" fill="#9aa7bd" text-anchor="end">l</text>
+  <text x="67.6" y="199.7" font-size="13" fill="#9aa7bd" text-anchor="end">m</text>
+  <text x="212" y="18" font-size="13" fill="#9aa7bd">n</text>
+  <polyline points="198.3,80.1 196.4,80.3 194.6,80.7 192.9,81.3 191.2,82.1 189.5,83.0 188.0,84.0 186.6,85.2 185.3,86.5 184.1,87.9 183.0,89.4 182.1,91.1 181.4,92.8 180.8,94.5 180.3,96.3 180.1,98.1 180.0,100.0" fill="none" stroke="#34d399" stroke-width="2"/>
+  <polyline points="220.0,100.0 219.9,97.9 219.6,95.9 219.0,93.9 218.3,91.9 217.4,90.1 216.3,88.4 215.0,86.7 213.5,85.3 211.9,83.9 210.2,82.8 208.4,81.8 206.4,81.1 204.4,80.5 202.4,80.1 200.3,80.0 198.3,80.1" fill="none" stroke="#60a5fa" stroke-width="2"/>
+  <polyline points="230.2,223.5 230.5,221.2 230.5,218.9 230.2,216.6 229.7,214.4 228.9,212.2 227.9,210.2 226.7,208.3 225.2,206.5 223.6,204.9 221.8,203.5 219.8,202.3 217.7,201.4 215.6,200.7 213.3,200.2 211.0,200.0 208.8,200.1" fill="none" stroke="#fbbf24" stroke-width="2"/>
+  <text x="176.4" y="78.4" font-size="15" font-weight="800" fill="#34d399" text-anchor="middle" dominant-baseline="middle">85&#176;</text>
+  <text x="221.6" y="76.4" font-size="15" font-weight="800" fill="#60a5fa" text-anchor="middle" dominant-baseline="middle">?</text>
+  <text x="234.1" y="198.4" font-size="15" font-weight="800" fill="#fbbf24" text-anchor="middle" dominant-baseline="middle">105&#176;</text>
+</svg>
+    </div>
+    <p>A(85°)의 이웃(평각) 각은 180−85=<strong>95°</strong>. 이 각이 F와 <strong>동위각 위치</strong>인데, F는 105°로 주어졌으니 95°≠105° — <strong>동위각의 크기가 다르므로 l과 m은 평행이 아닙니다.</strong></p>
+    <div class="box box-red"><div class="box-title">🚨 흔한 실수</div>
+      <p style="margin:0;">"동위각이니까 그냥 크기가 같겠지"라고 지레짐작하면 안 돼요. <strong>평행이라는 조건이 없으면</strong> 동위각·엇각이라 해서 저절로 크기가 같아지지 않습니다. 반대로 크기가 같음이 확인돼야 비로소 "평행하구나"라고 판단하는 거예요.</p></div>
+    <div class="quiz" data-qid="b7" data-ans="95" data-type="num">
+      <div class="quiz-q">Q. 위 그림에서 각 A(85°)의 평각(이웃 각)은 몇 도인가요?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="도"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b8" data-ans="아니요|아니오" data-type="text">
+      <div class="quiz-q">Q. 그렇다면 l과 m은 평행인가요? ("예"/"아니요")</div>
+      <div class="quiz-row"><input class="quiz-input" placeholder="예 / 아니요" style="width:160px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+
+  <section class="section" id="s5">
+    <div class="section-head"><span class="section-num">5</span><span class="section-title">보조선 긋기 — 꺾인 선(Z자형) 각도 구하기</span>
+      <button class="complete-btn" onclick="toggleDone('s5')">완료하기</button></div>
+    <p>평행선 문제에서 <strong>가장 자주 나오는 유형</strong>이에요. 두 평행선 l, m 사이에 점 P가 하나 있고, A(l 위)—P—C(m 위)로 <strong>꺾인 선</strong>이 이어져 있을 때, 꺾인 각 ∠APC를 구하는 문제입니다.</p>
+    <div class="box box-orange"><div class="box-title">🏆 비법 — P를 지나며 l, m에 평행한 보조선을 긋는다</div>
+      <p style="margin:0;">점 P를 지나면서 l, m과 평행한 <strong>보조선 n</strong>을 그으면, n∥l이므로 A의 각과 n 위쪽 각이 <strong>엇각으로 같고</strong>, n∥m이므로 C의 각과 n 아래쪽 각이 <strong>엇각으로 같아요.</strong> 두 조각을 더하면 바로 ∠APC가 나옵니다.</p></div>
+    <div class="diagram-wrap">
+<svg viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg">
+  <line x1="20" y1="98.4" x2="280" y2="98.4" stroke="#9aa7bd" stroke-width="2.2"/>
+  <line x1="20" y1="207.9" x2="280" y2="207.9" stroke="#9aa7bd" stroke-width="2.2"/>
+  <line x1="20" y1="150.0" x2="280" y2="150.0" stroke="#c4b5fd" stroke-width="1.6" stroke-dasharray="5,4"/>
+  <line x1="76.3" y1="98.4" x2="150.0" y2="150.0" stroke="#34d399" stroke-width="2.4"/>
+  <line x1="150.0" y1="150.0" x2="81.1" y2="207.9" stroke="#34d399" stroke-width="2.4"/>
+  <circle cx="76.3" cy="98.4" r="3.5" fill="#e7ecf3"/>
+  <circle cx="81.1" cy="207.9" r="3.5" fill="#e7ecf3"/>
+  <circle cx="150.0" cy="150.0" r="3.5" fill="#e7ecf3"/>
+  <polyline points="97.6,113.3 98.1,112.5 98.6,111.6 99.1,110.8 99.6,109.9 100.0,109.0 100.4,108.1 100.8,107.1 101.1,106.2 101.4,105.2 101.6,104.3 101.8,103.3 102.0,102.3 102.1,101.3 102.2,100.4 102.3,99.4 102.3,98.4" fill="none" stroke="#fbbf24" stroke-width="2"/>
+  <polyline points="107.1,207.9 107.0,206.7 107.0,205.6 106.8,204.5 106.7,203.3 106.4,202.2 106.2,201.1 105.9,200.0 105.5,199.0 105.1,197.9 104.6,196.9 104.1,195.8 103.6,194.9 103.0,193.9 102.4,192.9 101.7,192.0 101.0,191.1" fill="none" stroke="#60a5fa" stroke-width="2"/>
+  <polyline points="123.8,131.6 122.4,133.8 121.1,136.2 120.1,138.6 119.3,141.0 118.6,143.6 118.2,146.2 118.0,148.8 118.0,151.4 118.3,154.0 118.7,156.6 119.3,159.1 120.2,161.6 121.2,164.0 122.5,166.3 123.9,168.5 125.5,170.6" fill="none" stroke="#34d399" stroke-width="2.4"/>
+  <text x="295.0" y="98.4" font-size="13" font-weight="600" fill="#9aa7bd" text-anchor="middle" dominant-baseline="middle">l</text>
+  <text x="295.0" y="207.9" font-size="13" font-weight="600" fill="#9aa7bd" text-anchor="middle" dominant-baseline="middle">m</text>
+  <text x="250.0" y="142.0" font-size="12" font-weight="600" fill="#c4b5fd" text-anchor="middle" dominant-baseline="middle">n (보조선)</text>
+  <text x="63.1" y="103.2" font-size="15" font-weight="800" fill="#e7ecf3" text-anchor="middle" dominant-baseline="middle">A</text>
+  <text x="67.9" y="203.1" font-size="15" font-weight="800" fill="#e7ecf3" text-anchor="middle" dominant-baseline="middle">C</text>
+  <text x="150.0" y="134.0" font-size="15" font-weight="800" fill="#e7ecf3" text-anchor="middle" dominant-baseline="middle">P</text>
+  <text x="115.4" y="110.7" font-size="13" font-weight="800" fill="#fbbf24" text-anchor="middle" dominant-baseline="middle">35&#176;</text>
+  <text x="119.6" y="193.8" font-size="13" font-weight="800" fill="#60a5fa" text-anchor="middle" dominant-baseline="middle">40&#176;</text>
+  <text x="102.0" y="152.1" font-size="14" font-weight="800" fill="#34d399" text-anchor="middle" dominant-baseline="middle">75&#176;</text>
+</svg>
+    </div>
+    <p>∠(l, AP)=35°, ∠(m, PC)=40°일 때, 보조선 n으로 나뉜 두 조각이 각각 엇각으로 35°, 40°와 같으므로 <strong>∠APC = 35+40 = 75°</strong>입니다.</p>
+    <div class="quiz" data-qid="b9" data-ans="75" data-type="num">
+      <div class="quiz-q">Q. 위 그림처럼 두 각이 35°, 40°일 때 ∠APC는 몇 도인가요?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="도"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b10" data-ans="1" data-type="num">
+      <div class="quiz-q">Q. 꺾인 점(P)이 1개일 때, 필요한 보조선은 몇 개인가요?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="개"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+
+  <section class="section" id="s6">
+    <div class="section-head"><span class="section-num">6</span><span class="section-title">평행선의 활용 — 계단형(3개의 평행선)</span>
+      <button class="complete-btn" onclick="toggleDone('s6')">완료하기</button></div>
+    <p>아주 오래전, 건물을 한 층만 지을 땐 각을 정밀히 잴 필요가 없었어요. 그런데 층수를 올리려면 각 층의 <strong>바닥</strong>이 전부 <strong>서로 평행</strong>해야 사람이 걸어 다닐 수 있죠. 이걸 확인하는 방법이 바로 동위각·엇각을 측정해 크기가 같은지 비교하는 것이었다고 전해져요.</p>
+    <p>이번엔 §5의 보조선 대신, <strong>실제로 존재하는 층 바닥(n)</strong>을 이용해 똑같은 방식으로 풀어봅시다. 아래에서부터 m(1층 바닥), n(2층 바닥), l(3층 바닥)이 모두 평행할 때, 3층에서 1층으로 내려가는 계단 A—P—C가 있다고 해요.</p>
+    <div class="diagram-wrap">
+<svg viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg">
+  <line x1="20" y1="102.3" x2="280" y2="102.3" stroke="#9aa7bd" stroke-width="2.2"/>
+  <line x1="20" y1="216.9" x2="280" y2="216.9" stroke="#9aa7bd" stroke-width="2.2"/>
+  <line x1="20" y1="150.0" x2="280" y2="150.0" stroke="#9aa7bd" stroke-width="1.6" />
+  <line x1="73.7" y1="102.3" x2="150.0" y2="150.0" stroke="#34d399" stroke-width="2.4"/>
+  <line x1="150.0" y1="150.0" x2="89.8" y2="216.9" stroke="#34d399" stroke-width="2.4"/>
+  <circle cx="73.7" cy="102.3" r="3.5" fill="#e7ecf3"/>
+  <circle cx="89.8" cy="216.9" r="3.5" fill="#e7ecf3"/>
+  <circle cx="150.0" cy="150.0" r="3.5" fill="#e7ecf3"/>
+  <polyline points="95.7,116.1 96.2,115.3 96.6,114.5 97.0,113.7 97.4,112.9 97.8,112.0 98.1,111.2 98.4,110.3 98.7,109.5 98.9,108.6 99.1,107.7 99.3,106.8 99.4,105.9 99.5,105.0 99.6,104.1 99.7,103.2 99.7,102.3" fill="none" stroke="#fbbf24" stroke-width="2"/>
+  <polyline points="115.8,216.9 115.7,215.5 115.6,214.2 115.5,212.8 115.2,211.5 114.9,210.2 114.5,208.8 114.1,207.6 113.5,206.3 112.9,205.1 112.3,203.9 111.6,202.7 110.8,201.6 110.0,200.5 109.1,199.5 108.2,198.5 107.2,197.6" fill="none" stroke="#60a5fa" stroke-width="2"/>
+  <polyline points="122.9,133.0 121.5,135.5 120.3,138.0 119.4,140.6 118.7,143.3 118.2,146.1 118.0,148.9 118.0,151.7 118.3,154.5 118.8,157.2 119.6,159.9 120.5,162.5 121.7,165.0 123.2,167.4 124.8,169.7 126.6,171.8 128.6,173.8" fill="none" stroke="#34d399" stroke-width="2.4"/>
+  <text x="295.0" y="102.3" font-size="13" font-weight="600" fill="#9aa7bd" text-anchor="middle" dominant-baseline="middle">l</text>
+  <text x="295.0" y="216.9" font-size="13" font-weight="600" fill="#9aa7bd" text-anchor="middle" dominant-baseline="middle">m</text>
+  <text x="250.0" y="142.0" font-size="12" font-weight="600" fill="#9aa7bd" text-anchor="middle" dominant-baseline="middle">n (2층 바닥)</text>
+  <text x="60.5" y="107.1" font-size="15" font-weight="800" fill="#e7ecf3" text-anchor="middle" dominant-baseline="middle">A</text>
+  <text x="76.6" y="212.1" font-size="15" font-weight="800" fill="#e7ecf3" text-anchor="middle" dominant-baseline="middle">C</text>
+  <text x="150.0" y="134.0" font-size="15" font-weight="800" fill="#e7ecf3" text-anchor="middle" dominant-baseline="middle">P</text>
+  <text x="113.1" y="113.6" font-size="13" font-weight="800" fill="#fbbf24" text-anchor="middle" dominant-baseline="middle">32&#176;</text>
+  <text x="127.2" y="200.2" font-size="13" font-weight="800" fill="#60a5fa" text-anchor="middle" dominant-baseline="middle">48&#176;</text>
+  <text x="102.5" y="156.7" font-size="14" font-weight="800" fill="#34d399" text-anchor="middle" dominant-baseline="middle">80&#176;</text>
+</svg>
+    </div>
+    <p>n은 이미 그려진 <strong>실제 직선</strong>이라 §5와 똑같은 방법(엇각 두 번)이 그대로 적용돼요. ∠(l,AP)=32°, ∠(m,PC)=48°이면 <strong>∠APC = 32+48 = 80°</strong>.</p>
+    <div class="box box-blue"><div class="box-title">💡 §5와 무엇이 다를까?</div>
+      <p style="margin:0;">§5는 P를 지나는 선이 <strong>원래 없어서 새로 그은 보조선</strong>이고, 이번엔 n이 <strong>원래부터 있던 진짜 직선</strong>이라는 점만 달라요. 계산 방법(엇각 두 번, 합치기)은 완전히 동일합니다.</p></div>
+    <div class="quiz" data-qid="b11" data-ans="80" data-type="num">
+      <div class="quiz-q">Q. 위 그림처럼 두 각이 32°, 48°일 때 ∠APC는 몇 도인가요?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="도"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b12" data-ans="85" data-type="num">
+      <div class="quiz-q">Q. 같은 방법으로, 두 각이 20°, 65°라면 ∠APC는 몇 도인가요?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="도"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+
+  <section class="wrongnote" id="wrong">
+    <h2>📕 오답노트 <span style="font-size:13px;font-weight:600;color:var(--muted)">(본문에서 틀린 문제가 자동으로 모여요)</span></h2>
+    <div id="wrongList"><p class="empty">아직 틀린 문제가 없어요. 퀴즈를 풀어보세요!</p></div>
+    <button class="review-btn" id="reviewBtn" onclick="reviewWrong()">오답 정리 완료</button>
+    <button class="clear-btn" onclick="clearWrong()">오답노트 비우기</button>
+  </section>
+
+  <section class="gate" id="gate">
+    <h2>🔓 연습문제 잠금 해제</h2>
+    <p class="desc">아래 두 조건을 모두 채우면 기본·응용·심화 연습문제가 열려요.</p>
+    <ul class="checklist">
+      <li id="ck_quiz"><span class="mark">✓</span><span>본문 퀴즈 전부 채점하기 (<span id="gradedCount">0</span> / <span id="quizTotal">12</span>)</span></li>
+      <li id="ck_review"><span class="mark">✓</span><span>오답노트 확인하기 (위에서 '오답 정리 완료' 누르기)</span></li>
+    </ul>
+    <button class="start-btn locked" id="startBtn" onclick="startPractice()">🔒 연습문제 풀기 (잠김)</button>
+  </section>
+
+  <div class="practice-wrap" id="practiceWrap">
+    <div class="practice-title">✏️ 연습문제</div>
+    <div class="practice-sub">기본 10문제를 모두 채점하면 응용이, 응용을 모두 채점하면 심화가 열려요. 틀린 문제는 아래 연습 오답노트에 모입니다.</div>
+
+    <div class="pset" id="pset_basic">
+      <div class="pset-head"><span class="diff-badge diff-basic">기본</span><span class="pset-title">기본 개념 확인</span><span class="pcount" id="cnt_basic">0 / 10</span></div>
+      <div class="pbody">
+        <div class="prob" data-qid="pb1" data-ans="62" data-type="num">
+          <div class="pq"><span class="pnum">1.</span>아래 그림에서 l∥m이다. 표시된 62°의 <strong>동위각</strong>인 ∠x의 크기는? (단위: 도)</div>
+          <div class="diagram-wrap"><svg viewBox="0 0 330 180" xmlns="http://www.w3.org/2000/svg">
+<line x1="14.0" y1="50.0" x2="300.0" y2="50.0" stroke="#9aa7bd" stroke-width="2.2"/>
+<line x1="14.0" y1="130.0" x2="300.0" y2="130.0" stroke="#9aa7bd" stroke-width="2.2"/>
+<line x1="91.2" y1="14.7" x2="171.3" y2="165.3" stroke="#9aa7bd" stroke-width="2.2"/>
+<polyline points="135.0,50.0 135.0,51.1 134.9,52.3 134.8,53.4 134.6,54.5 134.4,55.6 134.1,56.7 133.8,57.8 133.4,58.8 133.0,59.9 132.5,60.9 132.0,61.9 131.4,62.9 130.8,63.8 130.2,64.8 129.5,65.6 128.8,66.5 128.0,67.3 127.2,68.1 126.4,68.9 125.5,69.6 124.6,70.3 123.7,70.9 122.7,71.5 121.7,72.1" fill="none" stroke="#34d399" stroke-width="2"/>
+<text x="138.4" y="77.5" font-size="13" font-weight="700" fill="#34d399">62°</text>
+<polyline points="177.5,130.0 177.5,131.1 177.4,132.3 177.3,133.4 177.1,134.5 176.9,135.6 176.6,136.7 176.3,137.8 175.9,138.8 175.5,139.9 175.0,140.9 174.5,141.9 174.0,142.9 173.4,143.8 172.7,144.8 172.0,145.6 171.3,146.5 170.5,147.3 169.7,148.1 168.9,148.9 168.0,149.6 167.1,150.3 166.2,150.9 165.3,151.5 164.3,152.1" fill="none" stroke="#fbbf24" stroke-width="2"/>
+<text x="183.2" y="156.5" font-size="13" font-weight="700" fill="#fbbf24">∠x</text>
+<text x="308.4" y="54.2" font-size="15" font-weight="700" fill="#34d399">l</text>
+<text x="308.4" y="134.2" font-size="15" font-weight="700" fill="#34d399">m</text>
+</svg></div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb2" data-ans="65" data-type="num">
+          <div class="pq"><span class="pnum">2.</span>l∥m일 때, 한 동측내각의 크기가 115°이다. 다른 동측내각의 크기는? (단위: 도)</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb3" data-ans="30" data-type="num">
+          <div class="pq"><span class="pnum">3.</span>l∥m일 때 엇각의 크기가 각각 (2x+10)°와 70°이다. x의 값은?</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb4" data-ans="예|네" data-type="text">
+          <div class="pq"><span class="pnum">4.</span>두 직선이 한 직선과 만나서 생긴 동위각의 크기가 각각 82°, 82°이다. 두 직선은 평행한가요?</div>
+          <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:160px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb5" data-ans="아니요|아니오" data-type="text">
+          <div class="pq"><span class="pnum">5.</span>두 직선이 한 직선과 만나서 생긴 엇각의 크기가 각각 55°, 60°이다. 두 직선은 평행한가요?</div>
+          <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:160px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb6" data-ans="133" data-type="num">
+          <div class="pq"><span class="pnum">6.</span>l∥m일 때 한 각의 크기가 47°이다. 이 각의 동위각과 평각을 이루는 각의 크기는? (단위: 도)</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb7" data-ans="25" data-type="num">
+          <div class="pq"><span class="pnum">7.</span>l∥m일 때 동위각의 크기가 각각 (3x−5)°와 (2x+20)°이다. x의 값은?</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb8" data-ans="83" data-type="num">
+          <div class="pq"><span class="pnum">8.</span>아래 그림에서 l∥m이다. ∠x의 크기는? (단위: 도)</div>
+          <div class="diagram-wrap"><svg viewBox="0 0 320 230" xmlns="http://www.w3.org/2000/svg">
+<line x1="14.0" y1="42.0" x2="296.0" y2="42.0" stroke="#9aa7bd" stroke-width="2.2"/>
+<line x1="14.0" y1="186.0" x2="296.0" y2="186.0" stroke="#9aa7bd" stroke-width="2.2"/>
+<line x1="78.0" y1="42.0" x2="180.8" y2="114.0" stroke="#f87171" stroke-width="2.4"/>
+<line x1="180.8" y1="114.0" x2="116.0" y2="186.0" stroke="#f87171" stroke-width="2.4"/>
+<line x1="118.8" y1="114.0" x2="242.8" y2="114.0" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.75"/>
+<polyline points="103.0,42.0 103.0,42.6 103.0,43.3 102.9,43.9 102.9,44.5 102.8,45.2 102.7,45.8 102.6,46.4 102.5,47.1 102.3,47.7 102.2,48.3 102.0,48.9 101.8,49.5 101.6,50.1 101.4,50.7 101.2,51.3 101.0,51.9 100.7,52.5 100.4,53.1 100.1,53.6 99.8,54.2 99.5,54.7 99.2,55.3 98.8,55.8 98.5,56.3" fill="none" stroke="#34d399" stroke-width="2"/>
+<text x="99.1" y="30.9" font-size="13" font-weight="700" fill="#34d399">35°</text>
+<polyline points="91.0,186.0 91.1,183.6 91.5,181.2 92.0,178.9 92.8,176.6 93.8,174.5 95.0,172.4 96.4,170.4 98.0,168.6 99.8,167.0 101.7,165.5 103.7,164.2 105.8,163.2 108.1,162.3 110.4,161.6 112.7,161.2 115.1,161.0 117.5,161.0 119.9,161.3 122.3,161.8 124.5,162.5 126.8,163.4 128.9,164.6 130.9,165.9 132.7,167.4" fill="none" stroke="#34d399" stroke-width="2"/>
+<text x="86.4" y="150.4" font-size="13" font-weight="700" fill="#34d399">48°</text>
+<polyline points="158.7,98.5 157.8,99.9 157.0,101.3 156.3,102.7 155.6,104.3 155.1,105.8 154.7,107.4 154.3,108.9 154.0,110.6 153.9,112.2 153.8,113.8 153.9,115.4 154.0,117.1 154.2,118.7 154.6,120.3 155.0,121.8 155.5,123.4 156.1,124.9 156.8,126.4 157.6,127.8 158.5,129.2 159.4,130.5 160.5,131.7 161.6,132.9 162.8,134.1" fill="none" stroke="#f87171" stroke-width="2"/>
+<text x="127.2" y="133.0" font-size="14" font-weight="700" fill="#f87171">∠x</text>
+<circle cx="78.0" cy="42.0" r="3" fill="#e7ecf3"/>
+<text x="73.7" y="30.9" font-size="14" font-weight="700" fill="#e7ecf3">A</text>
+<circle cx="180.8" cy="114.0" r="3" fill="#e7ecf3"/>
+<text x="183.4" y="102.4" font-size="14" font-weight="700" fill="#e7ecf3">P</text>
+<circle cx="116.0" cy="186.0" r="3" fill="#e7ecf3"/>
+<text x="111.7" y="204.9" font-size="14" font-weight="700" fill="#e7ecf3">C</text>
+<text x="304.4" y="46.2" font-size="15" font-weight="700" fill="#34d399">l</text>
+<text x="304.4" y="190.2" font-size="15" font-weight="700" fill="#34d399">m</text>
+</svg></div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ P를 지나며 l에 평행한 보조선을 그어 두 조각으로 나눠 보세요.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb9" data-ans="180" data-type="num">
+          <div class="pq"><span class="pnum">9.</span>두 직선이 평행할 때, 한 쌍의 동측내각의 크기의 합은? (단위: 도)</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb10" data-ans="90" data-type="num">
+          <div class="pq"><span class="pnum">10.</span>평행한 두 직선이 한 직선과 만날 때 생기는 8개의 각 중 하나가 90°였다. 나머지 7개의 각은 모두 몇 도인가? (단위: 도)</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pset locked" id="pset_applied">
+      <div class="pset-head"><span class="diff-badge diff-applied">응용</span><span class="pset-title">평행선 응용 — 지그재그·삼각형·종이접기</span><span class="pcount" id="cnt_applied">0 / 10</span></div>
+      <div class="lockmsg">🔒 기본 10문제를 모두 채점하면 열려요.</div>
+      <div class="pbody">
+        <div class="prob" data-qid="pa1" data-ans="25" data-type="num">
+          <div class="pq"><span class="pnum">1.</span>아래 그림에서 l∥m이다. x의 값은?</div>
+          <div class="diagram-wrap"><svg viewBox="0 0 340 340" xmlns="http://www.w3.org/2000/svg">
+<line x1="14.0" y1="34.0" x2="312.0" y2="34.0" stroke="#9aa7bd" stroke-width="2.2"/>
+<line x1="14.0" y1="300.0" x2="312.0" y2="300.0" stroke="#9aa7bd" stroke-width="2.2"/>
+<line x1="118.0" y1="34.0" x2="186.6" y2="132.0" stroke="#f87171" stroke-width="2.4"/>
+<line x1="186.6" y1="132.0" x2="147.5" y2="216.0" stroke="#f87171" stroke-width="2.4"/>
+<line x1="147.5" y1="216.0" x2="267.4" y2="300.0" stroke="#f87171" stroke-width="2.4"/>
+<polyline points="143.0,34.0 143.0,35.0 142.9,36.0 142.8,37.0 142.7,38.0 142.5,39.0 142.3,39.9 142.0,40.9 141.7,41.9 141.4,42.8 141.0,43.7 140.6,44.6 140.2,45.5 139.7,46.4 139.2,47.3 138.6,48.1 138.1,48.9 137.4,49.7 136.8,50.5 136.1,51.2 135.4,51.9 134.7,52.6 133.9,53.3 133.1,53.9 132.3,54.5" fill="none" stroke="#34d399" stroke-width="2"/>
+<text x="119.6" y="22.7" font-size="13" font-weight="700" fill="#34d399">(2x+5)°</text>
+<polyline points="172.3,111.5 170.6,112.8 168.9,114.3 167.5,115.9 166.1,117.7 165.0,119.5 164.0,121.4 163.1,123.4 162.5,125.5 162.0,127.7 161.7,129.8 161.6,132.0 161.7,134.2 162.0,136.3 162.5,138.5 163.1,140.6 164.0,142.6 165.0,144.5 166.1,146.3 167.5,148.1 168.9,149.7 170.6,151.2 172.3,152.5 174.1,153.7 176.1,154.7" fill="none" stroke="#fbbf24" stroke-width="2"/>
+<text x="87.7" y="142.2" font-size="13" font-weight="700" fill="#fbbf24">(3x+45)°</text>
+<polyline points="158.0,193.3 159.6,194.2 161.2,195.1 162.7,196.2 164.1,197.3 165.4,198.6 166.6,199.9 167.7,201.4 168.7,202.9 169.6,204.5 170.4,206.1 171.1,207.8 171.6,209.5 172.0,211.3 172.3,213.1 172.4,214.9 172.4,216.7 172.3,218.5 172.1,220.3 171.7,222.1 171.2,223.9 170.5,225.6 169.8,227.2 168.9,228.8 167.9,230.3" fill="none" stroke="#fbbf24" stroke-width="2"/>
+<text x="180.2" y="205.2" font-size="13" font-weight="700" fill="#fbbf24">100°</text>
+<polyline points="242.4,300.0 242.4,299.4 242.4,298.7 242.5,298.1 242.5,297.5 242.6,296.8 242.7,296.2 242.8,295.6 242.9,294.9 243.1,294.3 243.2,293.7 243.4,293.1 243.6,292.5 243.8,291.9 244.0,291.3 244.2,290.7 244.5,290.1 244.7,289.5 245.0,288.9 245.3,288.4 245.6,287.8 245.9,287.3 246.2,286.7 246.6,286.2 246.9,285.7" fill="none" stroke="#34d399" stroke-width="2"/>
+<text x="222.2" y="318.3" font-size="13" font-weight="700" fill="#34d399">35°</text>
+<text x="320.4" y="38.2" font-size="15" font-weight="700" fill="#34d399">l</text>
+<text x="320.4" y="304.2" font-size="15" font-weight="700" fill="#34d399">m</text>
+</svg></div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ 꺾인 점마다 평행한 보조선을 그으면 (위쪽 각)+(아래쪽 꺾임각) = (위쪽 꺾임각)+(아래쪽 각) 이 성립해요.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa2" data-ans="92" data-type="num">
+          <div class="pq"><span class="pnum">2.</span>l∥m이고, 어떤 삼각형에서 (3x+20)° + 40° + 27° = 180°가 성립한다. 이때 3x−1의 값은?</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ 먼저 x를 구한 뒤, 묻는 것이 x가 아니라 3x−1임에 주의하세요.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa3" data-ans="122" data-type="num">
+          <div class="pq"><span class="pnum">3.</span>아래 그림에서 l∥m이다. ∠x+∠y의 크기는? (단위: 도)</div>
+          <div class="diagram-wrap"><svg viewBox="0 0 360 250" xmlns="http://www.w3.org/2000/svg">
+<line x1="14.0" y1="52.0" x2="330.0" y2="52.0" stroke="#9aa7bd" stroke-width="2.2"/>
+<line x1="14.0" y1="158.0" x2="330.0" y2="158.0" stroke="#9aa7bd" stroke-width="2.2"/>
+<line x1="108.0" y1="52.0" x2="174.2" y2="158.0" stroke="#f87171" stroke-width="2.3"/>
+<line x1="268.0" y1="52.0" x2="146.1" y2="158.0" stroke="#f87171" stroke-width="2.3"/>
+<polyline points="133.0,52.0 133.0,53.1 132.9,54.1 132.8,55.2 132.6,56.2 132.4,57.2 132.2,58.3 131.9,59.3 131.6,60.3 131.2,61.3 130.8,62.2 130.4,63.2 129.9,64.1 129.3,65.0 128.8,65.9 128.2,66.8 127.5,67.6 126.8,68.4 126.1,69.2 125.4,70.0 124.6,70.7 123.8,71.4 123.0,72.0 122.1,72.6 121.2,73.2" fill="none" stroke="#34d399" stroke-width="2"/>
+<text x="136.8" y="78.7" font-size="13" font-weight="700" fill="#34d399">58°</text>
+<polyline points="243.0,52.0 243.0,52.7 243.0,53.5 243.1,54.2 243.2,55.0 243.3,55.7 243.4,56.4 243.5,57.2 243.7,57.9 243.9,58.6 244.1,59.3 244.3,60.1 244.6,60.8 244.9,61.4 245.1,62.1 245.5,62.8 245.8,63.5 246.1,64.1 246.5,64.8 246.9,65.4 247.3,66.0 247.7,66.7 248.2,67.2 248.7,67.8 249.1,68.4" fill="none" stroke="#34d399" stroke-width="2"/>
+<text x="205.2" y="70.5" font-size="13" font-weight="700" fill="#34d399">41°</text>
+<polyline points="150.5,120.1 151.9,119.3 153.2,118.6 154.6,118.0 156.1,117.5 157.5,117.0 159.0,116.7 160.5,116.4 162.1,116.2 163.6,116.1 165.1,116.1 166.6,116.2 168.2,116.4 169.7,116.7 171.2,117.0 172.6,117.5 174.1,118.0 175.5,118.6 176.8,119.3 178.1,120.1 179.4,121.0 180.6,121.9 181.8,122.9 182.9,123.9 183.9,125.1" fill="none" stroke="#f87171" stroke-width="2"/>
+<text x="161.2" y="104.4" font-size="14" font-weight="700" fill="#f87171">∠x</text>
+<polyline points="170.1,158.0 170.1,157.3 170.0,156.6 170.0,155.9 169.9,155.1 169.8,154.4 169.7,153.7 169.5,153.0 169.4,152.3 169.2,151.6 169.0,150.9 168.8,150.3 168.5,149.6 168.3,148.9 168.0,148.3 167.7,147.6 167.4,147.0 167.0,146.3 166.7,145.7 166.3,145.1 165.9,144.5 165.5,143.9 165.1,143.4 164.6,142.8 164.2,142.3" fill="none" stroke="#fbbf24" stroke-width="2"/>
+<text x="186.5" y="144.8" font-size="14" font-weight="700" fill="#fbbf24">∠y</text>
+<circle cx="108.0" cy="52.0" r="3" fill="#e7ecf3"/>
+<text x="107.1" y="41.0" font-size="13" font-weight="700" fill="#e7ecf3">A</text>
+<circle cx="268.0" cy="52.0" r="3" fill="#e7ecf3"/>
+<text x="267.1" y="41.0" font-size="13" font-weight="700" fill="#e7ecf3">B</text>
+<circle cx="164.3" cy="142.1" r="3" fill="#e7ecf3"/>
+<text x="139.7" y="141.4" font-size="13" font-weight="700" fill="#e7ecf3">P</text>
+<text x="338.4" y="56.2" font-size="15" font-weight="700" fill="#34d399">l</text>
+<text x="338.4" y="162.2" font-size="15" font-weight="700" fill="#34d399">m</text>
+</svg></div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa4" data-ans="56" data-type="num">
+          <div class="pq"><span class="pnum">4.</span>l∥m일 때 한 각의 크기가 118°이다. 이 각의 <strong>엇각</strong>의 크기와 <strong>동측내각</strong>의 크기의 차는? (단위: 도)</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa5" data-ans="2" data-type="num">
+          <div class="pq"><span class="pnum">5.</span>세 직선이 만날 때에 대한 다음 설명 중 옳지 <strong>않은</strong> 것은 모두 몇 개인가?<br>① 동위각의 크기가 같으면 두 직선은 평행하다. &nbsp; ② 두 직선이 평행하면 엇각의 크기는 같다.<br>③ 엇각의 크기가 같으면 항상 동측내각의 크기도 같다. &nbsp; ④ 두 직선이 평행하면 동측내각의 크기의 합은 180°이다.<br>⑤ 두 직선이 평행하지 않아도 동위각의 크기는 항상 같다.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa6" data-ans="68" data-type="num">
+          <div class="pq"><span class="pnum">6.</span>아래 그림에서 l∥m이고 삼각형 ABC는 AB=AC인 이등변삼각형이다. ∠x+∠y의 크기는? (단위: 도)</div>
+          <div class="diagram-wrap"><svg viewBox="0 0 350 240" xmlns="http://www.w3.org/2000/svg">
+<line x1="14.0" y1="44.0" x2="326.0" y2="44.0" stroke="#9aa7bd" stroke-width="2.2"/>
+<line x1="14.0" y1="194.0" x2="326.0" y2="194.0" stroke="#9aa7bd" stroke-width="2.2"/>
+<line x1="218.0" y1="44.0" x2="307.8" y2="165.8" stroke="#f87171" stroke-width="2.3"/>
+<line x1="218.0" y1="44.0" x2="198.0" y2="194.0" stroke="#f87171" stroke-width="2.3"/>
+<line x1="307.8" y1="165.8" x2="198.0" y2="194.0" stroke="#f87171" stroke-width="2.3"/>
+<polyline points="231.1,61.7 230.5,62.1 229.9,62.5 229.3,62.9 228.7,63.2 228.1,63.6 227.4,63.9 226.8,64.2 226.1,64.4 225.5,64.7 224.8,64.9 224.2,65.1 223.5,65.3 222.8,65.5 222.1,65.6 221.4,65.7 220.7,65.8 220.0,65.9 219.3,66.0 218.6,66.0 217.9,66.0 217.2,66.0 216.5,65.9 215.8,65.9 215.1,65.8" fill="none" stroke="#fbbf24" stroke-width="2"/>
+<text x="182.0" y="67.7" font-size="13" font-weight="700" fill="#fbbf24">44°</text>
+<polyline points="248.0,44.0 248.0,45.2 247.9,46.3 247.8,47.5 247.6,48.7 247.4,49.8 247.2,51.0 246.9,52.1 246.6,53.2 246.2,54.3 245.8,55.4 245.3,56.5 244.8,57.5 244.2,58.6 243.6,59.6 243.0,60.6 242.4,61.5 241.7,62.5 240.9,63.4 240.1,64.2 239.3,65.1 238.5,65.9 237.6,66.7 236.7,67.4 235.8,68.1" fill="none" stroke="#f87171" stroke-width="2"/>
+<text x="254.3" y="69.7" font-size="14" font-weight="700" fill="#f87171">∠x</text>
+<polyline points="228.0,194.0 228.0,193.7 228.0,193.4 228.0,193.1 228.0,192.7 228.0,192.4 227.9,192.1 227.9,191.8 227.9,191.5 227.9,191.2 227.8,190.9 227.8,190.6 227.8,190.2 227.7,189.9 227.7,189.6 227.6,189.3 227.6,189.0 227.5,188.7 227.5,188.4 227.4,188.1 227.3,187.8 227.3,187.5 227.2,187.1 227.1,186.8 227.1,186.5" fill="none" stroke="#f87171" stroke-width="2"/>
+<text x="227.2" y="212.9" font-size="14" font-weight="700" fill="#f87171">∠y</text>
+<circle cx="218.0" cy="44.0" r="3" fill="#e7ecf3"/>
+<text x="213.7" y="32.9" font-size="14" font-weight="700" fill="#e7ecf3">A</text>
+<circle cx="307.8" cy="165.8" r="3" fill="#e7ecf3"/>
+<text x="316.5" y="169.7" font-size="14" font-weight="700" fill="#e7ecf3">B</text>
+<circle cx="198.0" cy="194.0" r="3" fill="#e7ecf3"/>
+<text x="193.7" y="212.9" font-size="14" font-weight="700" fill="#e7ecf3">C</text>
+<text x="334.4" y="48.2" font-size="15" font-weight="700" fill="#34d399">l</text>
+<text x="334.4" y="198.2" font-size="15" font-weight="700" fill="#34d399">m</text>
+</svg></div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ B를 지나는 보조선을 긋고 이등변삼각형의 두 밑각을 먼저 구해 보세요.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa7" data-ans="173" data-type="num">
+          <div class="pq"><span class="pnum">7.</span>두 직선이 각각 다른 두 직선과 만나는 그림에서 ∠a의 동위각이 2개 생겼고 그 크기가 각각 116°, 57°였다. ∠a의 <strong>모든</strong> 동위각의 크기의 합은? (단위: 도)</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ "모든"이라는 말에 주의 — 동위각이 하나뿐이라고 단정하지 마세요.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa8" data-ans="20" data-type="num">
+          <div class="pq"><span class="pnum">8.</span>두 직선이 평행하고, 한 쌍의 동측내각의 크기가 각각 (4x)°와 (5x)°이다. x의 값은?</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa9" data-ans="64" data-type="num">
+          <div class="pq"><span class="pnum">9.</span>아래 그림은 직사각형 모양의 종이를 EF를 접는 선으로 하여 접은 것이다. ∠x의 크기는? (단위: 도)</div>
+          <div class="diagram-wrap"><svg viewBox="0 0 360 270" xmlns="http://www.w3.org/2000/svg">
+<rect x="34" y="62" width="266" height="120" fill="rgba(52,211,153,0.05)" stroke="#9aa7bd" stroke-width="2"/>
+<line x1="147.0" y1="62.0" x2="222.0" y2="182.0" stroke="#fbbf24" stroke-width="2.5"/>
+<line x1="147.0" y1="62.0" x2="80.0" y2="199.5" stroke="#f87171" stroke-width="2.3"/>
+<line x1="80.0" y1="199.5" x2="187.8" y2="252.1" stroke="#f87171" stroke-width="2.3"/>
+<line x1="187.8" y1="252.1" x2="222.0" y2="182.0" stroke="#f87171" stroke-width="2.3"/>
+<polyline points="197.0,182.0 197.0,180.9 197.1,179.9 197.2,178.8 197.4,177.8 197.6,176.8 197.8,175.7 198.1,174.7 198.4,173.7 198.8,172.7 199.2,171.8 199.6,170.8 200.1,169.9 200.7,169.0 201.2,168.1 201.8,167.2 202.5,166.4 203.2,165.6 203.9,164.8 204.6,164.0 205.4,163.3 206.2,162.6 207.0,162.0 207.9,161.4 208.8,160.8" fill="none" stroke="#34d399" stroke-width="2"/>
+<text x="169.0" y="162.6" font-size="13" font-weight="700" fill="#34d399">58°</text>
+<polyline points="119.0,62.0 119.0,63.3 119.1,64.6 119.3,65.9 119.5,67.2 119.8,68.5 120.1,69.7 120.5,71.0 120.9,72.2 121.4,73.4 122.0,74.6 122.6,75.7 123.3,76.8 124.0,77.9 124.8,79.0 125.6,80.0 126.4,81.0 127.3,81.9 128.3,82.8 129.3,83.7 130.3,84.5 131.4,85.2 132.5,85.9 133.6,86.6 134.7,87.2" fill="none" stroke="#f87171" stroke-width="2"/>
+<text x="97.3" y="90.8" font-size="14" font-weight="700" fill="#f87171">∠x</text>
+<circle cx="147.0" cy="62.0" r="3" fill="#e7ecf3"/>
+<text x="142.7" y="50.9" font-size="14" font-weight="700" fill="#e7ecf3">E</text>
+<circle cx="222.0" cy="182.0" r="3" fill="#e7ecf3"/>
+<text x="228.8" y="170.5" font-size="14" font-weight="700" fill="#e7ecf3">F</text>
+<circle cx="80.0" cy="199.5" r="3" fill="#e7ecf3"/>
+<text x="62.7" y="202.1" font-size="14" font-weight="700" fill="#e7ecf3">G</text>
+<text x="17.8" y="58.6" font-size="13" font-weight="700" fill="#e7ecf3">A</text>
+<text x="310.0" y="65.6" font-size="13" font-weight="700" fill="#e7ecf3">D</text>
+<text x="17.8" y="178.6" font-size="13" font-weight="700" fill="#e7ecf3">B</text>
+<text x="310.0" y="185.6" font-size="13" font-weight="700" fill="#e7ecf3">C</text>
+</svg></div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ 접은 각의 크기는 원래 각과 같고, AD∥BC이므로 엇각도 같아요.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa10" data-ans="6" data-type="num">
+          <div class="pq"><span class="pnum">10.</span>서로 다른 세 직선이 한 점에서 만날 때 생기는 맞꼭지각은 모두 몇 쌍인가?</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ 세 직선 중 두 직선을 고르는 경우마다 맞꼭지각이 2쌍씩 생겨요.</div>
+          <div class="quiz-fb"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pset locked" id="pset_hard">
+      <div class="pset-head"><span class="diff-badge diff-hard">심화</span><span class="pset-title">킬러 — 종이접기·거울·다단 역산</span><span class="pcount" id="cnt_hard">0 / 10</span></div>
+      <div class="lockmsg">🔒 응용 10문제를 모두 채점하면 열려요.</div>
+      <div class="pbody">
+        <div class="box box-purple"><div class="box-title">🔮 심화 공략 — 종이접기와 거울, '접은 각은 그대로'</div>
+          <p style="margin:0;">이 세트의 절반은 <strong>접거나 반사시킨 도형</strong>이에요. 핵심은 딱 두 가지 — ① <strong>접은 각의 크기는 원래 각과 같다</strong> ② 직사각형·평행한 거울에는 <strong>평행선이 숨어 있으니 엇각을 쓴다</strong>.</p></div>
+        <div class="solution">
+          <div class="sol-head">🧩 단계별 풀이 — 직사각형 종이접기의 기본형</div>
+          <div class="sol-q">직사각형 모양의 종이를 접는 선 EF를 따라 접었더니 ∠EFB=58°가 되었다. 이때 ∠AEG의 크기를 구하시오. (A, D는 윗변, B, C는 아랫변)</div>
+          <div class="step"><span class="s-label">STEP 1</span><br>직사각형이므로 <strong>AD∥BC</strong>. EF가 두 평행선을 가로지르는 직선이니 <strong>엇각</strong>이 같아요 → ∠DEF = ∠EFB = 58°.</div>
+          <div class="step"><span class="s-label">STEP 2</span><br>접은 각은 원래 각과 같으므로 <strong>∠GEF = ∠DEF = 58°</strong>.</div>
+          <div class="step"><span class="s-label">STEP 3</span><br>∠AEG, ∠GEF, ∠FED가 한 직선(AD) 위에서 평각을 이루므로<br>∠AEG = 180° − 58° − 58°</div>
+          <div class="step"><span class="s-label">정답</span><br>= <strong>64°</strong></div>
+          <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 →</button>
+        </div>
+        <div class="prob" data-qid="ph1" data-ans="102" data-type="num">
+          <div class="pq"><span class="pnum">1.</span>빛은 거울에 들어갈 때와 나갈 때 같은 각의 크기로 반사된다. 아래 그림에서 두 거울은 서로 평행하고 빛이 거울에 들어가는 각의 크기가 39°일 때, ∠x의 크기는? (단위: 도)</div>
+          <div class="diagram-wrap"><svg viewBox="0 0 380 265" xmlns="http://www.w3.org/2000/svg">
+<line x1="155.6" y1="45.3" x2="236.4" y2="110.7" stroke="#9aa7bd" stroke-width="5"/>
+<line x1="177.4" y1="148.0" x2="258.2" y2="213.4" stroke="#9aa7bd" stroke-width="5"/>
+<line x1="64.0" y1="78.0" x2="196.0" y2="78.0" stroke="#fbbf24" stroke-width="2.3"/>
+<line x1="196.0" y1="78.0" x2="217.8" y2="180.7" stroke="#fbbf24" stroke-width="2.3"/>
+<line x1="217.8" y1="180.7" x2="317.8" y2="180.7" stroke="#fbbf24" stroke-width="2.3"/>
+<circle cx="64.0" cy="78.0" r="9" fill="none" stroke="#fbbf24" stroke-width="2"/>
+<polyline points="171.0,78.0 171.0,77.3 171.0,76.6 171.1,75.9 171.2,75.2 171.3,74.5 171.4,73.8 171.5,73.1 171.6,72.4 171.8,71.7 172.0,71.0 172.2,70.3 172.4,69.7 172.7,69.0 172.9,68.3 173.2,67.7 173.5,67.0 173.8,66.4 174.2,65.8 174.5,65.2 174.9,64.6 175.3,64.0 175.7,63.4 176.1,62.8 176.6,62.3" fill="none" stroke="#34d399" stroke-width="2"/>
+<text x="131.1" y="66.8" font-size="13" font-weight="700" fill="#34d399">39°</text>
+<polyline points="245.8,180.7 245.8,181.5 245.8,182.3 245.7,183.1 245.7,183.9 245.5,184.7 245.4,185.4 245.3,186.2 245.1,187.0 244.9,187.8 244.7,188.5 244.5,189.3 244.2,190.1 243.9,190.8 243.7,191.5 243.3,192.3 243.0,193.0 242.6,193.7 242.3,194.4 241.9,195.1 241.4,195.7 241.0,196.4 240.6,197.1 240.1,197.7 239.6,198.3" fill="none" stroke="#f87171" stroke-width="2"/>
+<text x="260.9" y="199.6" font-size="14" font-weight="700" fill="#f87171">∠x</text>
+<text x="56.6" y="104.4" font-size="12" font-weight="700" fill="#fbbf24">태양</text>
+<text x="229.0" y="128.1" font-size="12" font-weight="700" fill="#e7ecf3">거울</text>
+<text x="170.0" y="137.3" font-size="12" font-weight="700" fill="#e7ecf3">거울</text>
+</svg></div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ 두 거울이 평행하므로 엇각을 이용해 두 번째 거울에서의 입사각을 먼저 구하세요.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph2" data-ans="26" data-type="num">
+          <div class="pq"><span class="pnum">2.</span>아래 그림과 같이 직사각형 ABCD에서 점 C가 대각선 BD 위의 점 P에 포개어지도록 접었다. ∠DBC=38°일 때 ∠x(=∠CPQ)의 크기는? (단위: 도)</div>
+          <div class="diagram-wrap"><svg viewBox="0 0 370 240" xmlns="http://www.w3.org/2000/svg">
+<polygon points="58.0,39.7 258.0,39.7 258.0,196.0 58.0,196.0" fill="rgba(52,211,153,0.05)" stroke="#9aa7bd" stroke-width="2"/>
+<line x1="58.0" y1="196.0" x2="258.0" y2="39.7" stroke="#fbbf24" stroke-width="2.2"/>
+<line x1="181.8" y1="196.0" x2="134.9" y2="135.9" stroke="#f87171" stroke-width="2.3"/>
+<line x1="181.8" y1="196.0" x2="258.0" y2="39.7" stroke="#fbbf24" stroke-width="2.3"/>
+<line x1="134.9" y1="135.9" x2="258.0" y2="39.7" stroke="#f87171" stroke-width="2.0"/>
+<line x1="134.9" y1="135.9" x2="258.0" y2="196.0" stroke="#f87171" stroke-width="2.0"/>
+<line x1="258.0" y1="196.0" x2="258.0" y2="39.7" stroke="#9aa7bd" stroke-width="1.3" stroke-dasharray="4,3" opacity="0.5"/>
+<polyline points="77.7,180.6 78.1,181.2 78.5,181.7 78.9,182.3 79.3,182.9 79.6,183.5 80.0,184.1 80.3,184.7 80.6,185.3 80.9,185.9 81.2,186.6 81.4,187.2 81.6,187.9 81.9,188.5 82.1,189.2 82.2,189.8 82.4,190.5 82.5,191.2 82.7,191.9 82.8,192.6 82.8,193.2 82.9,193.9 83.0,194.6 83.0,195.3 83.0,196.0" fill="none" stroke="#34d399" stroke-width="2"/>
+<text x="76.4" y="214.3" font-size="13" font-weight="700" fill="#34d399">38°</text>
+<polyline points="154.6,145.6 154.5,146.0 154.3,146.3 154.1,146.7 153.9,147.1 153.6,147.4 153.4,147.8 153.2,148.1 153.0,148.5 152.7,148.8 152.5,149.1 152.2,149.5 152.0,149.8 151.7,150.1 151.4,150.4 151.2,150.7 150.9,151.0 150.6,151.3 150.3,151.6 150.0,151.9 149.7,152.2 149.4,152.5 149.1,152.8 148.7,153.0 148.4,153.3" fill="none" stroke="#f87171" stroke-width="2"/>
+<text x="164.2" y="137.6" font-size="14" font-weight="700" fill="#f87171">∠x</text>
+<circle cx="58.0" cy="39.7" r="3" fill="#e7ecf3"/>
+<text x="41.6" y="39.4" font-size="13" font-weight="700" fill="#e7ecf3">A</text>
+<circle cx="258.0" cy="39.7" r="3" fill="#e7ecf3"/>
+<text x="267.0" y="43.4" font-size="13" font-weight="700" fill="#e7ecf3">D</text>
+<circle cx="58.0" cy="196.0" r="3" fill="#e7ecf3"/>
+<text x="41.6" y="195.6" font-size="13" font-weight="700" fill="#e7ecf3">B</text>
+<circle cx="258.0" cy="196.0" r="3" fill="#e7ecf3"/>
+<text x="267.0" y="199.6" font-size="13" font-weight="700" fill="#e7ecf3">C</text>
+<circle cx="134.9" cy="135.9" r="3" fill="#e7ecf3"/>
+<text x="125.6" y="123.4" font-size="13" font-weight="700" fill="#e7ecf3">P</text>
+<circle cx="181.8" cy="196.0" r="3" fill="#e7ecf3"/>
+<text x="174.6" y="214.3" font-size="13" font-weight="700" fill="#e7ecf3">Q</text>
+</svg></div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ ∠BDC를 구한 뒤, 접는 선 DQ가 ∠BDC를 이등분함을 이용하세요. 마지막엔 QC=QP인 이등변삼각형입니다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph3" data-ans="12" data-type="num">
+          <div class="pq"><span class="pnum">3.</span>두 직선이 한 점에서 만나고, 또 다른 한 직선이 두 직선과 평행하지 않고 그 교점을 지나지도 않을 때 맞꼭지각은 모두 a쌍 존재한다. 또 세 직선이 한 점에서 만날 때 생기는 맞꼭지각은 모두 b쌍이다. a+b의 값은? (단, 직선은 모두 한 평면 위에 있다.)</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ 교점이 몇 개 생기는지부터 그림으로 세어 보세요.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph4" data-ans="110" data-type="num">
+          <div class="pq"><span class="pnum">4.</span>l∥m이고 엇각의 크기가 각각 (3x+10)°와 (5x−30)°이다. 이때 그 각의 <strong>동측내각</strong>의 크기는? (단위: 도)</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ x를 구하고 → 각의 크기를 구하고 → 다시 동측내각으로. 세 단계입니다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph5" data-ans="141" data-type="num">
+          <div class="pq"><span class="pnum">5.</span>꺾인 점이 2개인 지그재그에서 (위쪽 각)+(아래쪽 꺾임각) = (위쪽 꺾임각)+(아래쪽 각)이 성립한다. 위쪽 각이 48°, 위쪽 꺾임각이 132°, 아래쪽 각이 57°일 때 아래쪽 꺾임각은? (단위: 도)</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph6" data-ans="112" data-type="num">
+          <div class="pq"><span class="pnum">6.</span>직사각형 모양의 종이를 접는 선 EF를 따라 접었더니 ∠EFB=34°가 되었다. 이때 ∠AEG의 크기는? (단위: 도)</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ 엇각으로 ∠DEF를 구하고, 접은 각이 같음을 이용해 평각에서 빼세요.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph7" data-ans="4" data-type="num">
+          <div class="pq"><span class="pnum">7.</span>l∥m이고 한 직선이 두 직선과 만나서 생기는 8개의 각이 있다. 그중 한 각의 크기가 63°일 때, 크기가 63°인 각은 모두 몇 개인가?</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ 맞꼭지각·동위각·엇각을 모두 찾아보세요.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph8" data-ans="20" data-type="num">
+          <div class="pq"><span class="pnum">8.</span>두 직선이 한 직선과 만나서 생긴 동위각의 크기가 각각 (2x+15)°와 (4x−25)°이다. 두 직선이 평행하려면 x의 값은 얼마여야 하는가?</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph9" data-ans="100" data-type="num">
+          <div class="pq"><span class="pnum">9.</span>평행한 두 직선이 한 직선과 만날 때, 한 쌍의 동측내각의 크기의 비가 4:5이다. 두 각 중 큰 각의 크기는? (단위: 도)</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph10" data-ans="2" data-type="num">
+          <div class="pq"><span class="pnum">10.</span>평행한 두 직선이 한 직선과 만날 때 생기는 8개의 각을 크기별로 분류하면 서로 다른 크기는 몇 가지인가? (단, 어느 각도 90°가 아니다.)</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ 같은 크기끼리 묶어 보세요.</div>
+          <div class="quiz-fb"></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="wrongnote" id="pwrong">
+      <h2>📒 연습 오답노트 <span style="font-size:13px;font-weight:600;color:var(--muted)">(연습문제에서 틀린 문제)</span></h2>
+      <div id="pwrongList"><p class="empty">아직 틀린 문제가 없어요.</p></div>
+    </section>
+  </div>
+
+</div>
+
+<footer class="site-foot">
+  <p><a href="index.html">← 중1 2학기 목차</a><span class="sep">·</span><a href="/">Isaac Math 홈</a><span class="sep">·</span><a href="/privacy.html">개인정보처리방침</a></p>
+  <p>© Isaac Math · 개인 학습용으로 자유롭게 이용하세요. 무단 복제·재배포는 금합니다.</p>
+</footer>
+
+<script>
+const LS='isaacmath_note_1-2-3_v1';
+let state={done:[],results:{},reviewed:false};
+function load(){try{const s=JSON.parse(localStorage.getItem(LS));if(s&&typeof s==='object'){state.done=s.done||[];state.results=s.results||{};state.reviewed=!!s.reviewed;}}catch(e){}}
+function save(){try{localStorage.setItem(LS,JSON.stringify(state));}catch(e){}}
+
+let cel={init:false,practice:false,applied:false,hard:false};
+const reduceMotion=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function toast(msg,type){const t=document.createElement('div');t.className='toast '+(type==='ng'?'ng':'ok');t.textContent=msg;document.body.appendChild(t);requestAnimationFrame(()=>t.classList.add('show'));setTimeout(()=>{t.classList.remove('show');setTimeout(()=>t.remove(),300);},2200);}
+function flashWrong(id){const el=document.getElementById(id);if(!el)return;el.classList.remove('flash');void el.offsetWidth;el.classList.add('flash');}
+function confetti(){if(reduceMotion)return;const c=document.createElement('canvas');c.className='confetti-canvas';c.width=innerWidth;c.height=innerHeight;document.body.appendChild(c);const ctx=c.getContext('2d');const cols=['#34d399','#60a5fa','#fbbf24','#c4b5fd','#f87171'];const ps=[];for(let i=0;i<90;i++)ps.push({x:Math.random()*c.width,y:-20-Math.random()*c.height*0.3,r:4+Math.random()*5,vx:-2+Math.random()*4,vy:2+Math.random()*4,col:cols[i%cols.length],rot:Math.random()*6.28,vr:-0.2+Math.random()*0.4});let t0=null;function frame(ts){if(!t0)t0=ts;const el=ts-t0;ctx.clearRect(0,0,c.width,c.height);ps.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=0.05;p.rot+=p.vr;ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.rot);ctx.fillStyle=p.col;ctx.fillRect(-p.r/2,-p.r/2,p.r,p.r*0.7);ctx.restore();});if(el<1600)requestAnimationFrame(frame);else c.remove();}requestAnimationFrame(frame);}
+function celebrate(msg){toast(msg,'ok');confetti();}
+
+function toggleTheme(){document.documentElement.classList.toggle('light');const light=document.documentElement.classList.contains('light');document.getElementById('themeBtn').textContent=light?'🌙 다크 모드':'☀️ 라이트 모드';}
+function resetAll(){if(confirm('이 단원의 모든 진행 상황(완료·채점·오답·잠금)을 초기화할까요?')){state={done:[],results:{},reviewed:false};save();location.reload();}}
+
+function onScroll(){const h=document.documentElement;const sc=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;document.getElementById('pbar').style.width=Math.min(100,sc)+'%';}
+window.addEventListener('scroll',onScroll);
+
+document.addEventListener('keydown',function(e){
+  if(e.key!=='Enter')return;
+  const inp=e.target;
+  if(inp.classList&&inp.classList.contains('quiz-input')){
+    e.preventDefault();
+    const row=inp.closest('.quiz-row');const btn=row&&row.querySelector('.quiz-submit');
+    if(btn)grade(btn);
+  }
+});
+
+const spy=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){const id=e.target.id;document.querySelectorAll('.tlink').forEach(a=>a.classList.remove('active'));const l=document.querySelector('.tlink[href="#'+id+'"]');if(l)l.classList.add('active');}});},{rootMargin:'-40% 0px -55% 0px'});
+document.querySelectorAll('.section,#wrong,#gate').forEach(s=>spy.observe(s));
+
+function qtext(el){const q=el.querySelector('.quiz-q, .pq');return q?q.textContent.trim():'';}
+function ids(t){return [...document.querySelectorAll('[data-qid]')].filter(t);}
+const bodyEls=()=>ids(q=>q.dataset.qid[0]==='b');
+const setEls=(p)=>ids(q=>q.dataset.qid.startsWith(p));
+const gradedIn=(list)=>list.filter(q=>state.results[q.dataset.qid]).length;
+
+function grade(btn){
+  const el=btn.closest('[data-qid]');const qid=el.dataset.qid;
+  const inp=el.querySelector('.quiz-input');const type=el.dataset.type;
+  const cands=el.dataset.ans.split('|');   // 복수 정답 지원
+  let val=inp.value.trim();
+  let ok=type==='num'?(val!==''&&cands.some(a=>Number(val)===Number(a))):cands.some(a=>val.replace(/\s/g,'')===a.replace(/\s/g,''));
+  state.results[qid]={correct:ok,given:val||'(미입력)',question:qtext(el),ans:cands[0]};
+  if(!ok){flashWrong(qid[0]==='p'?'pwrong':'wrong');toast('❌ 틀린 문제가 오답노트에 기록됐어요','ng');}
+  save();refresh();
+}
+function paint(el){
+  const qid=el.dataset.qid;const r=state.results[qid];const fb=el.querySelector('.quiz-fb');const inp=el.querySelector('.quiz-input');
+  if(!fb)return;
+  if(r){if(inp&&inp.value===''&&r.given!=='(미입력)')inp.value=r.given;
+    fb.classList.add('show');
+    if(r.correct){fb.className='quiz-fb show ok';fb.textContent='✅ 정답이에요!';}
+    else{fb.className='quiz-fb show ng';fb.textContent='❌ 다시 생각해봐요. (오답노트에 기록됐어요)';}
+  } else {fb.className='quiz-fb';fb.textContent='';}
+}
+
+function toggleDone(id){const i=state.done.indexOf(id);if(i>=0)state.done.splice(i,1);else state.done.push(id);save();refresh();}
+function reveal(btn){const box=btn.closest('.solution');const steps=box.querySelectorAll('.step');for(const s of steps){if(!s.classList.contains('show')){s.classList.add('show');break;}}if([...steps].every(s=>s.classList.contains('show'))){btn.disabled=true;btn.textContent='모든 단계 공개됨';}}
+function reviewWrong(){state.reviewed=true;save();refresh();}
+function clearWrong(){for(const k of Object.keys(state.results)){if(state.results[k].correct===false)delete state.results[k];}save();refresh();}
+function startPractice(){const wrap=document.getElementById('practiceWrap');if(wrap.style.display==='block'){document.getElementById('pset_basic').scrollIntoView({behavior:'smooth'});}}
+
+function renderWrongList(boxId,list){
+  const box=document.getElementById(boxId);
+  const items=list.filter(q=>{const r=state.results[q.dataset.qid];return r&&r.correct===false;}).map(q=>state.results[q.dataset.qid]);
+  if(!items.length){box.innerHTML='<p class="empty">아직 틀린 문제가 없어요.</p>';return;}
+  box.innerHTML=items.map(w=>'<div class="wrong-item"><div class="wq">'+w.question+'</div><div class="wa">내 답: '+w.given+' · 정답: '+w.ans+'</div></div>').join('');
+}
+
+function refresh(){
+  state.done=state.done.filter(id=>document.getElementById(id));
+  const secs=document.querySelectorAll('.section');
+  secs.forEach(s=>{const on=state.done.indexOf(s.id)>=0;s.classList.toggle('done',on);const b=s.querySelector('.complete-btn');if(b)b.textContent=on?'✓ 완료됨':'완료하기';});
+  const total=secs.length;const p=Math.round(state.done.length/total*100);
+  document.getElementById('ring').style.setProperty('--p',p);document.getElementById('ringTxt').textContent=p+'%';
+  document.getElementById('b_first').classList.toggle('on',state.done.length>=1);
+  document.getElementById('b_half').classList.toggle('on',p>=50);
+  document.getElementById('b_master').classList.toggle('on',p>=100);
+  const d=document.getElementById('achDesc');
+  d.textContent=p>=100?'🏆 단원 마스터! 모든 섹션을 끝냈어요.':(p>=50?'🔥 절반 돌파! 끝까지 가볼까요?':'각 섹션을 끝내면 완료 버튼을 눌러 진행률을 채워보세요.');
+
+  document.querySelectorAll('[data-qid]').forEach(paint);
+
+  renderWrongList('wrongList',bodyEls());
+  renderWrongList('pwrongList',[...setEls('pb'),...setEls('pa'),...setEls('ph')]);
+  const rb=document.getElementById('reviewBtn');if(state.reviewed){rb.classList.add('done');rb.textContent='✓ 오답 정리 완료';}else{rb.classList.remove('done');rb.textContent='오답 정리 완료';}
+
+  const body=bodyEls();const bg=gradedIn(body);
+  document.getElementById('gradedCount').textContent=bg;
+  document.getElementById('quizTotal').textContent=body.length;
+  const quizDone=bg===body.length&&body.length>0;
+  document.getElementById('ck_quiz').classList.toggle('ok',quizDone);
+  document.getElementById('ck_review').classList.toggle('ok',state.reviewed);
+  const unlocked=quizDone&&state.reviewed;
+  const sb=document.getElementById('startBtn');
+  if(unlocked){sb.className='start-btn open';sb.textContent='✏️ 연습문제 풀기 →';}
+  else{sb.className='start-btn locked';sb.textContent='🔒 연습문제 풀기 (잠김)';}
+  document.getElementById('practiceWrap').style.display=unlocked?'block':'none';
+
+  const gb=gradedIn(setEls('pb')),ga=gradedIn(setEls('pa')),gh=gradedIn(setEls('ph'));
+  setCount('cnt_basic',gb);setCount('cnt_applied',ga);setCount('cnt_hard',gh);
+  document.getElementById('pset_basic').classList.remove('locked');
+  document.getElementById('pset_applied').classList.toggle('locked',gb<10);
+  document.getElementById('pset_hard').classList.toggle('locked',ga<10);
+
+  const cur={practice:unlocked,applied:gb>=10,hard:ga>=10};
+  if(cel.init){
+    if(cur.practice&&!cel.practice)celebrate('🎉 축하합니다! 연습문제가 열렸어요!');
+    else if(cur.hard&&!cel.hard)celebrate('🏆 심화 레벨이 열렸어요!');
+    else if(cur.applied&&!cel.applied)celebrate('🔥 응용 레벨이 열렸어요!');
+  }
+  cel={init:true,practice:cur.practice,applied:cur.applied,hard:cur.hard};
+}
+function setCount(id,n){const el=document.getElementById(id);el.textContent=n+' / 10';el.classList.toggle('clear',n>=10);}
+
+load();
+if(document.documentElement.classList.contains('light'))document.getElementById('themeBtn').textContent='🌙 다크 모드';
+refresh();
+</script>
+</body>
+</html>
