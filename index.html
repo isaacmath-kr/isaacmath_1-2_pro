@@ -54,6 +54,17 @@
   .unit .u-bar > i{display:block;height:100%;width:0%;background:var(--green);border-radius:5px;}
   .unit .u-meta{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);}
   .unit .u-go{margin-top:14px;font-size:13px;font-weight:700;color:var(--green);}
+  .intro{margin-top:30px;background:var(--card);border:1px solid var(--border);border-radius:16px;
+    padding:24px 26px;backdrop-filter:blur(10px);}
+  .intro h2{font-size:1.05rem;font-weight:800;letter-spacing:-.01em;margin-bottom:10px;}
+  .intro p{font-size:.93rem;color:var(--muted);margin-bottom:11px;}
+  .intro p:last-child{margin-bottom:0;}
+  .intro strong{color:var(--text);}
+  .intro a{color:var(--green);}
+  .flow{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin:14px 0 4px;font-size:.84rem;}
+  .flow .st{background:rgba(148,163,184,.08);border:1px solid var(--border);border-radius:9px;
+    padding:6px 12px;font-weight:700;color:var(--text);}
+  .flow .ar{color:var(--muted);}
   .foot{text-align:center;color:var(--muted);font-size:12.5px;margin-top:40px;}
   @media (max-width:600px){.grid{grid-template-columns:1fr;}.cover h1{font-size:30px;}}
 </style>
@@ -107,8 +118,23 @@
       <div class="u-go">강의노트 열기 →</div>
     </a>
   </div>
+  <div class="intro">
+    <h2>중1 2학기는 이런 학기입니다</h2>
+    <p>1학기가 수와 식이었다면, 2학기는 <strong>도형</strong>입니다. 점·선·면이라는 가장 기본적인 약속에서 출발해 직선과 평면의 위치 관계를 정리하고, 평행선이 만드는 각의 성질을 익힌 뒤, 자와 컴퍼스만으로 도형을 그리는 작도와 두 도형이 같음을 보이는 합동 조건으로 이어집니다. 이어서 다각형의 내각과 외각을 다룹니다.</p>
+    <p>이 학기의 내용은 <strong>중2 도형(삼각형·사각형의 성질, 닮음)의 토대</strong>가 됩니다. 특히 평행선의 성질과 삼각형의 합동 조건은 이후 증명 문제에서 계속 쓰이므로, 결론을 외우기보다 왜 그렇게 되는지를 그림과 함께 따라가는 편이 좋습니다.</p>
+    <p><strong>현재 5개 단원이 공개되어 있으며</strong>, 나머지 단원은 같은 기준을 통과하는 대로 추가됩니다.</p>
+    <h2 style="margin-top:20px;">각 단원은 이렇게 구성됩니다</h2>
+    <div class="flow">
+      <span class="st">개념 6~8섹션</span><span class="ar">→</span>
+      <span class="st">본문 퀴즈</span><span class="ar">→</span>
+      <span class="st">오답노트</span><span class="ar">→</span>
+      <span class="st">연습문제 30문항</span>
+    </div>
+    <p style="margin-top:12px;">도형 단원이라 그림이 많습니다. 모든 그림은 좌표를 계산해 생성하고, 그림에 그려진 각도와 문제에 적힌 값이 일치하는지 스크립트로 전수 검사합니다. 자세한 제작·검증 방식은 <a href="/about.html">사이트 소개</a>에 정리해 두었습니다.</p>
+  </div>
+
   <div class="foot">
-  <p style="margin-bottom:6px;"><a href="/" style="color:var(--muted);">Isaac Math 홈</a> · <a href="/privacy.html" style="color:var(--muted);">개인정보처리방침</a></p>
+  <p style="margin-bottom:6px;"><a href="/" style="color:var(--muted);">Isaac Math 홈</a> · <a href="/about.html" style="color:var(--muted);">사이트 소개</a> · <a href="/privacy.html" style="color:var(--muted);">개인정보처리방침</a></p>
   © Isaac Math · 개인 학습용으로 자유롭게 이용하세요. 무단 복제·재배포는 금합니다.</div>
 </div>
 
