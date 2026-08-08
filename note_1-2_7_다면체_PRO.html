@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google tag (gtag.js) — isaacmath.kr 전용 GA4 속성. faithreason.kr 측정 ID를 재사용하지 말 것 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JS3GE709TF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JS3GE709TF');
+</script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2084707405154770"
+        crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>다면체 강의노트 PRO | 1-2</title>
+<meta name="description" content="중1 2학기 7단원 「다면체」 강의노트. 다면체의 뜻과 면·모서리·꼭짓점, 각기둥·각뿔·각뿔대의 면·모서리·꼭짓점 개수 공식, 정다면체가 다섯 가지뿐인 이유와 3·3·4·3·5 암기법, 전개도까지 정리했습니다. 인터랙티브 퀴즈와 연습문제 30문항(기본·응용·심화)을 무료로 제공합니다.">
+<link rel="canonical" href="https://isaacmath.kr/isaacmath_1-2_pro/note_1-2_7_%EB%8B%A4%EB%A9%B4%EC%B2%B4_PRO.html">
+<meta property="og:title" content="다면체 — 중1 2학기 7단원 강의노트">
+<meta property="og:description" content="중1 2학기 7단원 「다면체」 강의노트. 다면체의 뜻과 면·모서리·꼭짓점, 각기둥·각뿔·각뿔대의 면·모서리·꼭짓점 개수 공식, 정다면체가 다섯 가지뿐인 이유와 3·3·4·3·5 암기법, 전개도까지 정리했습니다. 인터랙티브 퀴즈와 연습문제 30문항(기본·응용·심화)을 무료로 제공합니다.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://isaacmath.kr/isaacmath_1-2_pro/note_1-2_7_%EB%8B%A4%EB%A9%B4%EC%B2%B4_PRO.html">
+<style>
+  :root {
+    --bg:#0b1220; --bg2:#0f1830; --card:rgba(30,41,66,0.55); --card-solid:#162038;
+    --border:rgba(148,163,184,0.18); --text:#e7ecf3; --muted:#9aa7bd;
+    --green:#34d399; --green-d:#059669; --blue:#60a5fa; --orange:#fbbf24;
+    --red:#f87171; --purple:#c4b5fd; --gold:#fbbf24;
+  }
+  html.light {
+    --bg:#f3f5f9; --bg2:#eef1f7; --card:#ffffff; --card-solid:#ffffff;
+    --border:#e2e8f0; --text:#1a202c; --muted:#5b6675;
+    --green:#0f9d63; --blue:#2563eb; --orange:#c2870b; --red:#dc2626; --purple:#7c3aed;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic','맑은 고딕',sans-serif;
+    background:radial-gradient(1200px 600px at 80% -10%, rgba(52,211,153,0.10), transparent 60%),
+      radial-gradient(900px 500px at -10% 10%, rgba(96,165,250,0.10), transparent 55%), var(--bg);
+    color:var(--text); line-height:1.7; -webkit-font-smoothing:antialiased; transition:background .3s,color .3s; }
+  p { margin-bottom:10px; } strong { color:var(--text); }
+  ul,ol { padding-left:20px; } li { margin-bottom:6px; } sup { font-size:.7em; } em { color:var(--muted); font-style:italic; }
+
+  .progress-bar { position:fixed; top:0; left:0; height:3px; width:0%;
+    background:linear-gradient(90deg,var(--green),var(--gold)); z-index:300; transition:width .1s; }
+
+  .page-header { position:relative; overflow:hidden; border-bottom:1px solid var(--border); }
+  .page-header::before { content:""; position:absolute; inset:0;
+    background:linear-gradient(135deg, rgba(52,211,153,0.16), rgba(96,165,250,0.10) 50%, transparent); }
+  .page-header-inner { position:relative; max-width:820px; margin:0 auto; padding:48px 24px 34px; }
+  .brandline { display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+  .pro-badge { font-size:11px; font-weight:800; letter-spacing:.08em; color:#1a1205;
+    background:linear-gradient(135deg,#fde68a,var(--gold)); padding:4px 10px; border-radius:6px; }
+  .brandline .label { font-size:13px; color:var(--muted); letter-spacing:.02em; }
+  .page-header h1 { font-size:32px; font-weight:800; letter-spacing:-0.03em; line-height:1.2; }
+  .page-header .sub { margin-top:10px; color:var(--muted); font-size:15px; }
+  .header-tools { display:flex; gap:8px; margin-top:18px; align-items:center; flex-wrap:wrap; }
+  .mini-btn { font-size:12.5px; color:var(--text); background:var(--card); border:1px solid var(--border);
+    padding:7px 12px; border-radius:8px; cursor:pointer; backdrop-filter:blur(6px); transition:.15s; }
+  .mini-btn:hover { border-color:var(--green); color:var(--green); }
+
+  .achieve { max-width:820px; margin:18px auto 0; padding:0 24px; }
+  .achieve-card { background:var(--card); border:1px solid var(--border); border-radius:16px;
+    padding:16px 20px; backdrop-filter:blur(10px); display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+  .ring { --p:0; width:54px; height:54px; border-radius:50%; flex-shrink:0;
+    background:conic-gradient(var(--green) calc(var(--p)*1%), rgba(148,163,184,0.18) 0);
+    display:flex; align-items:center; justify-content:center; }
+  .ring span { width:42px; height:42px; border-radius:50%; background:var(--bg2);
+    display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:800; color:var(--green); }
+  .achieve-text { flex:1; min-width:160px; }
+  .achieve-text .t { font-weight:700; font-size:15px; } .achieve-text .d { font-size:13px; color:var(--muted); }
+  .badges { display:flex; gap:6px; flex-wrap:wrap; }
+  .ach-badge { font-size:11px; font-weight:700; padding:5px 9px; border-radius:20px;
+    background:rgba(148,163,184,0.12); color:var(--muted); border:1px solid var(--border); }
+  .ach-badge.on { background:rgba(251,191,36,0.16); color:var(--gold); border-color:rgba(251,191,36,0.4); }
+
+  .toc { position:sticky; top:0; z-index:200; background:rgba(11,18,32,0.82); backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--border); display:flex; justify-content:center; gap:2px; overflow-x:auto; padding:0 16px; }
+  html.light .toc { background:rgba(243,245,249,0.85); }
+  .toc a { padding:14px 10px; font-size:12.5px; color:var(--muted); text-decoration:none; white-space:nowrap;
+    border-bottom:2px solid transparent; transition:.2s; }
+  .toc a:hover { color:var(--green); } .toc a.active { color:var(--green); border-bottom-color:var(--green); }
+
+  .content { max-width:820px; margin:0 auto; padding:34px 24px 90px; }
+
+  .section { position:relative; background:var(--card); border:1px solid var(--border); border-radius:18px;
+    padding:30px 30px 26px; margin-bottom:22px; backdrop-filter:blur(10px); box-shadow:0 10px 30px rgba(0,0,0,0.25); }
+  html.light .section { box-shadow:0 6px 20px rgba(15,23,42,0.06); }
+  .section-head { display:flex; align-items:center; gap:12px; margin-bottom:18px; }
+  .section-num { width:30px; height:30px; border-radius:9px; flex-shrink:0; font-size:14px; font-weight:800;
+    color:#04140d; background:linear-gradient(135deg,var(--green),var(--green-d)); display:flex; align-items:center; justify-content:center; }
+  .section-title { font-size:21px; font-weight:800; letter-spacing:-0.02em; }
+  .complete-btn { margin-left:auto; font-size:12.5px; font-weight:700; padding:8px 14px; border-radius:9px; cursor:pointer;
+    border:1px solid var(--border); background:transparent; color:var(--muted); transition:.15s; white-space:nowrap; }
+  .complete-btn:hover { border-color:var(--green); color:var(--green); }
+  .section.done { border-color:rgba(52,211,153,0.45); }
+  .section.done .complete-btn { background:rgba(52,211,153,0.14); color:var(--green); border-color:rgba(52,211,153,0.45); }
+
+  .box { border-radius:12px; padding:15px 18px; margin:14px 0; border:1px solid var(--border);
+    border-left-width:4px; background:rgba(148,163,184,0.06); }
+  .box-green { border-left-color:var(--green); background:rgba(52,211,153,0.08); }
+  .box-blue { border-left-color:var(--blue); background:rgba(96,165,250,0.08); }
+  .box-orange { border-left-color:var(--orange); background:rgba(251,191,36,0.08); }
+  .box-red { border-left-color:var(--red); background:rgba(248,113,113,0.08); }
+  .box-purple { border-left-color:var(--purple); background:rgba(196,181,253,0.08); }
+  .box-title { font-weight:800; font-size:13px; margin-bottom:6px; }
+  .box-green .box-title{color:var(--green);} .box-blue .box-title{color:var(--blue);}
+  .box-orange .box-title{color:var(--orange);} .box-red .box-title{color:var(--red);} .box-purple .box-title{color:var(--purple);}
+
+  .special-table { width:100%; border-collapse:collapse; margin:14px 0; font-size:14.5px; border-radius:10px; overflow:hidden; }
+  .special-table th { background:rgba(52,211,153,0.16); color:var(--green); padding:10px 12px; text-align:center; font-weight:700; }
+  .special-table td { padding:10px 12px; text-align:center; border-bottom:1px solid var(--border); }
+  .table-wrap { overflow-x:auto; margin:14px 0; }
+  .table-wrap .special-table { margin:0; }
+
+  .formula-big { background:linear-gradient(135deg, rgba(52,211,153,0.10), rgba(196,181,253,0.10));
+    border:2px solid var(--purple); border-radius:14px; padding:22px; text-align:center; margin:16px 0; }
+  .formula-big .f-title { font-size:13px; font-weight:800; color:var(--purple); margin-bottom:10px; }
+  .formula-big .f-body { font-size:20px; font-weight:800; line-height:1.8; }
+
+  .diagram-wrap { text-align:center; margin:16px 0; }
+  .diagram-wrap svg { max-width:100%; height:auto; width:100%; display:block; margin:0 auto; }
+
+  .stepbox { background:rgba(148,163,184,0.06); border-radius:10px; padding:14px 18px; margin:10px 0; border-left:4px solid var(--purple); }
+  .stepbox .step-header { font-size:12px; font-weight:800; color:var(--purple); margin-bottom:6px; }
+
+  .solution { border:1px dashed var(--border); border-radius:12px; padding:16px 18px; margin:14px 0; background:rgba(196,181,253,0.05); }
+  .sol-head { display:flex; align-items:center; gap:8px; font-weight:800; font-size:14px; color:var(--purple); }
+  .sol-q { margin:6px 0 12px; font-weight:600; }
+  .step { display:none; padding:10px 14px; margin:8px 0; border-radius:10px; background:rgba(148,163,184,0.07); border-left:3px solid var(--purple); font-size:14.5px; }
+  .step.show { display:block; animation:fade .3s ease; }
+  @keyframes fade { from{opacity:0; transform:translateY(4px);} to{opacity:1; transform:none;} }
+  .step .s-label { font-size:11px; font-weight:800; color:var(--purple); letter-spacing:.04em; }
+  .reveal-btn { margin-top:8px; font-size:13px; font-weight:700; padding:9px 16px; border-radius:9px; cursor:pointer; border:1px solid var(--purple); color:var(--purple); background:transparent; transition:.15s; }
+  .reveal-btn:hover { background:rgba(196,181,253,0.14); } .reveal-btn:disabled { opacity:.4; cursor:default; }
+
+  .quiz { background:rgba(148,163,184,0.06); border:1px solid var(--border); border-radius:14px; padding:18px; margin:14px 0; }
+  .quiz-q { font-weight:700; margin-bottom:12px; }
+  .quiz-row { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+  .quiz-input { width:150px; padding:9px 12px; font-size:15px; border-radius:9px; border:1px solid var(--border); background:var(--bg2); color:var(--text); }
+  .quiz-input:focus { outline:none; border-color:var(--green); }
+  .quiz-submit { padding:9px 18px; font-size:14px; font-weight:700; border-radius:9px; cursor:pointer; color:#04140d; background:linear-gradient(135deg,var(--green),var(--green-d)); border:none; }
+  .quiz-hint { font-size:12.5px; color:var(--muted); margin-top:8px; }
+  .quiz-fb { margin-top:10px; font-size:13.5px; font-weight:700; display:none; }
+  .quiz-fb.show { display:block; } .quiz-fb.ok { color:var(--green); } .quiz-fb.ng { color:var(--red); }
+
+  .wrongnote { background:var(--card); border:1px solid var(--border); border-radius:18px; padding:24px 28px; margin-bottom:22px; backdrop-filter:blur(10px); }
+  .wrongnote h2 { font-size:18px; font-weight:800; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  .wrongnote .empty { color:var(--muted); font-size:14px; margin-top:8px; }
+  .wrong-item { padding:12px 14px; border-radius:10px; background:rgba(248,113,113,0.08); border-left:3px solid var(--red); margin-top:10px; font-size:14px; }
+  .wrong-item .wq { font-weight:600; } .wrong-item .wa { font-size:13px; color:var(--muted); margin-top:4px; }
+  .clear-btn { margin-top:14px; font-size:12.5px; padding:7px 12px; border-radius:8px; cursor:pointer; border:1px solid var(--border); background:transparent; color:var(--muted); }
+  .review-btn { margin-top:14px; margin-right:8px; font-size:12.5px; font-weight:700; padding:8px 14px; border-radius:8px; cursor:pointer; border:1px solid var(--purple); background:transparent; color:var(--purple); }
+  .review-btn.done { background:rgba(196,181,253,0.16); }
+
+  .gate { background:var(--card); border:1px solid var(--border); border-radius:18px; padding:28px 30px; margin-bottom:22px; backdrop-filter:blur(10px); }
+  .gate h2 { font-size:19px; font-weight:800; display:flex; align-items:center; gap:8px; }
+  .gate .desc { color:var(--muted); font-size:14px; margin-top:6px; }
+  .checklist { list-style:none; padding:0; margin:18px 0; }
+  .checklist li { display:flex; align-items:center; gap:12px; padding:12px 14px; border:1px solid var(--border); border-radius:10px; margin-bottom:8px; font-size:14px; background:rgba(148,163,184,0.05); }
+  .checklist li .mark { width:24px; height:24px; border-radius:50%; border:2px solid var(--muted); flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:13px; color:var(--muted); font-weight:800; }
+  .checklist li.ok .mark { border-color:var(--green); background:var(--green); color:#04140d; }
+  .checklist li.ok { border-color:rgba(52,211,153,0.4); }
+  .start-btn { display:inline-block; margin-top:6px; padding:13px 24px; border-radius:11px; font-weight:800; font-size:15px; border:none; cursor:pointer; transition:.15s; }
+  .start-btn.locked { background:rgba(148,163,184,0.15); color:var(--muted); cursor:not-allowed; }
+  .start-btn.open { background:linear-gradient(135deg,var(--green),var(--green-d)); color:#04140d; box-shadow:0 6px 18px rgba(52,211,153,0.25); }
+
+  .practice-wrap { display:none; }
+  .practice-title { font-size:24px; font-weight:800; letter-spacing:-0.02em; margin:8px 0 4px; }
+  .practice-sub { color:var(--muted); font-size:14px; margin-bottom:18px; }
+  .pset { position:relative; background:var(--card); border:1px solid var(--border); border-radius:18px; padding:24px 28px; margin-bottom:20px; backdrop-filter:blur(10px); }
+  .pset-head { display:flex; align-items:center; gap:12px; margin-bottom:6px; flex-wrap:wrap; }
+  .diff-badge { font-size:12px; font-weight:800; padding:5px 12px; border-radius:20px; }
+  .diff-basic { background:rgba(96,165,250,0.16); color:var(--blue); }
+  .diff-applied { background:rgba(251,191,36,0.16); color:var(--orange); }
+  .diff-hard { background:rgba(196,181,253,0.16); color:var(--purple); }
+  .pset-title { font-size:18px; font-weight:800; }
+  .pcount { margin-left:auto; font-size:13px; color:var(--muted); font-weight:700; }
+  .pcount.clear { color:var(--green); }
+  .lockmsg { display:none; color:var(--muted); font-size:14px; padding:16px 0 2px; }
+  .pset.locked .pbody { display:none; }
+  .pset.locked .lockmsg { display:block; }
+  .pset.locked { opacity:.9; }
+  .prob { background:rgba(148,163,184,0.06); border:1px solid var(--border); border-radius:12px; padding:14px 16px; margin:10px 0; }
+  .prob .pq { font-weight:600; margin-bottom:10px; font-size:14.5px; }
+  .prob .pnum { color:var(--green); font-weight:800; margin-right:6px; }
+
+  .toast { position:fixed; left:50%; bottom:32px; transform:translateX(-50%) translateY(12px); z-index:400;
+    background:var(--card-solid); border:1px solid var(--border); color:var(--text); padding:12px 18px; border-radius:12px;
+    font-size:13.5px; font-weight:700; box-shadow:0 10px 30px rgba(0,0,0,0.35); opacity:0; transition:opacity .3s, transform .3s; max-width:90vw; text-align:center; }
+  .toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
+  .toast.ok { border-color:rgba(52,211,153,0.5); } .toast.ng { border-color:rgba(248,113,113,0.5); }
+  .confetti-canvas { position:fixed; inset:0; pointer-events:none; z-index:390; }
+  @keyframes wrongflash { 0%{box-shadow:0 0 0 0 rgba(248,113,113,0);} 30%{box-shadow:0 0 0 3px rgba(248,113,113,0.55);} 100%{box-shadow:0 0 0 0 rgba(248,113,113,0);} }
+  .wrongnote.flash { animation:wrongflash .7s ease; }
+
+  @media (max-width:600px) {
+    .page-header-inner{padding:32px 16px 24px;} .page-header h1{font-size:24px;}
+    .content{padding:24px 16px 70px;} .section,.gate,.pset,.wrongnote{padding:22px 18px;}
+  }
+  @media print {
+    :root{--bg:#fff;--bg2:#fff;--card:#fff;--card-solid:#fff;--border:#cbd5e1;--text:#111827;--muted:#475569;--green:#0f9d63;--blue:#2563eb;--orange:#c2870b;--red:#dc2626;--purple:#7c3aed;--gold:#b45309;}
+    body{background:#fff; color:#000;}
+    .progress-bar,.toc,.header-tools,.complete-btn,.reveal-btn,.quiz-submit,.clear-btn,.review-btn,.achieve,.start-btn{display:none!important;}
+    .section,.wrongnote,.gate,.pset{box-shadow:none; border:1px solid #ccc; backdrop-filter:none; break-inside:avoid;}
+    .step{display:block!important;} .practice-wrap{display:block!important;} .pset.locked .pbody{display:block!important;} .lockmsg{display:none!important;}
+  }
+  .unit-nav{max-width:900px;margin:44px auto 0;padding:0 20px;display:grid;
+    grid-template-columns:1fr 1fr;gap:12px;}
+  .unit-nav a{display:flex;flex-direction:column;gap:3px;padding:14px 18px;
+    background:var(--card);border:1px solid var(--border);border-radius:12px;
+    text-decoration:none;transition:border-color .15s, transform .15s;}
+  .unit-nav a:hover{border-color:var(--green);transform:translateY(-2px);}
+  .unit-nav .un-lbl{font-size:11.5px;font-weight:700;color:var(--muted);letter-spacing:.03em;}
+  .unit-nav .un-t{font-size:14.5px;font-weight:700;color:var(--text);letter-spacing:-.01em;}
+  .unit-nav .nx{text-align:right;grid-column:2;}
+  @media(max-width:600px){.unit-nav{grid-template-columns:1fr;}.unit-nav .nx{grid-column:1;text-align:left;}}
+  .site-foot{margin:40px auto 0;padding:22px 20px 30px;border-top:1px solid var(--border);
+    text-align:center;font-size:12.5px;color:var(--muted);line-height:1.9;}
+  .site-foot a{color:var(--muted);text-decoration:none;border-bottom:1px dashed var(--border);}
+  .site-foot a:hover{color:var(--green);border-color:var(--green);}
+  .site-foot .sep{margin:0 8px;opacity:.5;}
+</style>
+</head>
+<body>
+<div class="progress-bar" id="pbar"></div>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="brandline">
+      <span class="pro-badge">PRO</span>
+      <span class="label">Isaac Math 1-2 강의노트 · 프리미엄</span>
+    </div>
+    <h1>다면체</h1>
+    <div class="sub">다각형으로 둘러싸인 입체도형이라는 정의에서 출발해 면·모서리·꼭짓점, 각기둥·각뿔·각뿔대의 개수 공식, 정다면체의 두 조건과 다섯 가지뿐인 이유, 3·3·4·3·5 계산법과 전개도까지 — 개념 → 본문 퀴즈 → 오답 정리 → 연습문제(기본·응용·심화)를 한 파일로</div>
+    <div class="header-tools">
+      <button class="mini-btn" onclick="location.href='index.html'">← 학기 목차</button>
+      <button class="mini-btn" onclick="toggleTheme()" id="themeBtn">☀️ 라이트 모드</button>
+      <button class="mini-btn" onclick="window.print()">🖨️ 인쇄 / PDF 저장</button>
+      <button class="mini-btn" onclick="resetAll()">↺ 진행 초기화</button>
+    </div>
+  </div>
+</header>
+
+<div class="achieve">
+  <div class="achieve-card">
+    <div class="ring" id="ring"><span id="ringTxt">0%</span></div>
+    <div class="achieve-text">
+      <div class="t" id="achTitle">학습 진행률</div>
+      <div class="d" id="achDesc">각 섹션을 끝내면 완료 버튼을 눌러 진행률을 채워보세요.</div>
+    </div>
+    <div class="badges">
+      <span class="ach-badge" id="b_first">🔰 첫 완료</span>
+      <span class="ach-badge" id="b_half">🔥 절반 돌파</span>
+      <span class="ach-badge" id="b_master">🏆 단원 마스터</span>
+    </div>
+  </div>
+</div>
+
+<nav class="toc" id="toc">
+  <a href="#s1" class="tlink">① 다면체란?</a>
+  <a href="#s2" class="tlink">② 면·모서리·꼭짓점</a>
+  <a href="#s3" class="tlink">③ 각기둥</a>
+  <a href="#s4" class="tlink">④ 각뿔</a>
+  <a href="#s5" class="tlink">⑤ 각뿔대</a>
+  <a href="#s6" class="tlink">⑥ 개수 총정리</a>
+  <a href="#s7" class="tlink">⑦ 정다면체</a>
+  <a href="#s8" class="tlink">⑧ 3·3·4·3·5</a>
+  <a href="#wrong" class="tlink">📕 오답노트</a>
+  <a href="#gate" class="tlink">✏️ 연습문제</a>
+</nav>
+
+<div class="content">
+  <section class="section" id="s1">
+    <div class="section-head"><span class="section-num">1</span><span class="section-title">다면체란? — 다각형으로 둘러싸인 입체도형</span>
+      <button class="complete-btn" onclick="toggleDone('s1')">완료하기</button></div>
+
+<p>지난 단원까지 원과 부채꼴을 끝으로 <strong>평면도형</strong>이 마무리됐어요. 이번 단원부터는 종이 밖으로 나와 <strong>입체도형</strong>을 다룹니다. 그 첫 주제가 <strong>다면체</strong>예요.</p>
+<div class="box box-green"><div class="box-title">🔑 다면체의 뜻</div>
+  다면체(多面體)는 한자 그대로 <strong>면(面)이 여럿(多)인 몸통(體)</strong>이라는 뜻이에요. 정확한 정의는
+  <strong>다각형으로만 둘러싸인 입체도형</strong>입니다. 면 하나하나가 전부 다각형이어야 다면체라고 부를 수 있어요.</div>
+<div class="diagram-wrap" style="max-width:620px;margin:16px auto">
+<svg viewBox="-41.0 -26.0 501.0 168.5" xmlns="http://www.w3.org/2000/svg">
+<line x1="-29.0" y1="46.7" x2="-7.8" y2="34.1" stroke="#34d399" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="-7.8" y1="34.1" x2="29.0" y2="41.3" stroke="#34d399" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="-7.8" y1="34.1" x2="-7.8" y2="-13.8" stroke="#34d399" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="7.8" y1="53.9" x2="-29.0" y2="46.7" stroke="#34d399" stroke-width="2.0"/>
+<line x1="7.8" y1="53.9" x2="29.0" y2="41.3" stroke="#34d399" stroke-width="2.0"/>
+<line x1="7.8" y1="53.9" x2="7.8" y2="6.0" stroke="#34d399" stroke-width="2.0"/>
+<line x1="-29.0" y1="46.7" x2="-29.0" y2="-1.3" stroke="#34d399" stroke-width="2.0"/>
+<line x1="29.0" y1="41.3" x2="29.0" y2="-6.6" stroke="#34d399" stroke-width="2.0"/>
+<line x1="7.8" y1="6.0" x2="-29.0" y2="-1.3" stroke="#34d399" stroke-width="2.0"/>
+<line x1="7.8" y1="6.0" x2="29.0" y2="-6.6" stroke="#34d399" stroke-width="2.0"/>
+<line x1="-29.0" y1="-1.3" x2="-7.8" y2="-13.8" stroke="#34d399" stroke-width="2.0"/>
+<line x1="-7.8" y1="-13.8" x2="29.0" y2="-6.6" stroke="#34d399" stroke-width="2.0"/>
+<line x1="112.7" y1="38.6" x2="146.5" y2="33.5" stroke="#34d399" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="146.5" y1="33.5" x2="171.3" y2="42.9" stroke="#34d399" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="146.5" y1="33.5" x2="140.0" y2="-6.7" stroke="#34d399" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="152.8" y1="53.8" x2="116.6" y2="51.2" stroke="#34d399" stroke-width="2.0"/>
+<line x1="152.8" y1="53.8" x2="171.3" y2="42.9" stroke="#34d399" stroke-width="2.0"/>
+<line x1="152.8" y1="53.8" x2="140.0" y2="-6.7" stroke="#34d399" stroke-width="2.0"/>
+<line x1="116.6" y1="51.2" x2="112.7" y2="38.6" stroke="#34d399" stroke-width="2.0"/>
+<line x1="116.6" y1="51.2" x2="140.0" y2="-6.7" stroke="#34d399" stroke-width="2.0"/>
+<line x1="112.7" y1="38.6" x2="140.0" y2="-6.7" stroke="#34d399" stroke-width="2.0"/>
+<line x1="171.3" y1="42.9" x2="140.0" y2="-6.7" stroke="#34d399" stroke-width="2.0"/>
+<polyline points="307.0,-4.0 306.7,-2.5 305.8,-1.1 304.3,0.3 302.3,1.6 299.8,2.8 296.8,3.8 293.5,4.7 289.9,5.3 286.0,5.7 282.0,6.0 278.0,6.0 274.0,5.7 270.1,5.3 266.5,4.7 263.2,3.8 260.2,2.8 257.7,1.6 255.7,0.3 254.2,-1.1 253.3,-2.5 253.0,-4.0 253.3,-5.5 254.2,-6.9 255.7,-8.3 257.7,-9.6 260.2,-10.8 263.2,-11.8 266.5,-12.7 270.1,-13.3 274.0,-13.7 278.0,-14.0 282.0,-14.0 286.0,-13.7 289.9,-13.3 293.5,-12.7 296.8,-11.8 299.8,-10.8 302.3,-9.6 304.3,-8.3 305.8,-6.9 306.7,-5.5 307.0,-4.0" fill="none" stroke="#f87171" stroke-width="2.0"/>
+<polyline points="307.0,48.0 306.9,48.7 306.7,49.5 306.3,50.2 305.8,50.9 305.1,51.7 304.3,52.3 303.4,53.0 302.3,53.6 301.1,54.2 299.8,54.8 298.4,55.3 296.8,55.8 295.2,56.3 293.5,56.7 291.7,57.0 289.9,57.3 288.0,57.6 286.0,57.7 284.0,57.9 282.0,58.0 280.0,58.0 278.0,58.0 276.0,57.9 274.0,57.7 272.0,57.6 270.1,57.3 268.3,57.0 266.5,56.7 264.8,56.3 263.2,55.8 261.6,55.3 260.2,54.8 258.9,54.2 257.7,53.6 256.6,53.0 255.7,52.3 254.9,51.7 254.2,50.9 253.7,50.2 253.3,49.5 253.1,48.7 253.0,48.0" fill="none" stroke="#f87171" stroke-width="2.0"/>
+<polyline points="253.0,48.0 253.1,47.3 253.3,46.5 253.7,45.8 254.2,45.1 254.9,44.3 255.7,43.7 256.6,43.0 257.7,42.4 258.9,41.8 260.2,41.2 261.6,40.7 263.2,40.2 264.8,39.7 266.5,39.3 268.3,39.0 270.1,38.7 272.0,38.4 274.0,38.3 276.0,38.1 278.0,38.0 280.0,38.0 282.0,38.0 284.0,38.1 286.0,38.3 288.0,38.4 289.9,38.7 291.7,39.0 293.5,39.3 295.2,39.7 296.8,40.2 298.4,40.7 299.8,41.2 301.1,41.8 302.3,42.4 303.4,43.0 304.3,43.7 305.1,44.3 305.8,45.1 306.3,45.8 306.7,46.5 306.9,47.3 307.0,48.0" fill="none" stroke="#f87171" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="253.0" y1="-4.0" x2="253.0" y2="48.0" stroke="#f87171" stroke-width="2.0"/>
+<line x1="307.0" y1="-4.0" x2="307.0" y2="48.0" stroke="#f87171" stroke-width="2.0"/>
+<polyline points="448.0,48.0 447.9,48.7 447.7,49.5 447.3,50.2 446.8,50.9 446.1,51.7 445.2,52.3 444.2,53.0 443.1,53.6 441.9,54.2 440.5,54.8 439.0,55.3 437.5,55.8 435.8,56.3 434.0,56.7 432.1,57.0 430.2,57.3 428.3,57.6 426.2,57.7 424.2,57.9 422.1,58.0 420.0,58.0 417.9,58.0 415.8,57.9 413.8,57.7 411.7,57.6 409.8,57.3 407.9,57.0 406.0,56.7 404.2,56.3 402.5,55.8 401.0,55.3 399.5,54.8 398.1,54.2 396.9,53.6 395.8,53.0 394.8,52.3 393.9,51.7 393.2,50.9 392.7,50.2 392.3,49.5 392.1,48.7 392.0,48.0" fill="none" stroke="#f87171" stroke-width="2.0"/>
+<polyline points="392.0,48.0 392.1,47.3 392.3,46.5 392.7,45.8 393.2,45.1 393.9,44.3 394.8,43.7 395.8,43.0 396.9,42.4 398.1,41.8 399.5,41.2 401.0,40.7 402.5,40.2 404.2,39.7 406.0,39.3 407.9,39.0 409.8,38.7 411.7,38.4 413.8,38.3 415.8,38.1 417.9,38.0 420.0,38.0 422.1,38.0 424.2,38.1 426.2,38.3 428.3,38.4 430.2,38.7 432.1,39.0 434.0,39.3 435.8,39.7 437.5,40.2 439.0,40.7 440.5,41.2 441.9,41.8 443.1,42.4 444.2,43.0 445.2,43.7 446.1,44.3 446.8,45.1 447.3,45.8 447.7,46.5 447.9,47.3 448.0,48.0" fill="none" stroke="#f87171" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="392.0" y1="48.0" x2="420.0" y2="-6.0" stroke="#f87171" stroke-width="2.0"/>
+<line x1="448.0" y1="48.0" x2="420.0" y2="-6.0" stroke="#f87171" stroke-width="2.0"/>
+<text x="0.0" y="86.0" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">사각기둥</text>
+<text x="0.0" y="105.0" font-size="12.5" font-weight="700" fill="#34d399" text-anchor="middle">다면체 O</text>
+<text x="140.0" y="86.0" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">오각뿔</text>
+<text x="140.0" y="105.0" font-size="12.5" font-weight="700" fill="#34d399" text-anchor="middle">다면체 O</text>
+<text x="280.0" y="86.0" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">원기둥</text>
+<text x="280.0" y="105.0" font-size="12.5" font-weight="700" fill="#f87171" text-anchor="middle">다면체 X</text>
+<text x="420.0" y="86.0" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">원뿔</text>
+<text x="420.0" y="105.0" font-size="12.5" font-weight="700" fill="#f87171" text-anchor="middle">다면체 X</text>
+<text x="210.0" y="128.0" font-size="11.5" font-weight="700" fill="#9aa7bd" text-anchor="middle">옆면·밑면이 모두 다각형이어야 다면체 — 곡면이 있으면 아니다</text>
+</svg>
+</div>
+<div class="box box-red"><div class="box-title">⚠️ 면이 여러 개라고 다 다면체는 아니다</div>
+  원기둥·원뿔·구는 면이 여러 개인 것처럼 보여도 <strong>곡면(휘어진 면)</strong>을 가지고 있어요.
+  다면체의 판정 기준은 <strong>면의 개수</strong>가 아니라 <strong>모든 면이 다각형인가</strong>입니다.
+  그림 안에 원이나 곡선이 하나라도 보이면 그 순간 탈락이에요.</div>
+<div class="box box-blue"><div class="box-title">💡 겨냥도 — 입체도형을 그리는 약속</div>
+  입체도형을 종이에 그릴 때, <strong>보이는 모서리는 실선</strong>으로, <strong>가려져서 보이지 않는 모서리는 점선</strong>으로 그려
+  입체감을 살린 그림을 <strong>겨냥도</strong>라고 해요. 이 노트의 모든 입체 그림도 그 약속을 따르고 있어요.</div>
+    <div class="quiz" data-qid="b1" data-ans="다면체" data-type="text">
+      <div class="quiz-q">Q. 다각형으로만 둘러싸인 입체도형을 무엇이라 하나요?</div>
+      <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b2" data-ans="아니요|아니오" data-type="text">
+      <div class="quiz-q">Q. 원기둥은 다면체인가요? (예 / 아니요)</div>
+      <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">면이 몇 개인지가 아니라, 모든 면이 다각형인지를 보세요.</div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s2">
+    <div class="section-head"><span class="section-num">2</span><span class="section-title">면·모서리·꼭짓점 — 이름 붙이는 두 관점</span>
+      <button class="complete-btn" onclick="toggleDone('s2')">완료하기</button></div>
+
+<p>평면도형에서 쓰던 말과 입체도형에서 쓰는 말이 조금씩 달라져요. 용어를 정확히 맞춰 두는 것이 이 단원의 절반입니다.</p>
+<div class="box box-green"><div class="box-title">🔑 입체도형의 세 가지 요소</div>
+  <strong>면</strong>: 입체도형을 둘러싸는 하나하나의 다각형<br>
+  <strong>모서리</strong>: 두 면이 만나서 생기는 선분<br>
+  <strong>꼭짓점</strong>: 모서리와 모서리가 만나는 점</div>
+<div class="diagram-wrap" style="max-width:420px;margin:16px auto">
+<svg viewBox="-114.4 -66.0 246.8 227.2" xmlns="http://www.w3.org/2000/svg">
+<polygon points="80.0,42.7 -27.8,76.6 0.0,-32.5" fill="rgba(52,211,153,0.2)" stroke="none"/>
+<line x1="-52.2" y1="24.7" x2="80.0" y2="42.7" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="-27.8" y1="76.6" x2="-52.2" y2="24.7" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="-27.8" y1="76.6" x2="80.0" y2="42.7" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="-27.8" y1="76.6" x2="0.0" y2="-32.5" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="-52.2" y1="24.7" x2="0.0" y2="-32.5" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="80.0" y1="42.7" x2="0.0" y2="-32.5" stroke="#e7ecf3" stroke-width="2.0"/>
+<circle cx="-27.8" cy="76.6" r="2.7" fill="#e7ecf3"/>
+<circle cx="-52.2" cy="24.7" r="2.7" fill="#e7ecf3"/>
+<circle cx="80.0" cy="42.7" r="2.7" fill="#e7ecf3"/>
+<circle cx="0.0" cy="-32.5" r="2.7" fill="#e7ecf3"/>
+<line x1="80.0" y1="42.7" x2="-52.2" y2="24.7" stroke="#fbbf24" stroke-width="4.2"/>
+<text x="0.0" y="-43.9" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">A</text>
+<text x="-35.7" y="95.1" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">B</text>
+<text x="-68.2" y="28.3" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">C</text>
+<text x="95.7" y="50.2" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">D</text>
+<text x="114.0" y="24.9" font-size="13" font-weight="700" fill="#34d399" text-anchor="middle">면</text>
+<line x1="99.5" y1="22.4" x2="22.4" y2="28.5" stroke="#34d399" stroke-width="1.4" stroke-dasharray="4,3" opacity="0.8"/>
+<text x="13.9" y="116.6" font-size="13" font-weight="700" fill="#fbbf24" text-anchor="middle">모서리</text>
+<line x1="13.9" y1="98.4" x2="13.9" y2="38.7" stroke="#fbbf24" stroke-width="1.4" stroke-dasharray="4,3" opacity="0.8"/>
+<text x="-62.0" y="-34.5" font-size="13" font-weight="700" fill="#60a5fa" text-anchor="middle">꼭짓점</text>
+<line x1="-34.5" y1="-35.6" x2="-5.0" y2="-32.9" stroke="#60a5fa" stroke-width="1.4" stroke-dasharray="4,3" opacity="0.8"/>
+<text x="0.0" y="146.6" font-size="12" font-weight="700" fill="#9aa7bd" text-anchor="middle">삼각뿔 A-BCD : 면 4개 → 사면체</text>
+</svg>
+</div>
+<div class="box box-blue"><div class="box-title">💡 '변'이 '모서리'가 되는 순간</div>
+  삼각형 ACD만 따로 떼어 놓고 보면 선분 CD는 그 삼각형의 <strong>변</strong>이에요. 그런데 이 삼각형이
+  입체도형의 한 면이 되는 순간, 선분 CD는 두 면이 만나서 생긴 선이므로 <strong>모서리</strong>가 됩니다.
+  같은 선분인데 <strong>평면으로 보느냐 입체로 보느냐</strong>에 따라 이름이 바뀌는 거예요.</div>
+<div class="box box-orange"><div class="box-title">🏆 같은 도형인데 이름이 두 개 — 관점의 차이</div>
+  위 그림의 도형은 면이 4개니까 <strong>사면체</strong>예요. 동시에 밑면이 삼각형이고 옆면이 한 점에서 모이니까
+  <strong>삼각뿔</strong>이기도 하죠. 둘은 <strong>같은 도형을 다른 관점에서 부른 이름</strong>입니다.
+  <ul style="margin:8px 0 0">
+    <li><strong>면의 개수</strong>로 부르기 → 사면체 · 오면체 · 육면체 …</li>
+    <li><strong>모양</strong>으로 부르기 → 삼각뿔 · 사각기둥 · 오각뿔대 …</li>
+  </ul>
+  '삼각뿔인데 왜 사면체지? 3과 4가 다르잖아' 하는 혼동은 <strong>세는 대상이 다르기 때문</strong>에 생기는 거예요.
+  다만 <strong>거꾸로는 성립하지 않아요</strong> — 사면체는 언제나 삼각뿔이지만, 육면체가 모두 사각기둥인 것은 아닙니다.</div>
+<div class="box box-red"><div class="box-title">⚠️ '몇 면체'는 한글로 쓴다</div>
+  '몇 면체인가?'를 물으면 답은 <strong>칠면체</strong>처럼 한글로 씁니다. 숫자를 섞어 '7면체'라고 쓰면
+  오답 처리하는 학교가 많으니 습관을 들여 두세요.</div>
+    <div class="quiz" data-qid="b3" data-ans="4" data-type="num">
+      <div class="quiz-q">Q. 삼각뿔은 몇 면체인가요? (숫자만)</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b4" data-ans="모서리" data-type="text">
+      <div class="quiz-q">Q. 입체도형에서 두 면이 만나서 생기는 선분을 무엇이라 하나요?</div>
+      <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s3">
+    <div class="section-head"><span class="section-num">3</span><span class="section-title">각기둥 — 밑면은 두 개다</span>
+      <button class="complete-btn" onclick="toggleDone('s3')">완료하기</button></div>
+
+<p>다면체를 <strong>모양의 관점</strong>에서 나누면 크게 <strong>각기둥 · 각뿔 · 각뿔대</strong> 세 가지예요. 먼저 각기둥부터 봅니다.</p>
+<div class="box box-green"><div class="box-title">🔑 각기둥이란</div>
+  밑면 하나를 정한 뒤, <strong>그 밑면과 합동인 도형을 수직으로 쌓아 올려</strong> 만든 입체도형이 각기둥이에요.
+  밑면이 n각형이면 <strong>n각기둥</strong>이라고 부릅니다.</div>
+<div class="diagram-wrap" style="max-width:460px;margin:16px auto">
+<svg viewBox="-95.2 -63.0 441.3 223.6" xmlns="http://www.w3.org/2000/svg">
+<line x1="-49.7" y1="59.2" x2="-15.2" y2="37.0" stroke="#34d399" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="-15.2" y1="37.0" x2="49.7" y2="48.8" stroke="#34d399" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="-15.2" y1="37.0" x2="-15.2" y2="-51.0" stroke="#34d399" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="15.2" y1="71.0" x2="-49.7" y2="59.2" stroke="#34d399" stroke-width="2.0"/>
+<line x1="15.2" y1="71.0" x2="49.7" y2="48.8" stroke="#34d399" stroke-width="2.0"/>
+<line x1="15.2" y1="71.0" x2="15.2" y2="-16.9" stroke="#34d399" stroke-width="2.0"/>
+<line x1="-49.7" y1="59.2" x2="-49.7" y2="-28.8" stroke="#34d399" stroke-width="2.0"/>
+<line x1="49.7" y1="48.8" x2="49.7" y2="-39.2" stroke="#34d399" stroke-width="2.0"/>
+<line x1="15.2" y1="-16.9" x2="-49.7" y2="-28.8" stroke="#34d399" stroke-width="2.0"/>
+<line x1="15.2" y1="-16.9" x2="49.7" y2="-39.2" stroke="#34d399" stroke-width="2.0"/>
+<line x1="-49.7" y1="-28.8" x2="-15.2" y2="-51.0" stroke="#34d399" stroke-width="2.0"/>
+<line x1="-15.2" y1="-51.0" x2="49.7" y2="-39.2" stroke="#34d399" stroke-width="2.0"/>
+<text x="0.0" y="128.0" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle">밑면과 합동인 면을 수직으로</text>
+<text x="0.0" y="146.0" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle">쌓아 올림 → 각기둥 O</text>
+<line x1="200.3" y1="59.2" x2="234.8" y2="37.0" stroke="#f87171" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="234.8" y1="37.0" x2="299.7" y2="48.8" stroke="#f87171" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="234.8" y1="37.0" x2="269.2" y2="-44.7" stroke="#f87171" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="265.2" y1="71.0" x2="200.3" y2="59.2" stroke="#f87171" stroke-width="2.0"/>
+<line x1="265.2" y1="71.0" x2="299.7" y2="48.8" stroke="#f87171" stroke-width="2.0"/>
+<line x1="265.2" y1="71.0" x2="299.6" y2="-10.7" stroke="#f87171" stroke-width="2.0"/>
+<line x1="200.3" y1="59.2" x2="234.7" y2="-22.5" stroke="#f87171" stroke-width="2.0"/>
+<line x1="299.7" y1="48.8" x2="334.2" y2="-32.9" stroke="#f87171" stroke-width="2.0"/>
+<line x1="299.6" y1="-10.7" x2="234.7" y2="-22.5" stroke="#f87171" stroke-width="2.0"/>
+<line x1="299.6" y1="-10.7" x2="334.2" y2="-32.9" stroke="#f87171" stroke-width="2.0"/>
+<line x1="234.7" y1="-22.5" x2="269.2" y2="-44.7" stroke="#f87171" stroke-width="2.0"/>
+<line x1="269.2" y1="-44.7" x2="334.2" y2="-32.9" stroke="#f87171" stroke-width="2.0"/>
+<text x="250.0" y="128.0" font-size="12" font-weight="700" fill="#f87171" text-anchor="middle">기울어져 올라감</text>
+<text x="250.0" y="146.0" font-size="12" font-weight="700" fill="#f87171" text-anchor="middle">→ 각기둥이 아니다 X</text>
+</svg>
+</div>
+<div class="box box-red"><div class="box-title">⚠️ 기울어져 올라가면 기둥이 아니다</div>
+  피사의 사탑을 떠올려 보세요. 층은 똑같이 쌓았지만 <strong>비스듬히</strong> 올라가죠. 그런 모양은
+  각기둥이라고 부르지 않아요. <strong>반드시 수직으로</strong> 쌓아 올려야 각기둥입니다.</div>
+<div class="diagram-wrap" style="max-width:620px;margin:16px auto">
+<svg viewBox="-98.6 -63.0 580.8 252.7" xmlns="http://www.w3.org/2000/svg">
+<polygon points="15.2,-16.5 -49.7,-28.3 -15.2,-50.5 49.7,-38.7" fill="rgba(52,211,153,0.22)" stroke="none"/>
+<line x1="-49.7" y1="57.2" x2="-15.2" y2="35.0" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="-15.2" y1="35.0" x2="49.7" y2="46.8" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="-15.2" y1="35.0" x2="-15.2" y2="-50.5" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="15.2" y1="69.0" x2="-49.7" y2="57.2" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="15.2" y1="69.0" x2="49.7" y2="46.8" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="15.2" y1="69.0" x2="15.2" y2="-16.5" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="-49.7" y1="57.2" x2="-49.7" y2="-28.3" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="49.7" y1="46.8" x2="49.7" y2="-38.7" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="15.2" y1="-16.5" x2="-49.7" y2="-28.3" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="15.2" y1="-16.5" x2="49.7" y2="-38.7" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="-49.7" y1="-28.3" x2="-15.2" y2="-50.5" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="-15.2" y1="-50.5" x2="49.7" y2="-38.7" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="49.7" y1="46.8" x2="-15.2" y2="35.0" stroke="#34d399" stroke-width="2.34" stroke-dasharray="5,4" opacity="0.75"/>
+<line x1="-15.2" y1="35.0" x2="-49.7" y2="57.2" stroke="#34d399" stroke-width="2.34" stroke-dasharray="5,4" opacity="0.75"/>
+<line x1="-49.7" y1="57.2" x2="15.2" y2="69.0" stroke="#34d399" stroke-width="3.0"/>
+<line x1="15.2" y1="69.0" x2="49.7" y2="46.8" stroke="#34d399" stroke-width="3.0"/>
+<line x1="15.2" y1="-16.5" x2="-49.7" y2="-28.3" stroke="#34d399" stroke-width="3.0"/>
+<line x1="-49.7" y1="-28.3" x2="-15.2" y2="-50.5" stroke="#34d399" stroke-width="3.0"/>
+<line x1="-15.2" y1="-50.5" x2="49.7" y2="-38.7" stroke="#34d399" stroke-width="3.0"/>
+<line x1="49.7" y1="-38.7" x2="15.2" y2="-16.5" stroke="#34d399" stroke-width="3.0"/>
+<text x="0.0" y="128.0" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">사각기둥</text>
+<text x="0.0" y="147.0" font-size="11.5" font-weight="700" fill="#9aa7bd" text-anchor="middle">면 6 · 모서리 12 · 꼭짓점 8</text>
+<polygon points="212.8,-17.5 152.6,-21.2 144.1,-41.9 199.0,-51.0 241.5,-36.0" fill="rgba(52,211,153,0.22)" stroke="none"/>
+<line x1="144.1" y1="43.7" x2="199.0" y2="34.5" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="199.0" y1="34.5" x2="241.5" y2="49.5" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="199.0" y1="34.5" x2="199.0" y2="-51.0" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="212.8" y1="68.0" x2="152.6" y2="64.4" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="212.8" y1="68.0" x2="241.5" y2="49.5" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="212.8" y1="68.0" x2="212.8" y2="-17.5" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="152.6" y1="64.4" x2="144.1" y2="43.7" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="152.6" y1="64.4" x2="152.6" y2="-21.2" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="144.1" y1="43.7" x2="144.1" y2="-41.9" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="241.5" y1="49.5" x2="241.5" y2="-36.0" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="212.8" y1="-17.5" x2="152.6" y2="-21.2" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="212.8" y1="-17.5" x2="241.5" y2="-36.0" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="152.6" y1="-21.2" x2="144.1" y2="-41.9" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="144.1" y1="-41.9" x2="199.0" y2="-51.0" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="199.0" y1="-51.0" x2="241.5" y2="-36.0" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="241.5" y1="49.5" x2="199.0" y2="34.5" stroke="#34d399" stroke-width="2.34" stroke-dasharray="5,4" opacity="0.75"/>
+<line x1="199.0" y1="34.5" x2="144.1" y2="43.7" stroke="#34d399" stroke-width="2.34" stroke-dasharray="5,4" opacity="0.75"/>
+<line x1="144.1" y1="43.7" x2="152.6" y2="64.4" stroke="#34d399" stroke-width="3.0"/>
+<line x1="152.6" y1="64.4" x2="212.8" y2="68.0" stroke="#34d399" stroke-width="3.0"/>
+<line x1="212.8" y1="68.0" x2="241.5" y2="49.5" stroke="#34d399" stroke-width="3.0"/>
+<line x1="212.8" y1="-17.5" x2="152.6" y2="-21.2" stroke="#34d399" stroke-width="3.0"/>
+<line x1="152.6" y1="-21.2" x2="144.1" y2="-41.9" stroke="#34d399" stroke-width="3.0"/>
+<line x1="144.1" y1="-41.9" x2="199.0" y2="-51.0" stroke="#34d399" stroke-width="3.0"/>
+<line x1="199.0" y1="-51.0" x2="241.5" y2="-36.0" stroke="#34d399" stroke-width="3.0"/>
+<line x1="241.5" y1="-36.0" x2="212.8" y2="-17.5" stroke="#34d399" stroke-width="3.0"/>
+<text x="190.0" y="128.0" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">오각기둥</text>
+<text x="190.0" y="147.0" font-size="11.5" font-weight="700" fill="#9aa7bd" text-anchor="middle">면 7 · 모서리 15 · 꼭짓점 10</text>
+<polygon points="407.6,-18.4 355.6,-17.8 328.0,-32.9 352.4,-48.6 404.4,-49.2 432.0,-34.1" fill="rgba(52,211,153,0.22)" stroke="none"/>
+<line x1="328.0" y1="52.6" x2="352.4" y2="36.9" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="352.4" y1="36.9" x2="404.4" y2="36.3" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="352.4" y1="36.9" x2="352.4" y2="-48.6" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="404.4" y1="36.3" x2="432.0" y2="51.4" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="404.4" y1="36.3" x2="404.4" y2="-49.2" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="407.6" y1="67.1" x2="355.6" y2="67.7" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="407.6" y1="67.1" x2="432.0" y2="51.4" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="407.6" y1="67.1" x2="407.6" y2="-18.4" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="355.6" y1="67.7" x2="328.0" y2="52.6" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="355.6" y1="67.7" x2="355.6" y2="-17.8" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="328.0" y1="52.6" x2="328.0" y2="-32.9" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="432.0" y1="51.4" x2="432.0" y2="-34.1" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="407.6" y1="-18.4" x2="355.6" y2="-17.8" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="407.6" y1="-18.4" x2="432.0" y2="-34.1" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="355.6" y1="-17.8" x2="328.0" y2="-32.9" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="328.0" y1="-32.9" x2="352.4" y2="-48.6" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="352.4" y1="-48.6" x2="404.4" y2="-49.2" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="404.4" y1="-49.2" x2="432.0" y2="-34.1" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="432.0" y1="51.4" x2="404.4" y2="36.3" stroke="#34d399" stroke-width="2.34" stroke-dasharray="5,4" opacity="0.75"/>
+<line x1="404.4" y1="36.3" x2="352.4" y2="36.9" stroke="#34d399" stroke-width="2.34" stroke-dasharray="5,4" opacity="0.75"/>
+<line x1="352.4" y1="36.9" x2="328.0" y2="52.6" stroke="#34d399" stroke-width="2.34" stroke-dasharray="5,4" opacity="0.75"/>
+<line x1="328.0" y1="52.6" x2="355.6" y2="67.7" stroke="#34d399" stroke-width="3.0"/>
+<line x1="355.6" y1="67.7" x2="407.6" y2="67.1" stroke="#34d399" stroke-width="3.0"/>
+<line x1="407.6" y1="67.1" x2="432.0" y2="51.4" stroke="#34d399" stroke-width="3.0"/>
+<line x1="407.6" y1="-18.4" x2="355.6" y2="-17.8" stroke="#34d399" stroke-width="3.0"/>
+<line x1="355.6" y1="-17.8" x2="328.0" y2="-32.9" stroke="#34d399" stroke-width="3.0"/>
+<line x1="328.0" y1="-32.9" x2="352.4" y2="-48.6" stroke="#34d399" stroke-width="3.0"/>
+<line x1="352.4" y1="-48.6" x2="404.4" y2="-49.2" stroke="#34d399" stroke-width="3.0"/>
+<line x1="404.4" y1="-49.2" x2="432.0" y2="-34.1" stroke="#34d399" stroke-width="3.0"/>
+<line x1="432.0" y1="-34.1" x2="407.6" y2="-18.4" stroke="#34d399" stroke-width="3.0"/>
+<text x="380.0" y="128.0" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">육각기둥</text>
+<text x="380.0" y="147.0" font-size="11.5" font-weight="700" fill="#9aa7bd" text-anchor="middle">면 8 · 모서리 18 · 꼭짓점 12</text>
+<text x="190.0" y="175.0" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle">위·아래 두 면이 모두 밑면 — 합동이고 서로 평행하다</text>
+</svg>
+</div>
+<div class="box box-red"><div class="box-title">⚠️ 가장 많이 틀리는 것 — 밑면은 2개</div>
+  각기둥에서 <strong>밑면은 두 개</strong>입니다. 위에 있다고 해서 '윗면'이라고 부르지 않아요. 위·아래 두 면 모두 <strong>밑면</strong>이고,
+  이 두 밑면은 <strong>서로 합동이면서 평행</strong>합니다. 옆면은 전부 <strong>직사각형</strong>이에요.</div>
+<div class="box box-orange"><div class="box-title">🏆 개수 공식이 나오는 자리</div>
+  n각기둥에서
+  <ul style="margin:8px 0 0">
+    <li>면 = 옆면 n개 + 밑면 2개 = <strong>n + 2</strong></li>
+    <li>모서리 = 아래 밑면 n개 + 위 밑면 n개 + 세로로 잇는 n개 = <strong>3n</strong></li>
+    <li>꼭짓점 = 아래 n개 + 위 n개 = <strong>2n</strong></li>
+  </ul>
+  공식을 통째로 외우기보다 <strong>어디서 나온 n인가</strong>를 따라가면 시험장에서 헷갈리지 않아요.</div>
+    <div class="quiz" data-qid="b5" data-ans="7" data-type="num">
+      <div class="quiz-q">Q. 오각기둥의 면의 개수는?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b6" data-ans="2" data-type="num">
+      <div class="quiz-q">Q. 각기둥에서 밑면은 모두 몇 개인가요?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s4">
+    <div class="section-head"><span class="section-num">4</span><span class="section-title">각뿔 — 한 점에서 모인다</span>
+      <button class="complete-btn" onclick="toggleDone('s4')">완료하기</button></div>
+
+<p>각기둥이 '합동인 면을 수직으로 쌓은 것'이라면, 각뿔은 <strong>한 점으로 모으는 것</strong>입니다.</p>
+<div class="box box-green"><div class="box-title">🔑 각뿔이란</div>
+  밑면 하나를 정한 뒤, 밑면의 꼭짓점들이 모두 <strong>한 점에서 모이도록</strong> 올린 입체도형이 각뿔이에요.
+  밑면이 n각형이면 <strong>n각뿔</strong>입니다.</div>
+<div class="diagram-wrap" style="max-width:620px;margin:16px auto">
+<svg viewBox="-95.0 -36.9 573.6 226.6" xmlns="http://www.w3.org/2000/svg">
+<line x1="-50.2" y1="67.2" x2="-15.3" y2="44.8" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="-15.3" y1="44.8" x2="50.2" y2="56.8" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="-15.3" y1="44.8" x2="0.0" y2="-24.9" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="15.3" y1="79.2" x2="-50.2" y2="67.2" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="15.3" y1="79.2" x2="50.2" y2="56.8" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="15.3" y1="79.2" x2="0.0" y2="-24.9" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="-50.2" y1="67.2" x2="0.0" y2="-24.9" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="50.2" y1="56.8" x2="0.0" y2="-24.9" stroke="#e7ecf3" stroke-width="2.0"/>
+<text x="0.0" y="128.0" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">사각뿔</text>
+<text x="0.0" y="147.0" font-size="11.5" font-weight="700" fill="#9aa7bd" text-anchor="middle">면 5 · 모서리 8 · 꼭짓점 5</text>
+<line x1="143.6" y1="53.6" x2="199.1" y2="44.3" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="199.1" y1="44.3" x2="242.0" y2="59.5" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="199.1" y1="44.3" x2="190.0" y2="-24.9" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="213.0" y1="78.1" x2="152.2" y2="74.5" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="213.0" y1="78.1" x2="242.0" y2="59.5" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="213.0" y1="78.1" x2="190.0" y2="-24.9" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="152.2" y1="74.5" x2="143.6" y2="53.6" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="152.2" y1="74.5" x2="190.0" y2="-24.9" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="143.6" y1="53.6" x2="190.0" y2="-24.9" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="242.0" y1="59.5" x2="190.0" y2="-24.9" stroke="#e7ecf3" stroke-width="2.0"/>
+<text x="190.0" y="128.0" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">오각뿔</text>
+<text x="190.0" y="147.0" font-size="11.5" font-weight="700" fill="#9aa7bd" text-anchor="middle">면 6 · 모서리 10 · 꼭짓점 6</text>
+<line x1="327.5" y1="62.6" x2="352.2" y2="46.8" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="352.2" y1="46.8" x2="404.6" y2="46.1" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="352.2" y1="46.8" x2="380.0" y2="-24.9" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="404.6" y1="46.1" x2="432.5" y2="61.4" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="404.6" y1="46.1" x2="380.0" y2="-24.9" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="407.8" y1="77.2" x2="355.4" y2="77.9" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="407.8" y1="77.2" x2="432.5" y2="61.4" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="407.8" y1="77.2" x2="380.0" y2="-24.9" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="355.4" y1="77.9" x2="327.5" y2="62.6" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="355.4" y1="77.9" x2="380.0" y2="-24.9" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="327.5" y1="62.6" x2="380.0" y2="-24.9" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="432.5" y1="61.4" x2="380.0" y2="-24.9" stroke="#e7ecf3" stroke-width="2.0"/>
+<text x="380.0" y="128.0" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">육각뿔</text>
+<text x="380.0" y="147.0" font-size="11.5" font-weight="700" fill="#9aa7bd" text-anchor="middle">면 7 · 모서리 12 · 꼭짓점 7</text>
+<text x="190.0" y="175.0" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle">밑면은 하나 — 옆면은 모두 삼각형이고 한 점에서 만난다</text>
+</svg>
+</div>
+<div class="box box-orange"><div class="box-title">🏆 개수 공식이 나오는 자리</div>
+  n각뿔에서
+  <ul style="margin:8px 0 0">
+    <li>면 = 옆면 n개 + 밑면 1개 = <strong>n + 1</strong></li>
+    <li>모서리 = 밑면의 n개 + 꼭대기로 올라가는 n개 = <strong>2n</strong></li>
+    <li>꼭짓점 = 밑면의 n개 + 꼭대기 1개 = <strong>n + 1</strong></li>
+  </ul>
+  각뿔은 <strong>면의 개수와 꼭짓점의 개수가 서로 같다</strong>는 점이 특징이에요 — 각기둥·각뿔대에는 없는 성질입니다.</div>
+<div class="box box-blue"><div class="box-title">💡 옆면은 언제나 삼각형</div>
+  밑면의 한 변과 꼭대기 점 하나가 만나 옆면 하나를 만들기 때문에, 각뿔의 옆면은 <strong>예외 없이 삼각형</strong>이에요.
+  밑면은 <strong>하나뿐</strong>이라는 점도 각기둥과 다른 부분입니다.</div>
+    <div class="quiz" data-qid="b7" data-ans="12" data-type="num">
+      <div class="quiz-q">Q. 육각뿔의 모서리의 개수는?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b8" data-ans="8" data-type="num">
+      <div class="quiz-q">Q. 칠각뿔은 몇 면체인가요? (숫자만)</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s5">
+    <div class="section-head"><span class="section-num">5</span><span class="section-title">각뿔대 — 뿔을 평행하게 자른다</span>
+      <button class="complete-btn" onclick="toggleDone('s5')">완료하기</button></div>
+
+<p>세 번째 모양은 <strong>각뿔대</strong>예요. 이름 그대로 '뿔의 <strong>받침대</strong>' 부분입니다.</p>
+<div class="box box-green"><div class="box-title">🔑 각뿔대 만드는 법 (순서가 곧 정의다)</div>
+  ① 각뿔을 하나 만든다 → ② <strong>밑면과 평행한 평면</strong>으로 자른다 → ③ 위쪽의 작은 각뿔을 버린다.<br>
+  이렇게 해서 남은 아래쪽 도형이 <strong>각뿔대</strong>예요. 밑면이 n각형이면 <strong>n각뿔대</strong>입니다.</div>
+<div class="diagram-wrap" style="max-width:500px;margin:16px auto">
+<svg viewBox="-110.9 -44.4 459.8 208.9" xmlns="http://www.w3.org/2000/svg">
+<line x1="-54.2" y1="69.7" x2="-16.6" y2="45.5" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="-16.6" y1="45.5" x2="54.2" y2="58.3" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="-16.6" y1="45.5" x2="0.0" y2="-32.4" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="16.6" y1="82.5" x2="-54.2" y2="69.7" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="16.6" y1="82.5" x2="54.2" y2="58.3" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="16.6" y1="82.5" x2="0.0" y2="-32.4" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="-54.2" y1="69.7" x2="0.0" y2="-32.4" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="54.2" y1="58.3" x2="0.0" y2="-32.4" stroke="#e7ecf3" stroke-width="2.0"/>
+<polygon points="8.6,27.4 -28.2,20.7 -8.6,8.1 28.2,14.8" fill="rgba(251,191,36,0.16)" stroke="#fbbf24" stroke-width="2.0" stroke-dasharray="6,4"/>
+<text x="0.0" y="128.0" font-size="12" font-weight="700" fill="#fbbf24" text-anchor="middle">① 각뿔을 밑면과 평행하게 자른다</text>
+<polygon points="258.6,27.4 221.8,20.7 241.4,8.1 278.2,14.8" fill="rgba(52,211,153,0.2)" stroke="none"/>
+<line x1="195.8" y1="69.7" x2="233.4" y2="45.5" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="233.4" y1="45.5" x2="304.2" y2="58.3" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="233.4" y1="45.5" x2="241.4" y2="8.1" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="266.6" y1="82.5" x2="195.8" y2="69.7" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="266.6" y1="82.5" x2="304.2" y2="58.3" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="266.6" y1="82.5" x2="258.6" y2="27.4" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="195.8" y1="69.7" x2="221.8" y2="20.7" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="304.2" y1="58.3" x2="278.2" y2="14.8" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="258.6" y1="27.4" x2="221.8" y2="20.7" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="258.6" y1="27.4" x2="278.2" y2="14.8" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="221.8" y1="20.7" x2="241.4" y2="8.1" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="241.4" y1="8.1" x2="278.2" y2="14.8" stroke="#e7ecf3" stroke-width="2.0"/>
+<text x="250.0" y="128.0" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle">② 위쪽 각뿔을 버리면 각뿔대</text>
+<text x="125.0" y="150.0" font-size="11.5" font-weight="700" fill="#9aa7bd" text-anchor="middle">두 밑면은 서로 평행하지만 크기가 달라 합동이 아니다 · 옆면은 사다리꼴</text>
+</svg>
+</div>
+<div class="box box-red"><div class="box-title">⚠️ 아무렇게나 자르면 각뿔대가 아니다</div>
+  자르는 방향이 조건입니다. <strong>반드시 밑면과 평행하게</strong> 잘라야 해요.
+  비스듬히 자른 도형은 각뿔대라고 부르지 않습니다.</div>
+<div class="box box-orange"><div class="box-title">🏆 각뿔대의 세 가지 성질</div>
+  <ul style="margin:6px 0 0">
+    <li>밑면이 <strong>2개</strong>(위·아래)이고 서로 <strong>평행</strong>하다.</li>
+    <li>두 밑면은 모양은 같지만 <strong>크기가 달라 합동이 아니다</strong> — 각기둥과 갈리는 결정적 차이.</li>
+    <li>옆면은 전부 <strong>사다리꼴</strong>이다.</li>
+  </ul></div>
+<div class="box box-blue"><div class="box-title">💡 개수는 각기둥과 완전히 똑같다</div>
+  한 점으로 모이려다 <strong>중간에 멈춘 것</strong>이 각뿔대예요. 위쪽 꼭짓점들이 하나로 합쳐지지 않았으니,
+  세는 방식은 각기둥과 같아집니다 — 면 <strong>n + 2</strong>, 모서리 <strong>3n</strong>, 꼭짓점 <strong>2n</strong>.</div>
+    <div class="quiz" data-qid="b9" data-ans="사다리꼴" data-type="text">
+      <div class="quiz-q">Q. 각뿔대의 옆면의 모양은?</div>
+      <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b10" data-ans="8" data-type="num">
+      <div class="quiz-q">Q. 사각뿔대의 꼭짓점의 개수는?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s6">
+    <div class="section-head"><span class="section-num">6</span><span class="section-title">개수 총정리와 거꾸로 찾기</span>
+      <button class="complete-btn" onclick="toggleDone('s6')">완료하기</button></div>
+
+<p>세 도형을 나란히 놓고 개수를 정리해 봅시다. 시험에 나오는 계산은 결국 이 표 한 장에서 나와요.</p>
+<div class="diagram-wrap" style="max-width:620px;margin:16px auto">
+<svg viewBox="-104 -48.8 525.9 251.6" xmlns="http://www.w3.org/2000/svg">
+<line x1="-42.4" y1="48.3" x2="8.3" y2="39.8" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="8.3" y1="39.8" x2="47.5" y2="53.7" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="8.3" y1="39.8" x2="8.3" y2="-36.8" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="21.0" y1="70.8" x2="-34.5" y2="67.4" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="21.0" y1="70.8" x2="47.5" y2="53.7" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="21.0" y1="70.8" x2="21.0" y2="-5.9" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="-34.5" y1="67.4" x2="-42.4" y2="48.3" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="-34.5" y1="67.4" x2="-34.5" y2="-9.3" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="-42.4" y1="48.3" x2="-42.4" y2="-28.4" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="47.5" y1="53.7" x2="47.5" y2="-23.0" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="21.0" y1="-5.9" x2="-34.5" y2="-9.3" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="21.0" y1="-5.9" x2="47.5" y2="-23.0" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="-34.5" y1="-9.3" x2="-42.4" y2="-28.4" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="-42.4" y1="-28.4" x2="8.3" y2="-36.8" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="8.3" y1="-36.8" x2="47.5" y2="-23.0" stroke="#e7ecf3" stroke-width="2.0"/>
+<text x="0.0" y="122.0" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">오각기둥</text>
+<line x1="135.5" y1="47.9" x2="188.8" y2="39.0" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="188.8" y1="39.0" x2="229.9" y2="53.6" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="188.8" y1="39.0" x2="180.0" y2="-27.4" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="202.1" y1="71.5" x2="143.7" y2="68.0" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="202.1" y1="71.5" x2="229.9" y2="53.6" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="202.1" y1="71.5" x2="180.0" y2="-27.4" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="143.7" y1="68.0" x2="135.5" y2="47.9" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="143.7" y1="68.0" x2="180.0" y2="-27.4" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="135.5" y1="47.9" x2="180.0" y2="-27.4" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="229.9" y1="53.6" x2="180.0" y2="-27.4" stroke="#e7ecf3" stroke-width="2.0"/>
+<text x="180.0" y="122.0" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">오각뿔</text>
+<line x1="315.5" y1="47.9" x2="368.8" y2="39.0" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="368.8" y1="39.0" x2="409.9" y2="53.6" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="368.8" y1="39.0" x2="365.0" y2="-16.8" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="382.1" y1="71.5" x2="323.7" y2="68.0" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="382.1" y1="71.5" x2="409.9" y2="53.6" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="382.1" y1="71.5" x2="372.6" y2="1.7" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="323.7" y1="68.0" x2="315.5" y2="47.9" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="323.7" y1="68.0" x2="339.3" y2="-0.3" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="315.5" y1="47.9" x2="334.6" y2="-11.8" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="409.9" y1="53.6" x2="388.5" y2="-8.5" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="372.6" y1="1.7" x2="339.3" y2="-0.3" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="372.6" y1="1.7" x2="388.5" y2="-8.5" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="339.3" y1="-0.3" x2="334.6" y2="-11.8" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="334.6" y1="-11.8" x2="365.0" y2="-16.8" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="365.0" y1="-16.8" x2="388.5" y2="-8.5" stroke="#e7ecf3" stroke-width="2.0"/>
+<text x="360.0" y="122.0" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">오각뿔대</text>
+<text x="-92.0" y="148.0" font-size="12" font-weight="700" fill="#9aa7bd" text-anchor="start">면</text>
+<text x="0.0" y="148.0" font-size="12.5" font-weight="700" fill="#34d399" text-anchor="middle">n + 2</text>
+<text x="180.0" y="148.0" font-size="12.5" font-weight="700" fill="#34d399" text-anchor="middle">n + 1</text>
+<text x="360.0" y="148.0" font-size="12.5" font-weight="700" fill="#34d399" text-anchor="middle">n + 2</text>
+<text x="-92.0" y="168.0" font-size="12" font-weight="700" fill="#9aa7bd" text-anchor="start">모서리</text>
+<text x="0.0" y="168.0" font-size="12.5" font-weight="700" fill="#fbbf24" text-anchor="middle">3n</text>
+<text x="180.0" y="168.0" font-size="12.5" font-weight="700" fill="#fbbf24" text-anchor="middle">2n</text>
+<text x="360.0" y="168.0" font-size="12.5" font-weight="700" fill="#fbbf24" text-anchor="middle">3n</text>
+<text x="-92.0" y="188.0" font-size="12" font-weight="700" fill="#9aa7bd" text-anchor="start">꼭짓점</text>
+<text x="0.0" y="188.0" font-size="12.5" font-weight="700" fill="#60a5fa" text-anchor="middle">2n</text>
+<text x="180.0" y="188.0" font-size="12.5" font-weight="700" fill="#60a5fa" text-anchor="middle">n + 1</text>
+<text x="360.0" y="188.0" font-size="12.5" font-weight="700" fill="#60a5fa" text-anchor="middle">2n</text>
+</svg>
+</div>
+<div class="table-wrap"><table class="special-table">
+  <tr><th>n각형이 밑면일 때</th><th>n각기둥</th><th>n각뿔</th><th>n각뿔대</th></tr>
+  <tr><td>밑면의 개수</td><td>2</td><td>1</td><td>2</td></tr>
+  <tr><td>옆면의 모양</td><td>직사각형</td><td>삼각형</td><td>사다리꼴</td></tr>
+  <tr><td>면의 개수</td><td>n + 2</td><td>n + 1</td><td>n + 2</td></tr>
+  <tr><td>모서리의 개수</td><td>3n</td><td>2n</td><td>3n</td></tr>
+  <tr><td>꼭짓점의 개수</td><td>2n</td><td>n + 1</td><td>2n</td></tr>
+</table></div>
+<div class="box box-orange"><div class="box-title">🏆 시험 단골 — 거꾸로 찾기</div>
+  '칠면체인 각뿔은 몇 각뿔인가?'처럼 <strong>개수를 주고 도형을 찾는</strong> 문제가 매년 나와요.
+  표의 식을 그대로 방정식으로 놓으면 끝납니다.
+  <ul style="margin:8px 0 0">
+    <li>칠면체인 각뿔 → n + 1 = 7 → n = 6 → <strong>육각뿔</strong></li>
+    <li>모서리가 21개인 각기둥 → 3n = 21 → n = 7 → <strong>칠각기둥</strong></li>
+    <li>꼭짓점이 16개인 각뿔대 → 2n = 16 → n = 8 → <strong>팔각뿔대</strong></li>
+  </ul></div>
+<div class="box box-red"><div class="box-title">⚠️ 개수만으로는 각기둥과 각뿔대를 구별할 수 없다</div>
+  표를 보면 각기둥과 각뿔대는 면·모서리·꼭짓점 개수가 <strong>완전히 같아요</strong>. 그래서 문제에는
+  '두 밑면이 평행하다', '옆면이 사다리꼴이다' 같은 <strong>모양 조건</strong>이 반드시 함께 주어집니다.
+  조건을 흘려 읽으면 답이 갈려요.</div>
+    <div class="quiz" data-qid="b11" data-ans="7" data-type="num">
+      <div class="quiz-q">Q. 모서리의 개수가 21개인 각기둥은 몇 각기둥인가요? (숫자만)</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">3n = 21</div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b12" data-ans="11" data-type="num">
+      <div class="quiz-q">Q. 구각뿔대는 몇 면체인가요? (숫자만)</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s7">
+    <div class="section-head"><span class="section-num">7</span><span class="section-title">정다면체 — 두 조건과 다섯 가지</span>
+      <button class="complete-btn" onclick="toggleDone('s7')">완료하기</button></div>
+
+<div class="box box-blue"><div class="box-title">💡 먼저 복습 — 정다각형의 정의</div>
+  5단원에서 배웠죠. 정다각형은 <strong>모든 변의 길이가 같고</strong>, <strong>동시에 모든 내각의 크기가 같은</strong> 다각형이에요.
+  조건이 <strong>둘</strong>이라는 점이 핵심이었습니다(마름모는 변만 같고, 직사각형은 각만 같아서 정사각형이 아니죠).
+  정다면체도 똑같이 <strong>조건이 두 개</strong>예요.</div>
+<div class="box box-green"><div class="box-title">🔑 정다면체의 두 조건</div>
+  ① <strong>모든 면이 합동인 정다각형</strong>이다.<br>
+  ② <strong>각 꼭짓점에 모인 면의 개수가 모두 같다</strong>.<br>
+  이 둘을 <strong>동시에</strong> 만족하는 다면체만 정다면체라고 부릅니다.</div>
+<div class="box box-red"><div class="box-title">⚠️ 조건 하나만으로는 안 된다</div>
+  정삼각뿔 두 개를 밑면끼리 붙인 도형을 생각해 보세요. 면이 <strong>합동인 정삼각형 6개</strong>라 ①은 만족해요.
+  그런데 위·아래 뾰족한 두 꼭짓점에는 면이 3개, 가운데 띠를 이루는 세 꼭짓점에는 면이 4개 모여 있어서
+  ②가 깨집니다. 그래서 이 도형은 <strong>정다면체가 아니에요</strong>.</div>
+<div class="diagram-wrap" style="max-width:680px;margin:16px auto">
+<svg viewBox="-108 -52.0 655.9 173.5" xmlns="http://www.w3.org/2000/svg">
+<line x1="31.1" y1="18.9" x2="-10.1" y2="-31.6" stroke="#e7ecf3" stroke-width="1.326" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="10.1" y1="-12.4" x2="31.1" y2="18.9" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="10.1" y1="-12.4" x2="-10.1" y2="-31.6" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="10.1" y1="-12.4" x2="-31.1" y2="25.1" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="31.1" y1="18.9" x2="-31.1" y2="25.1" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="-10.1" y1="-31.6" x2="-31.1" y2="25.1" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="113.9" y1="12.4" x2="92.9" y2="25.1" stroke="#e7ecf3" stroke-width="1.326" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="113.9" y1="12.4" x2="113.9" y2="-31.6" stroke="#e7ecf3" stroke-width="1.326" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="113.9" y1="12.4" x2="155.1" y2="18.9" stroke="#e7ecf3" stroke-width="1.326" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="92.9" y1="25.1" x2="92.9" y2="-18.9" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="92.9" y1="25.1" x2="134.1" y2="31.6" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="113.9" y1="-31.6" x2="92.9" y2="-18.9" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="113.9" y1="-31.6" x2="155.1" y2="-25.1" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="92.9" y1="-18.9" x2="134.1" y2="-12.4" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="155.1" y1="18.9" x2="134.1" y2="31.6" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="155.1" y1="18.9" x2="155.1" y2="-25.1" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="134.1" y1="31.6" x2="134.1" y2="-12.4" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="155.1" y1="-25.1" x2="134.1" y2="-12.4" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="285.5" y1="5.9" x2="267.1" y2="-11.6" stroke="#e7ecf3" stroke-width="1.326" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="210.5" y1="-5.9" x2="267.1" y2="-11.6" stroke="#e7ecf3" stroke-width="1.326" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="248.0" y1="-40.0" x2="267.1" y2="-11.6" stroke="#e7ecf3" stroke-width="1.326" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="248.0" y1="40.0" x2="267.1" y2="-11.6" stroke="#e7ecf3" stroke-width="1.326" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="285.5" y1="5.9" x2="248.0" y2="-40.0" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="285.5" y1="5.9" x2="248.0" y2="40.0" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="285.5" y1="5.9" x2="228.9" y2="11.6" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="210.5" y1="-5.9" x2="248.0" y2="-40.0" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="210.5" y1="-5.9" x2="248.0" y2="40.0" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="210.5" y1="-5.9" x2="228.9" y2="11.6" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="248.0" y1="-40.0" x2="228.9" y2="11.6" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="248.0" y1="40.0" x2="228.9" y2="11.6" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="361.9" y1="12.4" x2="389.0" y2="3.3" stroke="#e7ecf3" stroke-width="1.326" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="361.9" y1="12.4" x2="359.3" y2="33.6" stroke="#e7ecf3" stroke-width="1.326" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="361.9" y1="12.4" x2="345.1" y2="-9.2" stroke="#e7ecf3" stroke-width="1.326" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="361.9" y1="-31.6" x2="345.1" y2="-9.2" stroke="#e7ecf3" stroke-width="1.326" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="361.9" y1="-31.6" x2="359.3" y2="-37.6" stroke="#e7ecf3" stroke-width="1.326" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="361.9" y1="-31.6" x2="389.0" y2="-23.9" stroke="#e7ecf3" stroke-width="1.326" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="403.1" y1="18.9" x2="389.0" y2="3.3" stroke="#e7ecf3" stroke-width="1.326" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="403.1" y1="-25.1" x2="389.0" y2="-23.9" stroke="#e7ecf3" stroke-width="1.326" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="389.0" y1="3.3" x2="389.0" y2="-23.9" stroke="#e7ecf3" stroke-width="1.326" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="345.1" y1="-9.2" x2="332.2" y2="-1.3" stroke="#e7ecf3" stroke-width="1.326" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="340.9" y1="25.1" x2="359.3" y2="33.6" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="340.9" y1="25.1" x2="355.0" y2="23.9" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="340.9" y1="25.1" x2="332.2" y2="-1.3" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="340.9" y1="-18.9" x2="359.3" y2="-37.6" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="340.9" y1="-18.9" x2="332.2" y2="-1.3" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="340.9" y1="-18.9" x2="355.0" y2="-3.3" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="403.1" y1="18.9" x2="384.7" y2="37.6" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="403.1" y1="18.9" x2="411.8" y2="1.3" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="382.1" y1="31.6" x2="355.0" y2="23.9" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="382.1" y1="31.6" x2="384.7" y2="37.6" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="382.1" y1="31.6" x2="398.9" y2="9.2" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="403.1" y1="-25.1" x2="411.8" y2="1.3" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="403.1" y1="-25.1" x2="384.7" y2="-33.6" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="382.1" y1="-12.4" x2="355.0" y2="-3.3" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="382.1" y1="-12.4" x2="384.7" y2="-33.6" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="382.1" y1="-12.4" x2="398.9" y2="9.2" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="359.3" y1="33.6" x2="384.7" y2="37.6" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="355.0" y1="23.9" x2="355.0" y2="-3.3" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="359.3" y1="-37.6" x2="384.7" y2="-33.6" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="411.8" y1="1.3" x2="398.9" y2="9.2" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="511.5" y1="10.6" x2="477.3" y2="29.4" stroke="#e7ecf3" stroke-width="1.326" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="511.5" y1="10.6" x2="475.2" y2="-10.6" stroke="#e7ecf3" stroke-width="1.326" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="511.5" y1="10.6" x2="511.5" y2="-29.4" stroke="#e7ecf3" stroke-width="1.326" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="511.5" y1="10.6" x2="514.7" y2="35.3" stroke="#e7ecf3" stroke-width="1.326" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="511.5" y1="10.6" x2="535.9" y2="-1.0" stroke="#e7ecf3" stroke-width="1.326" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="477.3" y1="29.4" x2="475.2" y2="-10.6" stroke="#e7ecf3" stroke-width="1.326" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="475.2" y1="-10.6" x2="477.3" y2="-35.3" stroke="#e7ecf3" stroke-width="1.326" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="475.2" y1="-10.6" x2="456.1" y2="1.0" stroke="#e7ecf3" stroke-width="1.326" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="475.2" y1="-10.6" x2="511.5" y2="-29.4" stroke="#e7ecf3" stroke-width="1.326" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="477.3" y1="-35.3" x2="511.5" y2="-29.4" stroke="#e7ecf3" stroke-width="1.326" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="511.5" y1="-29.4" x2="535.9" y2="-1.0" stroke="#e7ecf3" stroke-width="1.326" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="511.5" y1="-29.4" x2="514.7" y2="-29.4" stroke="#e7ecf3" stroke-width="1.326" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="477.3" y1="29.4" x2="480.5" y2="29.4" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="477.3" y1="29.4" x2="456.1" y2="1.0" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="477.3" y1="29.4" x2="514.7" y2="35.3" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="480.5" y1="29.4" x2="456.1" y2="1.0" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="480.5" y1="29.4" x2="514.7" y2="35.3" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="480.5" y1="29.4" x2="480.5" y2="-10.6" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="480.5" y1="29.4" x2="516.8" y2="10.6" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="477.3" y1="-35.3" x2="456.1" y2="1.0" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="477.3" y1="-35.3" x2="480.5" y2="-10.6" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="477.3" y1="-35.3" x2="514.7" y2="-29.4" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="456.1" y1="1.0" x2="480.5" y2="-10.6" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="514.7" y1="35.3" x2="535.9" y2="-1.0" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="514.7" y1="35.3" x2="516.8" y2="10.6" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="535.9" y1="-1.0" x2="514.7" y2="-29.4" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="535.9" y1="-1.0" x2="516.8" y2="10.6" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="480.5" y1="-10.6" x2="514.7" y2="-29.4" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="480.5" y1="-10.6" x2="516.8" y2="10.6" stroke="#e7ecf3" stroke-width="1.7"/>
+<line x1="514.7" y1="-29.4" x2="516.8" y2="10.6" stroke="#e7ecf3" stroke-width="1.7"/>
+<text x="0.0" y="66.0" font-size="12.5" font-weight="700" fill="#e7ecf3" text-anchor="middle">정사면체</text>
+<text x="124.0" y="66.0" font-size="12.5" font-weight="700" fill="#e7ecf3" text-anchor="middle">정육면체</text>
+<text x="248.0" y="66.0" font-size="12.5" font-weight="700" fill="#e7ecf3" text-anchor="middle">정팔면체</text>
+<text x="372.0" y="66.0" font-size="12.5" font-weight="700" fill="#e7ecf3" text-anchor="middle">정십이면체</text>
+<text x="496.0" y="66.0" font-size="12.5" font-weight="700" fill="#e7ecf3" text-anchor="middle">정이십면체</text>
+<text x="-96.0" y="88.0" font-size="11.5" font-weight="700" fill="#9aa7bd" text-anchor="start">면의 모양</text>
+<text x="0.0" y="88.0" font-size="11.5" font-weight="700" fill="#c4b5fd" text-anchor="middle">정삼각형</text>
+<text x="124.0" y="88.0" font-size="11.5" font-weight="700" fill="#c4b5fd" text-anchor="middle">정사각형</text>
+<text x="248.0" y="88.0" font-size="11.5" font-weight="700" fill="#c4b5fd" text-anchor="middle">정삼각형</text>
+<text x="372.0" y="88.0" font-size="11.5" font-weight="700" fill="#c4b5fd" text-anchor="middle">정오각형</text>
+<text x="496.0" y="88.0" font-size="11.5" font-weight="700" fill="#c4b5fd" text-anchor="middle">정삼각형</text>
+<text x="-96.0" y="107.0" font-size="11.5" font-weight="700" fill="#9aa7bd" text-anchor="start">한 꼭짓점에</text>
+<text x="0.0" y="107.0" font-size="11.5" font-weight="700" fill="#fbbf24" text-anchor="middle">3개</text>
+<text x="124.0" y="107.0" font-size="11.5" font-weight="700" fill="#fbbf24" text-anchor="middle">3개</text>
+<text x="248.0" y="107.0" font-size="11.5" font-weight="700" fill="#fbbf24" text-anchor="middle">4개</text>
+<text x="372.0" y="107.0" font-size="11.5" font-weight="700" fill="#fbbf24" text-anchor="middle">3개</text>
+<text x="496.0" y="107.0" font-size="11.5" font-weight="700" fill="#fbbf24" text-anchor="middle">5개</text>
+</svg>
+</div>
+<div class="box box-orange"><div class="box-title">🏆 정다면체가 딱 5가지뿐인 이유</div>
+  입체가 만들어지려면 한 꼭짓점에 면이 <strong>최소 3개</strong> 모여야 하고, 그 <strong>각의 합이 360°보다 작아야</strong> 해요.
+  360°가 되면 평평하게 펴져 버려서 접히지 않거든요.</div>
+<div class="diagram-wrap" style="max-width:460px;margin:16px auto">
+<svg viewBox="-97.6 -59.0 405.3 207.7" xmlns="http://www.w3.org/2000/svg">
+<polygon points="0.0,0.0 -26.0,45.0 -52.0,0.0" fill="rgba(52,211,153,0.14)" stroke="#34d399" stroke-width="1.8"/>
+<polygon points="0.0,0.0 -52.0,0.0 -26.0,-45.0" fill="rgba(52,211,153,0.14)" stroke="#34d399" stroke-width="1.8"/>
+<polygon points="0.0,0.0 -26.0,-45.0 26.0,-45.0" fill="rgba(52,211,153,0.14)" stroke="#34d399" stroke-width="1.8"/>
+<polygon points="0.0,0.0 26.0,-45.0 52.0,-0.0" fill="rgba(52,211,153,0.14)" stroke="#34d399" stroke-width="1.8"/>
+<polygon points="0.0,0.0 52.0,-0.0 26.0,45.0" fill="rgba(52,211,153,0.14)" stroke="#34d399" stroke-width="1.8"/>
+<polygon points="0.0,0.0 26.0,45.0 -26.0,45.0" fill="none" stroke="#9aa7bd" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.75"/>
+<text x="0.0" y="37.4" font-size="12" font-weight="700" fill="#9aa7bd" text-anchor="middle">틈</text>
+<circle cx="0.0" cy="0.0" r="3.0" fill="#e7ecf3"/>
+<text x="0.0" y="88.0" font-size="12.5" font-weight="700" fill="#34d399" text-anchor="middle">60° × 5 = 300° < 360°</text>
+<text x="0.0" y="107.0" font-size="11.5" font-weight="700" fill="#9aa7bd" text-anchor="middle">→ 틈이 남아 접을 수 있다</text>
+<polygon points="210.0,0.0 184.0,45.0 158.0,0.0" fill="rgba(248,113,113,0.14)" stroke="#f87171" stroke-width="1.8"/>
+<polygon points="210.0,0.0 158.0,0.0 184.0,-45.0" fill="rgba(248,113,113,0.14)" stroke="#f87171" stroke-width="1.8"/>
+<polygon points="210.0,0.0 184.0,-45.0 236.0,-45.0" fill="rgba(248,113,113,0.14)" stroke="#f87171" stroke-width="1.8"/>
+<polygon points="210.0,0.0 236.0,-45.0 262.0,-0.0" fill="rgba(248,113,113,0.14)" stroke="#f87171" stroke-width="1.8"/>
+<polygon points="210.0,0.0 262.0,-0.0 236.0,45.0" fill="rgba(248,113,113,0.14)" stroke="#f87171" stroke-width="1.8"/>
+<polygon points="210.0,0.0 236.0,45.0 184.0,45.0" fill="rgba(248,113,113,0.14)" stroke="#f87171" stroke-width="1.8"/>
+<circle cx="210.0" cy="0.0" r="3.0" fill="#e7ecf3"/>
+<text x="210.0" y="88.0" font-size="12.5" font-weight="700" fill="#f87171" text-anchor="middle">60° × 6 = 360°</text>
+<text x="210.0" y="107.0" font-size="11.5" font-weight="700" fill="#9aa7bd" text-anchor="middle">→ 평면이 되어 접을 수 없다</text>
+<text x="105.0" y="132.0" font-size="12" font-weight="700" fill="#9aa7bd" text-anchor="middle">한 꼭짓점에 모인 각의 합이 360°보다 작아야 입체가 만들어진다</text>
+</svg>
+</div>
+<div class="table-wrap"><table class="special-table">
+  <tr><th>면의 모양</th><th>한 내각</th><th>3개</th><th>4개</th><th>5개</th><th>6개</th></tr>
+  <tr><td>정삼각형</td><td>60°</td><td>180° ○</td><td>240° ○</td><td>300° ○</td><td>360° ×</td></tr>
+  <tr><td>정사각형</td><td>90°</td><td>270° ○</td><td>360° ×</td><td>—</td><td>—</td></tr>
+  <tr><td>정오각형</td><td>108°</td><td>324° ○</td><td>432° ×</td><td>—</td><td>—</td></tr>
+  <tr><td>정육각형</td><td>120°</td><td>360° ×</td><td>—</td><td>—</td><td>—</td></tr>
+</table></div>
+<p>○ 표시가 붙은 칸이 정확히 <strong>3 + 1 + 1 = 5가지</strong>. 이것이 정다면체가 다섯 개뿐인 이유이고,
+동시에 <strong>정다면체의 면이 될 수 있는 도형은 정삼각형·정사각형·정오각형 세 가지뿐</strong>인 이유이기도 해요.</p>
+    <div class="quiz" data-qid="b13" data-ans="5" data-type="num">
+      <div class="quiz-q">Q. 정다면체는 모두 몇 가지인가요?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b14" data-ans="정십이면체" data-type="text">
+      <div class="quiz-q">Q. 각 면의 모양이 정오각형인 정다면체의 이름은?</div>
+      <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s8">
+    <div class="section-head"><span class="section-num">8</span><span class="section-title">3·3·4·3·5 와 전개도</span>
+      <button class="complete-btn" onclick="toggleDone('s8')">완료하기</button></div>
+
+<p>정다면체 문제에서 학생들이 가장 많이 헤매는 건 <strong>꼭짓점과 모서리의 개수</strong>예요. 그런데 딱 <strong>다섯 숫자</strong>만 외우면 전부 계산으로 나옵니다.</p>
+<div class="formula-big">
+  <div class="f-title">📌 이것만 외우세요</div>
+  <div class="f-body">3 · 3 · 4 · 3 · 5</div>
+  <div style="font-size:13px;margin-top:8px;opacity:.85">정사면체 · 정육면체 · 정팔면체 · 정십이면체 · 정이십면체 순서대로<br>
+  <strong>한 꼭짓점에 모인 면의 개수</strong></div>
+</div>
+<div class="box box-green"><div class="box-title">🔑 두 개의 계산식</div>
+  <p style="margin:4px 0">꼭짓점의 개수 = <strong>(한 면의 꼭짓점 수) × (면의 개수) ÷ (한 꼭짓점에 모인 면의 개수)</strong></p>
+  <p style="margin:4px 0">모서리의 개수 = <strong>(한 면의 변의 수) × (면의 개수) ÷ 2</strong></p></div>
+<div class="box box-blue"><div class="box-title">💡 왜 나누는지 알면 안 외워도 된다</div>
+  정사면체로 확인해 볼게요. 정삼각형 하나에 꼭짓점이 3개, 그런 면이 4개니까 3 × 4 = 12개처럼 보이죠.
+  그런데 <strong>꼭짓점 하나마다 면 3개가 모여</strong> 있으므로 같은 점을 3번씩 센 셈이에요. 그래서 3으로 나눠
+  12 ÷ 3 = <strong>4개</strong>가 됩니다.<br>
+  모서리는 훨씬 쉬워요 — <strong>모든 모서리는 언제나 면 2개가 만나서 생기므로 항상 2로 나눕니다.</strong>
+  밑에 무엇으로 나눌지 계속 바뀌는 건 <strong>꼭짓점</strong>뿐이고, 그래서 3·3·4·3·5가 필요한 거예요.</div>
+<div class="table-wrap"><table class="special-table">
+  <tr><th>정다면체</th><th>면의 모양</th><th>면</th><th>꼭짓점</th><th>모서리</th><th>한 꼭짓점에 모인 면</th></tr>
+  <tr><td>정사면체</td><td>정삼각형</td><td>4</td><td>3×4÷3 = 4</td><td>3×4÷2 = 6</td><td>3</td></tr>
+  <tr><td>정육면체</td><td>정사각형</td><td>6</td><td>4×6÷3 = 8</td><td>4×6÷2 = 12</td><td>3</td></tr>
+  <tr><td>정팔면체</td><td>정삼각형</td><td>8</td><td>3×8÷4 = 6</td><td>3×8÷2 = 12</td><td>4</td></tr>
+  <tr><td>정십이면체</td><td>정오각형</td><td>12</td><td>5×12÷3 = 20</td><td>5×12÷2 = 30</td><td>3</td></tr>
+  <tr><td>정이십면체</td><td>정삼각형</td><td>20</td><td>3×20÷5 = 12</td><td>3×20÷2 = 30</td><td>5</td></tr>
+</table></div>
+<div class="box box-purple"><div class="box-title">🔮 짝을 이루는 정다면체</div>
+  표를 세로로 보면 재미있는 규칙이 보여요. <strong>정육면체(면 6, 꼭짓점 8)</strong>와 <strong>정팔면체(면 8, 꼭짓점 6)</strong>는
+  면과 꼭짓점의 개수가 서로 바뀌어 있죠. 실제로 <strong>정육면체의 각 면의 한가운데 점을 연결하면 정팔면체</strong>가 나옵니다.
+  정십이면체와 정이십면체도 같은 짝이에요.</div>
+<div class="diagram-wrap" style="max-width:430px;margin:16px auto">
+<svg viewBox="-103.5 -14.0 423.0 218.6" xmlns="http://www.w3.org/2000/svg">
+<polygon points="54.0,0.0 108.0,0.0 108.0,54.0 54.0,54.0" fill="none" stroke="#e7ecf3" stroke-width="2.0"/>
+<polygon points="0.0,54.0 54.0,54.0 54.0,108.0 0.0,108.0" fill="none" stroke="#e7ecf3" stroke-width="2.0"/>
+<polygon points="54.0,54.0 108.0,54.0 108.0,108.0 54.0,108.0" fill="rgba(52,211,153,0.18)" stroke="#e7ecf3" stroke-width="2.0"/>
+<polygon points="108.0,54.0 162.0,54.0 162.0,108.0 108.0,108.0" fill="none" stroke="#e7ecf3" stroke-width="2.0"/>
+<polygon points="162.0,54.0 216.0,54.0 216.0,108.0 162.0,108.0" fill="rgba(52,211,153,0.18)" stroke="#e7ecf3" stroke-width="2.0"/>
+<polygon points="54.0,108.0 108.0,108.0 108.0,162.0 54.0,162.0" fill="none" stroke="#e7ecf3" stroke-width="2.0"/>
+<text x="81.0" y="32.0" font-size="15" font-weight="700" fill="#e7ecf3" text-anchor="middle">A</text>
+<text x="27.0" y="86.0" font-size="15" font-weight="700" fill="#e7ecf3" text-anchor="middle">B</text>
+<text x="81.0" y="86.0" font-size="15" font-weight="700" fill="#34d399" text-anchor="middle">C</text>
+<text x="135.0" y="86.0" font-size="15" font-weight="700" fill="#e7ecf3" text-anchor="middle">D</text>
+<text x="189.0" y="86.0" font-size="15" font-weight="700" fill="#34d399" text-anchor="middle">E</text>
+<text x="81.0" y="140.0" font-size="15" font-weight="700" fill="#e7ecf3" text-anchor="middle">F</text>
+<text x="108.0" y="188.0" font-size="12" font-weight="700" fill="#9aa7bd" text-anchor="middle">접으면 면 C와 면 E가 마주 본다 (한 칸 건너뛴 면끼리 마주 본다)</text>
+</svg>
+</div>
+<div class="box box-orange"><div class="box-title">🏆 전개도는 직접 한 번 접어 보는 게 최고</div>
+  교재 뒤에 붙어 있는 전개도를 가위로 오려 <strong>실제로 접어 보세요</strong>. 한 번만 해 봐도
+  '이 면이 저 면과 만나는구나'가 머릿속에 남습니다. 시험에는 '전개도를 접었을 때 점 A와 겹치는 점은?',
+  '어느 모서리와 만나는가?' 같은 문제가 꾸준히 나와요.</div>
+<div class="box box-blue"><div class="box-title">💡 다음 단원 예고</div>
+  다음은 <strong>회전체</strong>예요. 이번 단원에서 '다면체가 아니다'라며 옆으로 밀어 두었던
+  원기둥·원뿔·구가 주인공으로 등장합니다.</div>
+    <div class="quiz" data-qid="b15" data-ans="5" data-type="num">
+      <div class="quiz-q">Q. 정이십면체의 한 꼭짓점에 모인 면의 개수는?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">3·3·4·3·5</div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b16" data-ans="20" data-type="num">
+      <div class="quiz-q">Q. 정십이면체의 꼭짓점의 개수는?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">(한 면의 꼭짓점 수) × (면의 개수) ÷ (한 꼭짓점에 모인 면의 개수)</div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="wrongnote" id="wrong">
+    <h2>📕 오답노트 <span style="font-size:13px;font-weight:600;color:var(--muted)">(본문에서 틀린 문제가 자동으로 모여요)</span></h2>
+    <div id="wrongList"><p class="empty">아직 틀린 문제가 없어요. 퀴즈를 풀어보세요!</p></div>
+    <button class="review-btn" id="reviewBtn" onclick="reviewWrong()">오답 정리 완료</button>
+    <button class="clear-btn" onclick="clearWrong()">오답노트 비우기</button>
+  </section>
+
+  <section class="gate" id="gate">
+    <h2>🔓 연습문제 잠금 해제</h2>
+    <p class="desc">아래 두 조건을 모두 채우면 기본·응용·심화 연습문제가 열려요.</p>
+    <ul class="checklist">
+      <li id="ck_quiz"><span class="mark">✓</span><span>본문 퀴즈 전부 채점하기 (<span id="gradedCount">0</span> / <span id="quizTotal">16</span>)</span></li>
+      <li id="ck_review"><span class="mark">✓</span><span>오답노트 확인하기 (위에서 '오답 정리 완료' 누르기)</span></li>
+    </ul>
+    <button class="start-btn locked" id="startBtn" onclick="startPractice()">🔒 연습문제 풀기 (잠김)</button>
+  </section>
+
+  <div class="practice-wrap" id="practiceWrap">
+    <div class="practice-title">✏️ 연습문제</div>
+    <div class="practice-sub">기본 10문제를 모두 채점하면 응용이, 응용을 모두 채점하면 심화가 열립니다. 틀린 문제는 아래 연습 오답노트에 모입니다.</div>
+
+    <div class="pset" id="pset_basic">
+      <div class="pset-head"><span class="diff-badge diff-basic">기본</span><span class="pset-title">다면체 기본 개념 확인</span><span class="pcount" id="cnt_basic">0 / 10</span></div>
+      <div class="pbody">
+        <div class="prob" data-qid="pb1" data-ans="원기둥" data-type="text">
+          <div class="pq"><span class="pnum">1.</span>원기둥, 삼각뿔, 사각기둥, 오각뿔대 중에서 <strong>다면체가 아닌</strong> 것은?</div>
+          <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:180px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb2" data-ans="10" data-type="num">
+          <div class="pq"><span class="pnum">2.</span>팔각기둥의 면의 개수는?</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb3" data-ans="10" data-type="num">
+          <div class="pq"><span class="pnum">3.</span>오각뿔의 모서리의 개수는?</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb4" data-ans="12" data-type="num">
+          <div class="pq"><span class="pnum">4.</span>육각뿔대의 꼭짓점의 개수는?</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb5" data-ans="삼각형" data-type="text">
+          <div class="pq"><span class="pnum">5.</span>사각뿔의 옆면의 모양은?</div>
+          <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:180px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb6" data-ans="사다리꼴" data-type="text">
+          <div class="pq"><span class="pnum">6.</span>각뿔대의 옆면의 모양은?</div>
+          <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:180px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb7" data-ans="9" data-type="num">
+          <div class="pq"><span class="pnum">7.</span>십면체인 각뿔은 몇 각뿔인가? (숫자만)</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ n + 1 = 10</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb8" data-ans="3" data-type="num">
+          <div class="pq"><span class="pnum">8.</span>정다면체 중에서 각 면의 모양이 정삼각형인 것은 모두 몇 가지인가?</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb9" data-ans="6" data-type="num">
+          <div class="pq"><span class="pnum">9.</span>정팔면체의 꼭짓점의 개수는?</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb10" data-ans="12" data-type="num">
+          <div class="pq"><span class="pnum">10.</span>정육면체의 모서리의 개수는?</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pset locked" id="pset_applied">
+      <div class="pset-head"><span class="diff-badge diff-applied">응용</span><span class="pset-title">응용 — 거꾸로 찾기와 정다면체</span><span class="pcount" id="cnt_applied">0 / 10</span></div>
+      <div class="lockmsg">🔒 기본 10문제를 모두 채점하면 열려요.</div>
+      <div class="pbody">
+        <div class="prob" data-qid="pa1" data-ans="25" data-type="num">
+          <div class="pq"><span class="pnum">1.</span>꼭짓점의 개수가 9인 각뿔에서 모서리의 개수를 a, 면의 개수를 b라 할 때, a + b의 값은?</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ 먼저 n + 1 = 9로 몇 각뿔인지부터 찾으세요.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa2" data-ans="37" data-type="num">
+          <div class="pq"><span class="pnum">2.</span>구면체인 각기둥의 모서리의 개수를 x, 십면체인 각뿔대의 꼭짓점의 개수를 y라 할 때, x + y의 값은?</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ 각기둥도 각뿔대도 면의 개수는 n + 2입니다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa3" data-ans="10" data-type="num">
+          <div class="pq"><span class="pnum">3.</span>다음 조건을 모두 만족하는 입체도형은 몇 면체인가? (숫자만)<br><span style="display:inline-block;margin-top:6px">(가) 두 밑면이 서로 평행하다. &nbsp; (나) 옆면의 모양이 사다리꼴이다. &nbsp; (다) 한 밑면의 대각선의 총 개수가 20개이다.</span></div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ n각형의 대각선의 총 개수는 n(n−3)÷2 입니다(5단원).</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa4" data-ans="32" data-type="num">
+          <div class="pq"><span class="pnum">4.</span>그림은 정육면체의 한 꼭짓점을 잘라낸 입체도형이다. 면의 개수를 a, 꼭짓점의 개수를 b, 모서리의 개수를 c라 할 때, a + b + c의 값은?</div>
+<div class="diagram-wrap" style="max-width:400px;margin:14px auto">
+<svg viewBox="-130.9 -95.6 261.8 230.2" xmlns="http://www.w3.org/2000/svg">
+<line x1="-21.2" y1="27.4" x2="-79.2" y2="61.8" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="-21.2" y1="27.4" x2="-21.2" y2="-81.6" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="-21.2" y1="27.4" x2="79.2" y2="47.2" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="-79.2" y1="61.8" x2="-79.2" y2="-47.2" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="-79.2" y1="61.8" x2="21.2" y2="81.6" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="-21.2" y1="-81.6" x2="-79.2" y2="-47.2" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="-21.2" y1="-81.6" x2="79.2" y2="-61.8" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="-79.2" y1="-47.2" x2="-21.0" y2="-35.7" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="79.2" y1="47.2" x2="21.2" y2="81.6" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="79.2" y1="47.2" x2="79.2" y2="-61.8" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="21.2" y1="81.6" x2="21.2" y2="18.4" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="79.2" y1="-61.8" x2="45.6" y2="-41.8" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="-21.0" y1="-35.7" x2="21.2" y2="18.4" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="-21.0" y1="-35.7" x2="45.6" y2="-41.8" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="21.2" y1="18.4" x2="45.6" y2="-41.8" stroke="#e7ecf3" stroke-width="2.0"/>
+<polygon points="45.6,-41.8 -21.0,-35.7 21.2,18.4" fill="rgba(251,191,36,0.3)" stroke="#fbbf24" stroke-width="2.0"/>
+<text x="0.0" y="118.0" font-size="12" font-weight="700" fill="#9aa7bd" text-anchor="middle">정육면체의 한 꼭짓점을 잘라낸 입체도형</text>
+</svg>
+</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ 자를 때 무엇이 없어지고 무엇이 새로 생기는지 따로 세어 보세요.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa5" data-ans="9" data-type="num">
+          <div class="pq"><span class="pnum">5.</span>그림과 같은 입체도형의 면의 개수는?</div>
+<div class="diagram-wrap" style="max-width:400px;margin:14px auto">
+<svg viewBox="-162.3 -87.9 324.6 222.5" xmlns="http://www.w3.org/2000/svg">
+<line x1="-20.5" y1="35.6" x2="-76.5" y2="65.6" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="-20.5" y1="35.6" x2="-20.5" y2="-36.3" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="-20.5" y1="35.6" x2="76.5" y2="52.9" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="-20.5" y1="-36.3" x2="-76.5" y2="-6.3" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="-20.5" y1="-36.3" x2="76.5" y2="-19.0" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="-20.5" y1="-36.3" x2="0.0" y2="-73.9" stroke="#e7ecf3" stroke-width="1.56" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="-76.5" y1="65.6" x2="-76.5" y2="-6.3" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="-76.5" y1="65.6" x2="20.5" y2="82.9" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="-76.5" y1="-6.3" x2="20.5" y2="11.0" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="-76.5" y1="-6.3" x2="0.0" y2="-73.9" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="76.5" y1="52.9" x2="20.5" y2="82.9" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="76.5" y1="52.9" x2="76.5" y2="-19.0" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="20.5" y1="82.9" x2="20.5" y2="11.0" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="76.5" y1="-19.0" x2="20.5" y2="11.0" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="76.5" y1="-19.0" x2="0.0" y2="-73.9" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="20.5" y1="11.0" x2="0.0" y2="-73.9" stroke="#e7ecf3" stroke-width="2.0"/>
+<text x="0.0" y="118.0" font-size="12" font-weight="700" fill="#9aa7bd" text-anchor="middle">사각기둥 위에 사각뿔 모양의 지붕을 얹은 입체도형</text>
+</svg>
+</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ 옆면 · 지붕 · 밑면으로 나누어 세세요.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa6" data-ans="정사면체,정육면체,정십이면체|정사면체,정십이면체,정육면체|정육면체,정사면체,정십이면체|정육면체,정십이면체,정사면체|정십이면체,정사면체,정육면체|정십이면체,정육면체,정사면체" data-type="text">
+          <div class="pq"><span class="pnum">6.</span>한 꼭짓점에 모인 면의 개수가 3개인 정다면체를 모두 쓰시오. (쉼표로 구분)</div>
+          <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:180px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ 3·3·4·3·5</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa7" data-ans="360" data-type="num">
+          <div class="pq"><span class="pnum">7.</span>한 꼭짓점에 정삼각형 6개를 모으면 그 각의 합은 몇 도인가? (단위: 도)</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa8" data-ans="18" data-type="num">
+          <div class="pq"><span class="pnum">8.</span>정이십면체의 모서리의 개수에서 꼭짓점의 개수를 뺀 값은?</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ 모서리는 ÷2, 꼭짓점은 ÷(한 꼭짓점에 모인 면의 개수).</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa9" data-ans="정팔면체" data-type="text">
+          <div class="pq"><span class="pnum">9.</span>정육면체의 각 면의 한가운데 점을 모두 연결하여 만든 입체도형의 이름은?</div>
+          <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:180px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ 새 도형의 꼭짓점의 개수는 원래 도형의 면의 개수와 같습니다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa10" data-ans="E|면E|면 E" data-type="text">
+          <div class="pq"><span class="pnum">10.</span>그림은 정육면체의 전개도이다. 이 전개도를 접었을 때 <strong>면 C와 평행한 면</strong>은? (면의 이름만 쓰시오, 예: A)</div>
+<div class="diagram-wrap" style="max-width:400px;margin:14px auto">
+<svg viewBox="-14.0 -14.0 244.0 216.5" xmlns="http://www.w3.org/2000/svg">
+<polygon points="54.0,0.0 108.0,0.0 108.0,54.0 54.0,54.0" fill="none" stroke="#e7ecf3" stroke-width="2.0"/>
+<polygon points="0.0,54.0 54.0,54.0 54.0,108.0 0.0,108.0" fill="none" stroke="#e7ecf3" stroke-width="2.0"/>
+<polygon points="54.0,54.0 108.0,54.0 108.0,108.0 54.0,108.0" fill="none" stroke="#e7ecf3" stroke-width="2.0"/>
+<polygon points="108.0,54.0 162.0,54.0 162.0,108.0 108.0,108.0" fill="none" stroke="#e7ecf3" stroke-width="2.0"/>
+<polygon points="162.0,54.0 216.0,54.0 216.0,108.0 162.0,108.0" fill="none" stroke="#e7ecf3" stroke-width="2.0"/>
+<polygon points="54.0,108.0 108.0,108.0 108.0,162.0 54.0,162.0" fill="none" stroke="#e7ecf3" stroke-width="2.0"/>
+<text x="81.0" y="32.0" font-size="15" font-weight="700" fill="#e7ecf3" text-anchor="middle">A</text>
+<text x="27.0" y="86.0" font-size="15" font-weight="700" fill="#e7ecf3" text-anchor="middle">B</text>
+<text x="81.0" y="86.0" font-size="15" font-weight="700" fill="#e7ecf3" text-anchor="middle">C</text>
+<text x="135.0" y="86.0" font-size="15" font-weight="700" fill="#e7ecf3" text-anchor="middle">D</text>
+<text x="189.0" y="86.0" font-size="15" font-weight="700" fill="#e7ecf3" text-anchor="middle">E</text>
+<text x="81.0" y="140.0" font-size="15" font-weight="700" fill="#e7ecf3" text-anchor="middle">F</text>
+<text x="108.0" y="186.0" font-size="11.5" font-weight="700" fill="#9aa7bd" text-anchor="middle">정육면체의 전개도</text>
+</svg>
+</div>
+          <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:180px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ 전개도에서 한 칸 건너뛴 면끼리 마주 봅니다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pset locked" id="pset_hard">
+      <div class="pset-head"><span class="diff-badge diff-hard">심화</span><span class="pset-title">심화 — 조건을 식으로, 자른 자리를 세다</span><span class="pcount" id="cnt_hard">0 / 10</span></div>
+      <div class="lockmsg">🔒 응용 10문제를 모두 채점하면 열려요.</div>
+      <div class="pbody">
+        <div class="box box-purple"><div class="box-title">🔮 심화 3대 전략</div>
+  <p style="margin:0 0 6px;">① <strong>개수 조건은 전부 n에 대한 식</strong> — '꼭짓점과 모서리의 합이 40' 같은 말은 그대로 방정식으로 옮기면 끝납니다.<br>
+  ② <strong>자르고 깎는 문제는 없어지는 것과 새로 생기는 것을 따로 센다</strong> — 꼭짓점 하나를 자르면 꼭짓점 1개가 사라지고 3개가 생기는 식이죠.<br>
+  ③ <strong>정다면체는 3·3·4·3·5 하나로 전부 계산된다</strong> — 여기에 짝(정육면체↔정팔면체, 정십이면체↔정이십면체)까지 알면 끝입니다.</p></div>
+        <div class="solution">
+          <div class="sol-head">🧩 단계별 풀이 — 개수 조건을 방정식으로 옮기기</div>
+          <div class="sol-q">어떤 각뿔대의 꼭짓점의 개수와 모서리의 개수의 합이 40일 때, 이 각뿔대는 몇 면체인가?</div>
+          <div class="step"><span class="s-label">STEP 1</span><br>밑면을 n각형이라 하자. 각뿔대의 개수 공식은 각기둥과 같다 — 꼭짓점 2n, 모서리 3n, 면 n + 2.</div>
+          <div class="step"><span class="s-label">STEP 2</span><br>조건을 그대로 식으로 옮기면 2n + 3n = 40, 즉 5n = 40.</div>
+          <div class="step"><span class="s-label">STEP 3</span><br>n = 8이므로 이 도형은 <strong>팔각뿔대</strong>이다.</div>
+          <div class="step"><span class="s-label">정답</span><br>구하는 것은 면의 개수이므로 n + 2 = 8 + 2 = 10 → <strong>십면체</strong>.</div>
+          <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 →</button>
+        </div>
+        <div class="prob" data-qid="ph1" data-ans="13" data-type="num">
+          <div class="pq"><span class="pnum">1.</span>어떤 각뿔의 꼭짓점의 개수와 모서리의 개수의 합이 34이다. 이 각뿔과 <strong>밑면의 모양이 같은 각뿔대</strong>의 면의 개수는?</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ 각뿔은 꼭짓점 n + 1, 모서리 2n.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph2" data-ans="21" data-type="num">
+          <div class="pq"><span class="pnum">2.</span>모서리의 개수가 18개인 각기둥, 각뿔, 각뿔대의 밑면은 각각 몇 각형인가? 세 수의 합을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ 세 도형의 모서리 공식이 서로 다릅니다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph3" data-ans="74" data-type="num">
+          <div class="pq"><span class="pnum">3.</span>정육면체의 <strong>여덟 꼭짓점을 모두</strong> 잘라내어(각 모서리의 삼등분점을 이어 자른다) 새로운 다면체를 만들었다. 면의 개수를 a, 꼭짓점의 개수를 b, 모서리의 개수를 c라 할 때, a + b + c의 값은?</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ 응용 4번에서 꼭짓점 하나를 잘랐을 때 각각 얼마나 늘고 줄었는지 떠올리세요. 자른 자리는 서로 겹치지 않습니다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph4" data-ans="18" data-type="num">
+          <div class="pq"><span class="pnum">4.</span>정팔면체의 각 꼭짓점을 잘라내어 새로운 다면체를 만들었다. 잘라낸 자리에 생긴 정다각형이 정□각형이고 새 다면체의 면의 개수가 △개일 때, □ + △의 값은?</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ 잘린 면의 변의 수 = 그 꼭짓점에 모인 모서리의 개수. 새로 생기는 면의 개수 = 원래 꼭짓점의 개수.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph5" data-ans="6" data-type="num">
+          <div class="pq"><span class="pnum">5.</span>다면체 P에 대하여 &lt;P&gt;를 <strong>(꼭짓점의 개수) + (면의 개수) − (모서리의 개수)</strong>라고 하자. &lt;오각기둥&gt; + &lt;십각뿔&gt; + &lt;정이십면체&gt;의 값은?</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ 세 개를 각각 계산해 보면 규칙이 보입니다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph6" data-ans="10" data-type="num">
+          <div class="pq"><span class="pnum">6.</span>한 꼭짓점에 모인 면의 개수가 5인 정다면체의 모서리의 개수를 a, 각 면의 모양이 정오각형인 정다면체의 꼭짓점의 개수를 b라 할 때, a − b의 값은?</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph7" data-ans="12" data-type="num">
+          <div class="pq"><span class="pnum">7.</span>한 꼭짓점에 <strong>정n각형 3개</strong>를 모아 정다면체를 만들 수 있다. 가능한 n의 값을 모두 구하여 그 합을 쓰시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ 정n각형의 한 내각은 180°×(n−2)÷n. 3개의 합이 360°보다 작아야 합니다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph8" data-ans="꼬인 위치|꼬인위치" data-type="text">
+          <div class="pq"><span class="pnum">8.</span>그림은 정육면체의 전개도이고, 두 면 ㉮와 ㉯에 각각 대각선을 그었다. 이 전개도를 접었을 때 두 대각선의 위치 관계는? (평행 / 한 점에서 만남 / 꼬인 위치 중 하나)</div>
+<div class="diagram-wrap" style="max-width:400px;margin:14px auto">
+<svg viewBox="-14.0 -14.0 244.0 216.5" xmlns="http://www.w3.org/2000/svg">
+<polygon points="54.0,0.0 108.0,0.0 108.0,54.0 54.0,54.0" fill="none" stroke="#e7ecf3" stroke-width="2.0"/>
+<polygon points="0.0,54.0 54.0,54.0 54.0,108.0 0.0,108.0" fill="none" stroke="#e7ecf3" stroke-width="2.0"/>
+<polygon points="54.0,54.0 108.0,54.0 108.0,108.0 54.0,108.0" fill="none" stroke="#e7ecf3" stroke-width="2.0"/>
+<polygon points="108.0,54.0 162.0,54.0 162.0,108.0 108.0,108.0" fill="none" stroke="#e7ecf3" stroke-width="2.0"/>
+<polygon points="162.0,54.0 216.0,54.0 216.0,108.0 162.0,108.0" fill="none" stroke="#e7ecf3" stroke-width="2.0"/>
+<polygon points="54.0,108.0 108.0,108.0 108.0,162.0 54.0,162.0" fill="none" stroke="#e7ecf3" stroke-width="2.0"/>
+<line x1="0.0" y1="54.0" x2="54.0" y2="108.0" stroke="#fbbf24" stroke-width="3.4"/>
+<line x1="108.0" y1="54.0" x2="162.0" y2="108.0" stroke="#c4b5fd" stroke-width="3.4"/>
+<text x="27.0" y="45.0" font-size="14" font-weight="700" fill="#fbbf24" text-anchor="middle">㉮</text>
+<text x="135.0" y="45.0" font-size="14" font-weight="700" fill="#c4b5fd" text-anchor="middle">㉯</text>
+<text x="81.0" y="32.0" font-size="13.5" font-weight="700" fill="#9aa7bd" text-anchor="middle" opacity=".65">A</text>
+<text x="81.0" y="86.0" font-size="13.5" font-weight="700" fill="#9aa7bd" text-anchor="middle" opacity=".65">C</text>
+<text x="189.0" y="86.0" font-size="13.5" font-weight="700" fill="#9aa7bd" text-anchor="middle" opacity=".65">E</text>
+<text x="81.0" y="140.0" font-size="13.5" font-weight="700" fill="#9aa7bd" text-anchor="middle" opacity=".65">F</text>
+<text x="108.0" y="186.0" font-size="11.5" font-weight="700" fill="#9aa7bd" text-anchor="middle">㉮와 ㉯에 그은 두 대각선(굵은 선)</text>
+</svg>
+</div>
+          <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:180px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ 마주 보는 두 면 위의 대각선이라고 해서 반드시 평행한 것은 아닙니다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph9" data-ans="7" data-type="num">
+          <div class="pq"><span class="pnum">9.</span>모서리의 개수가 30개 이하인 각뿔 중에서 면의 개수가 <strong>짝수</strong>인 것은 모두 몇 개인가?</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ 밑면은 삼각형부터 가능합니다. n의 범위를 먼저 정하세요.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph10" data-ans="42" data-type="num">
+          <div class="pq"><span class="pnum">10.</span>정십이면체의 각 면의 한가운데 점을 연결하여 만든 입체도형의 꼭짓점의 개수를 a, 정이십면체의 각 면의 한가운데 점을 연결하여 만든 입체도형의 모서리의 개수를 b라 할 때, a + b의 값은?</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">→ 두 정다면체는 서로 짝(쌍)입니다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="wrongnote" id="pwrong">
+      <h2>📒 연습 오답노트 <span style="font-size:13px;font-weight:600;color:var(--muted)">(연습문제에서 틀린 문제)</span></h2>
+      <div id="pwrongList"><p class="empty">아직 틀린 문제가 없어요.</p></div>
+    </section>
+  </div>
+
+</div>
+
+<nav class="unit-nav" aria-label="단원 이동">
+    <a class="pv" href="note_1-2_6_원과부채꼴_PRO.html">
+      <span class="un-lbl">← 이전 단원</span>
+      <span class="un-t">6단원 · 원과 부채꼴</span>
+    </a>
+  </nav>
+
+<footer class="site-foot">
+  <p><a href="index.html">← 중1 2학기 목차</a><span class="sep">·</span><a href="/">Isaac Math 홈</a><span class="sep">·</span><a href="/about.html">사이트 소개</a><span class="sep">·</span><a href="/privacy.html">개인정보처리방침</a></p>
+  <p>© Isaac Math · 개인 학습용으로 자유롭게 이용하세요. 무단 복제·재배포는 금합니다.</p>
+</footer>
+
+<script>
+const LS='isaacmath_note_1-2-7_v1';
+let state={done:[],results:{},reviewed:false};
+function load(){try{const s=JSON.parse(localStorage.getItem(LS));if(s&&typeof s==='object'){state.done=s.done||[];state.results=s.results||{};state.reviewed=!!s.reviewed;}}catch(e){}}
+function save(){try{localStorage.setItem(LS,JSON.stringify(state));}catch(e){}}
+
+let cel={init:false,practice:false,applied:false,hard:false};
+const reduceMotion=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function toast(msg,type){const t=document.createElement('div');t.className='toast '+(type==='ng'?'ng':'ok');t.textContent=msg;document.body.appendChild(t);requestAnimationFrame(()=>t.classList.add('show'));setTimeout(()=>{t.classList.remove('show');setTimeout(()=>t.remove(),300);},2200);}
+function flashWrong(id){const el=document.getElementById(id);if(!el)return;el.classList.remove('flash');void el.offsetWidth;el.classList.add('flash');}
+function confetti(){if(reduceMotion)return;const c=document.createElement('canvas');c.className='confetti-canvas';c.width=innerWidth;c.height=innerHeight;document.body.appendChild(c);const ctx=c.getContext('2d');const cols=['#34d399','#60a5fa','#fbbf24','#c4b5fd','#f87171'];const ps=[];for(let i=0;i<90;i++)ps.push({x:Math.random()*c.width,y:-20-Math.random()*c.height*0.3,r:4+Math.random()*5,vx:-2+Math.random()*4,vy:2+Math.random()*4,col:cols[i%cols.length],rot:Math.random()*6.28,vr:-0.2+Math.random()*0.4});let t0=null;function frame(ts){if(!t0)t0=ts;const el=ts-t0;ctx.clearRect(0,0,c.width,c.height);ps.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=0.05;p.rot+=p.vr;ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.rot);ctx.fillStyle=p.col;ctx.fillRect(-p.r/2,-p.r/2,p.r,p.r*0.7);ctx.restore();});if(el<1600)requestAnimationFrame(frame);else c.remove();}requestAnimationFrame(frame);}
+function celebrate(msg){toast(msg,'ok');confetti();}
+
+function toggleTheme(){document.documentElement.classList.toggle('light');const light=document.documentElement.classList.contains('light');document.getElementById('themeBtn').textContent=light?'🌙 다크 모드':'☀️ 라이트 모드';}
+function resetAll(){if(confirm('이 단원의 모든 진행 상황(완료·채점·오답·잠금)을 초기화할까요?')){state={done:[],results:{},reviewed:false};save();location.reload();}}
+
+function onScroll(){const h=document.documentElement;const sc=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;document.getElementById('pbar').style.width=Math.min(100,sc)+'%';}
+window.addEventListener('scroll',onScroll);
+
+document.addEventListener('keydown',function(e){
+  if(e.key!=='Enter')return;
+  const inp=e.target;
+  if(inp.classList&&inp.classList.contains('quiz-input')){
+    e.preventDefault();
+    const row=inp.closest('.quiz-row');const btn=row&&row.querySelector('.quiz-submit');
+    if(btn)grade(btn);
+  }
+});
+
+const spy=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){const id=e.target.id;document.querySelectorAll('.tlink').forEach(a=>a.classList.remove('active'));const l=document.querySelector('.tlink[href="#'+id+'"]');if(l)l.classList.add('active');}});},{rootMargin:'-40% 0px -55% 0px'});
+document.querySelectorAll('.section,#wrong,#gate').forEach(s=>spy.observe(s));
+
+function qtext(el){const q=el.querySelector('.quiz-q, .pq');return q?q.textContent.trim():'';}
+function ids(t){return [...document.querySelectorAll('[data-qid]')].filter(t);}
+const bodyEls=()=>ids(q=>q.dataset.qid[0]==='b');
+const setEls=(p)=>ids(q=>q.dataset.qid.startsWith(p));
+const gradedIn=(list)=>list.filter(q=>state.results[q.dataset.qid]).length;
+
+function grade(btn){
+  const el=btn.closest('[data-qid]');const qid=el.dataset.qid;
+  const inp=el.querySelector('.quiz-input');const type=el.dataset.type;
+  const cands=el.dataset.ans.split('|');   // 복수 정답 지원
+  let val=inp.value.trim();
+  let ok=type==='num'?(val!==''&&cands.some(a=>Number(val)===Number(a))):cands.some(a=>val.replace(/\s/g,'')===a.replace(/\s/g,''));
+  state.results[qid]={correct:ok,given:val||'(미입력)',question:qtext(el),ans:cands[0]};
+  if(!ok){flashWrong(qid[0]==='p'?'pwrong':'wrong');toast('❌ 틀린 문제가 오답노트에 기록됐어요','ng');}
+  save();refresh();
+}
+function paint(el){
+  const qid=el.dataset.qid;const r=state.results[qid];const fb=el.querySelector('.quiz-fb');const inp=el.querySelector('.quiz-input');
+  if(!fb)return;
+  if(r){if(inp&&inp.value===''&&r.given!=='(미입력)')inp.value=r.given;
+    fb.classList.add('show');
+    if(r.correct){fb.className='quiz-fb show ok';fb.textContent='✅ 정답이에요!';}
+    else{fb.className='quiz-fb show ng';fb.textContent='❌ 다시 생각해봐요. (오답노트에 기록됐어요)';}
+  } else {fb.className='quiz-fb';fb.textContent='';}
+}
+
+function toggleDone(id){const i=state.done.indexOf(id);if(i>=0)state.done.splice(i,1);else state.done.push(id);save();refresh();}
+function reveal(btn){const box=btn.closest('.solution');const steps=box.querySelectorAll('.step');for(const s of steps){if(!s.classList.contains('show')){s.classList.add('show');break;}}if([...steps].every(s=>s.classList.contains('show'))){btn.disabled=true;btn.textContent='모든 단계 공개됨';}}
+function reviewWrong(){state.reviewed=true;save();refresh();}
+function clearWrong(){for(const k of Object.keys(state.results)){if(state.results[k].correct===false)delete state.results[k];}save();refresh();}
+function startPractice(){const wrap=document.getElementById('practiceWrap');if(wrap.style.display==='block'){document.getElementById('pset_basic').scrollIntoView({behavior:'smooth'});}}
+
+function renderWrongList(boxId,list){
+  const box=document.getElementById(boxId);
+  const items=list.filter(q=>{const r=state.results[q.dataset.qid];return r&&r.correct===false;}).map(q=>state.results[q.dataset.qid]);
+  if(!items.length){box.innerHTML='<p class="empty">아직 틀린 문제가 없어요.</p>';return;}
+  box.innerHTML=items.map(w=>'<div class="wrong-item"><div class="wq">'+w.question+'</div><div class="wa">내 답: '+w.given+' · 정답: '+w.ans+'</div></div>').join('');
+}
+
+function refresh(){
+  state.done=state.done.filter(id=>document.getElementById(id));
+  const secs=document.querySelectorAll('.section');
+  secs.forEach(s=>{const on=state.done.indexOf(s.id)>=0;s.classList.toggle('done',on);const b=s.querySelector('.complete-btn');if(b)b.textContent=on?'✓ 완료됨':'완료하기';});
+  const total=secs.length;const p=Math.round(state.done.length/total*100);
+  document.getElementById('ring').style.setProperty('--p',p);document.getElementById('ringTxt').textContent=p+'%';
+  document.getElementById('b_first').classList.toggle('on',state.done.length>=1);
+  document.getElementById('b_half').classList.toggle('on',p>=50);
+  document.getElementById('b_master').classList.toggle('on',p>=100);
+  const d=document.getElementById('achDesc');
+  d.textContent=p>=100?'🏆 단원 마스터! 모든 섹션을 끝냈어요.':(p>=50?'🔥 절반 돌파! 끝까지 가볼까요?':'각 섹션을 끝내면 완료 버튼을 눌러 진행률을 채워보세요.');
+
+  document.querySelectorAll('[data-qid]').forEach(paint);
+
+  renderWrongList('wrongList',bodyEls());
+  renderWrongList('pwrongList',[...setEls('pb'),...setEls('pa'),...setEls('ph')]);
+  const rb=document.getElementById('reviewBtn');if(state.reviewed){rb.classList.add('done');rb.textContent='✓ 오답 정리 완료';}else{rb.classList.remove('done');rb.textContent='오답 정리 완료';}
+
+  const body=bodyEls();const bg=gradedIn(body);
+  document.getElementById('gradedCount').textContent=bg;
+  document.getElementById('quizTotal').textContent=body.length;
+  const quizDone=bg===body.length&&body.length>0;
+  document.getElementById('ck_quiz').classList.toggle('ok',quizDone);
+  document.getElementById('ck_review').classList.toggle('ok',state.reviewed);
+  const unlocked=quizDone&&state.reviewed;
+  const sb=document.getElementById('startBtn');
+  if(unlocked){sb.className='start-btn open';sb.textContent='✏️ 연습문제 풀기 →';}
+  else{sb.className='start-btn locked';sb.textContent='🔒 연습문제 풀기 (잠김)';}
+  document.getElementById('practiceWrap').style.display=unlocked?'block':'none';
+
+  const gb=gradedIn(setEls('pb')),ga=gradedIn(setEls('pa')),gh=gradedIn(setEls('ph'));
+  setCount('cnt_basic',gb);setCount('cnt_applied',ga);setCount('cnt_hard',gh);
+  document.getElementById('pset_basic').classList.remove('locked');
+  document.getElementById('pset_applied').classList.toggle('locked',gb<10);
+  document.getElementById('pset_hard').classList.toggle('locked',ga<10);
+
+  const cur={practice:unlocked,applied:gb>=10,hard:ga>=10};
+  if(cel.init){
+    if(cur.practice&&!cel.practice)celebrate('🎉 축하합니다! 연습문제가 열렸어요!');
+    else if(cur.hard&&!cel.hard)celebrate('🏆 심화 레벨이 열렸어요!');
+    else if(cur.applied&&!cel.applied)celebrate('🔥 응용 레벨이 열렸어요!');
+  }
+  cel={init:true,practice:cur.practice,applied:cur.applied,hard:cur.hard};
+}
+function setCount(id,n){const el=document.getElementById(id);el.textContent=n+' / 10';el.classList.toggle('clear',n>=10);}
+
+load();
+if(document.documentElement.classList.contains('light'))document.getElementById('themeBtn').textContent='🌙 다크 모드';
+refresh();
+</script>
+</body>
+</html>
