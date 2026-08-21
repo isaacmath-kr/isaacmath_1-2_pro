@@ -279,15 +279,15 @@
       선분 2개로는 평면 위의 한 영역을 둘러쌀 수 없어요. 그래서 <strong>변의 개수가 가장 적은 다각형은 삼각형(3개)</strong>이고, 모든 다각형은 삼각형으로 쪼갤 수 있어서 삼각형이 도형 학습의 기본이 돼요.</div>
     <div class="diagram-wrap">
 <svg viewBox="0 0 620 235" xmlns="http://www.w3.org/2000/svg">
-<polygon points="100.0,46.0 159.0,88.8 136.4,158.2 63.6,158.2 41.0,88.8" fill="rgba(52,211,153,0.10)" stroke="#34d399" stroke-width="2.2"/>
-<text x="100.0" y="205.0" font-size="13" font-weight="700" fill="#34d399" text-anchor="middle">볼록다각형</text>
-<text x="100.0" y="222.0" font-size="11" font-weight="700" fill="#9aa7bd" text-anchor="middle">(모든 내각 &lt; 180°)</text>
-<polygon points="310.0,46.0 322.1,101.0 363.7,139.0 310.0,170.0 256.3,139.0 256.3,77.0" fill="rgba(248,113,113,0.10)" stroke="#f87171" stroke-width="2.2"/>
-<text x="310.0" y="205.0" font-size="13" font-weight="700" fill="#f87171" text-anchor="middle">오목다각형</text>
-<text x="310.0" y="222.0" font-size="11" font-weight="700" fill="#9aa7bd" text-anchor="middle">(180°보다 큰 내각 존재)</text>
-<circle cx="520.0" cy="108.0" r="62" fill="none" stroke="#9aa7bd" stroke-width="2.2"/>
-<text x="520.0" y="205.0" font-size="13" font-weight="700" fill="#9aa7bd" text-anchor="middle">다각형이 아님</text>
-<text x="520.0" y="222.0" font-size="11" font-weight="700" fill="#9aa7bd" text-anchor="middle">(곡선으로 둘러싸임)</text>
+<polygon points="100.0,46.0 159.0,88.8 136.4,158.2 63.6,158.2 41.0,88.8" fill="rgba(52,211,153,0.10)" stroke="var(--green)" stroke-width="2.2"/>
+<text x="100.0" y="205.0" font-size="13" font-weight="700" fill="var(--green)" text-anchor="middle">볼록다각형</text>
+<text x="100.0" y="222.0" font-size="11" font-weight="700" fill="var(--muted)" text-anchor="middle">(모든 내각 &lt; 180°)</text>
+<polygon points="310.0,46.0 322.1,101.0 363.7,139.0 310.0,170.0 256.3,139.0 256.3,77.0" fill="rgba(248,113,113,0.10)" stroke="var(--red)" stroke-width="2.2"/>
+<text x="310.0" y="205.0" font-size="13" font-weight="700" fill="var(--red)" text-anchor="middle">오목다각형</text>
+<text x="310.0" y="222.0" font-size="11" font-weight="700" fill="var(--muted)" text-anchor="middle">(180°보다 큰 내각 존재)</text>
+<circle cx="520.0" cy="108.0" r="62" fill="none" stroke="var(--muted)" stroke-width="2.2"/>
+<text x="520.0" y="205.0" font-size="13" font-weight="700" fill="var(--muted)" text-anchor="middle">다각형이 아님</text>
+<text x="520.0" y="222.0" font-size="11" font-weight="700" fill="var(--muted)" text-anchor="middle">(곡선으로 둘러싸임)</text>
 </svg>
 </div>
     <div class="box box-blue"><div class="box-title">💡 볼록다각형 vs 오목다각형</div>
@@ -312,19 +312,19 @@
     <p>다각형을 이루는 선분을 <strong>변</strong>, 두 변이 만나는 점을 <strong>꼭짓점</strong>이라고 해요. n각형은 변 n개, 꼭짓점 n개, 내각 n개를 가져요. 이웃한 두 변이 다각형 <strong>내부</strong>에 만드는 각이 <strong>내각</strong>이에요.</p>
     <div class="diagram-wrap">
 <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-<polygon points="150.0,60.0 226.1,115.3 197.0,204.7 103.0,204.7 73.9,115.3" fill="rgba(148,163,184,0.06)" stroke="#9aa7bd" stroke-width="2.2"/>
-<line x1="103.0" y1="204.7" x2="33.0" y2="204.7" stroke="#fbbf24" stroke-width="2.2" stroke-dasharray="5,4"/>
-<polyline points="129.0,204.7 128.8,201.7 128.3,198.7 127.4,195.7 126.1,192.9 124.6,190.3 122.7,187.8 120.6,185.6 118.3,183.7 115.7,182.0 112.9,180.7 110.0,179.7 107.0,179.0 104.0,178.7 100.9,178.8 97.9,179.2 94.9,180.0" fill="none" stroke="#34d399" stroke-width="2"/>
-<polyline points="90.6,166.7 87.7,167.8 84.8,169.1 82.1,170.6 79.5,172.4 77.0,174.3 74.7,176.4 72.6,178.7 70.6,181.2 68.9,183.8 67.3,186.6 66.0,189.4 64.9,192.4 64.1,195.4 63.5,198.5 63.1,201.6 63.0,204.7" fill="none" stroke="#fbbf24" stroke-width="2"/>
-<text x="130.0" y="167.5" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle">내각</text>
-<text x="41.5" y="160.0" font-size="12" font-weight="700" fill="#fbbf24" text-anchor="middle">외각</text>
-<circle cx="150.0" cy="60.0" r="3" fill="#e7ecf3"/>
-<circle cx="226.1" cy="115.3" r="3" fill="#e7ecf3"/>
-<circle cx="197.0" cy="204.7" r="3" fill="#e7ecf3"/>
-<circle cx="103.0" cy="204.7" r="3" fill="#e7ecf3"/>
-<circle cx="73.9" cy="115.3" r="3" fill="#e7ecf3"/>
-<text x="103.0" y="228.7" font-size="14" font-weight="700" fill="#e7ecf3" text-anchor="middle">V</text>
-<text x="10.0" y="20.0" font-size="12" font-weight="700" fill="#9aa7bd">내각 + 외각 = 180° (평각)</text>
+<polygon points="150.0,60.0 226.1,115.3 197.0,204.7 103.0,204.7 73.9,115.3" fill="rgba(148,163,184,0.06)" stroke="var(--muted)" stroke-width="2.2"/>
+<line x1="103.0" y1="204.7" x2="33.0" y2="204.7" stroke="var(--orange)" stroke-width="2.2" stroke-dasharray="5,4"/>
+<polyline points="129.0,204.7 128.8,201.7 128.3,198.7 127.4,195.7 126.1,192.9 124.6,190.3 122.7,187.8 120.6,185.6 118.3,183.7 115.7,182.0 112.9,180.7 110.0,179.7 107.0,179.0 104.0,178.7 100.9,178.8 97.9,179.2 94.9,180.0" fill="none" stroke="var(--green)" stroke-width="2"/>
+<polyline points="90.6,166.7 87.7,167.8 84.8,169.1 82.1,170.6 79.5,172.4 77.0,174.3 74.7,176.4 72.6,178.7 70.6,181.2 68.9,183.8 67.3,186.6 66.0,189.4 64.9,192.4 64.1,195.4 63.5,198.5 63.1,201.6 63.0,204.7" fill="none" stroke="var(--orange)" stroke-width="2"/>
+<text x="130.0" y="167.5" font-size="12" font-weight="700" fill="var(--green)" text-anchor="middle">내각</text>
+<text x="41.5" y="160.0" font-size="12" font-weight="700" fill="var(--orange)" text-anchor="middle">외각</text>
+<circle cx="150.0" cy="60.0" r="3" fill="var(--text)"/>
+<circle cx="226.1" cy="115.3" r="3" fill="var(--text)"/>
+<circle cx="197.0" cy="204.7" r="3" fill="var(--text)"/>
+<circle cx="103.0" cy="204.7" r="3" fill="var(--text)"/>
+<circle cx="73.9" cy="115.3" r="3" fill="var(--text)"/>
+<text x="103.0" y="228.7" font-size="14" font-weight="700" fill="var(--text)" text-anchor="middle">V</text>
+<text x="10.0" y="20.0" font-size="12" font-weight="700" fill="var(--muted)">내각 + 외각 = 180° (평각)</text>
 </svg>
 </div>
     <div class="box box-green"><div class="box-title">🔑 외각의 정의</div>
@@ -380,24 +380,24 @@
     <div class="formula-big"><div class="f-title">📐 성질 1</div><div class="f-body">삼각형의 세 내각의 크기의 합은 180°이다.</div></div>
     <div class="diagram-wrap">
 <svg viewBox="0 -1 320 251" xmlns="http://www.w3.org/2000/svg">
-<line x1="60.0" y1="210.0" x2="230.0" y2="210.0" stroke="#9aa7bd" stroke-width="2.2"/>
-<line x1="230.0" y1="210.0" x2="300.0" y2="210.0" stroke="#9aa7bd" stroke-width="2.2" stroke-dasharray="5,4"/>
-<line x1="150.0" y1="40.0" x2="60.0" y2="210.0" stroke="#34d399" stroke-width="2.2"/>
-<line x1="150.0" y1="40.0" x2="230.0" y2="210.0" stroke="#34d399" stroke-width="2.2"/>
-<polyline points="137.8,63.0 139.2,63.6 140.6,64.2 142.0,64.7 143.4,65.2 144.9,65.5 146.4,65.7 147.9,65.9 149.4,66.0 150.9,66.0 152.4,65.9 153.9,65.7 155.4,65.4 156.8,65.1 158.3,64.6 159.7,64.1 161.1,63.5" fill="none" stroke="#34d399" stroke-width="2"/>
-<polyline points="84.0,210.0 83.9,208.4 83.8,206.8 83.5,205.2 83.1,203.6 82.6,202.0 82.0,200.5 81.4,199.0 80.6,197.6 79.7,196.3 78.7,195.0 77.6,193.7 76.5,192.6 75.3,191.5 74.0,190.5 72.6,189.6 71.2,188.8" fill="none" stroke="#34d399" stroke-width="2"/>
-<polyline points="260.0,210.0 259.8,206.2 259.1,202.5 257.9,199.0 256.3,195.5 254.3,192.4 251.9,189.5 249.1,186.9 246.1,184.7 242.8,182.9 239.3,181.5 235.6,180.5 231.9,180.1 228.1,180.1 224.4,180.5 220.7,181.5 217.2,182.9" fill="none" stroke="#fbbf24" stroke-width="2"/>
-<circle cx="150.0" cy="40.0" r="3" fill="#e7ecf3"/>
-<circle cx="60.0" cy="210.0" r="3" fill="#e7ecf3"/>
-<circle cx="230.0" cy="210.0" r="3" fill="#e7ecf3"/>
-<text x="150.8" y="31.3" font-size="14" font-weight="700" fill="#e7ecf3" text-anchor="middle">A</text>
-<text x="45.0" y="201.0" font-size="14" font-weight="700" fill="#e7ecf3">B</text>
-<text x="200.0" y="195.0" font-size="14" font-weight="700" fill="#e7ecf3">C</text>
-<text x="306.0" y="201.0" font-size="14" font-weight="700" fill="#e7ecf3">D</text>
-<text x="147.8" y="132.0" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle">∠A</text>
-<text x="94.3" y="189.4" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle">∠B</text>
-<text x="254.6" y="171.2" font-size="12" font-weight="700" fill="#fbbf24" text-anchor="middle">∠ACD</text>
-<text x="160.0" y="12.1" font-size="12" font-weight="700" fill="#9aa7bd" text-anchor="middle">∠ACD = ∠A + ∠B</text>
+<line x1="60.0" y1="210.0" x2="230.0" y2="210.0" stroke="var(--muted)" stroke-width="2.2"/>
+<line x1="230.0" y1="210.0" x2="300.0" y2="210.0" stroke="var(--muted)" stroke-width="2.2" stroke-dasharray="5,4"/>
+<line x1="150.0" y1="40.0" x2="60.0" y2="210.0" stroke="var(--green)" stroke-width="2.2"/>
+<line x1="150.0" y1="40.0" x2="230.0" y2="210.0" stroke="var(--green)" stroke-width="2.2"/>
+<polyline points="137.8,63.0 139.2,63.6 140.6,64.2 142.0,64.7 143.4,65.2 144.9,65.5 146.4,65.7 147.9,65.9 149.4,66.0 150.9,66.0 152.4,65.9 153.9,65.7 155.4,65.4 156.8,65.1 158.3,64.6 159.7,64.1 161.1,63.5" fill="none" stroke="var(--green)" stroke-width="2"/>
+<polyline points="84.0,210.0 83.9,208.4 83.8,206.8 83.5,205.2 83.1,203.6 82.6,202.0 82.0,200.5 81.4,199.0 80.6,197.6 79.7,196.3 78.7,195.0 77.6,193.7 76.5,192.6 75.3,191.5 74.0,190.5 72.6,189.6 71.2,188.8" fill="none" stroke="var(--green)" stroke-width="2"/>
+<polyline points="260.0,210.0 259.8,206.2 259.1,202.5 257.9,199.0 256.3,195.5 254.3,192.4 251.9,189.5 249.1,186.9 246.1,184.7 242.8,182.9 239.3,181.5 235.6,180.5 231.9,180.1 228.1,180.1 224.4,180.5 220.7,181.5 217.2,182.9" fill="none" stroke="var(--orange)" stroke-width="2"/>
+<circle cx="150.0" cy="40.0" r="3" fill="var(--text)"/>
+<circle cx="60.0" cy="210.0" r="3" fill="var(--text)"/>
+<circle cx="230.0" cy="210.0" r="3" fill="var(--text)"/>
+<text x="150.8" y="31.3" font-size="14" font-weight="700" fill="var(--text)" text-anchor="middle">A</text>
+<text x="45.0" y="201.0" font-size="14" font-weight="700" fill="var(--text)">B</text>
+<text x="200.0" y="195.0" font-size="14" font-weight="700" fill="var(--text)">C</text>
+<text x="306.0" y="201.0" font-size="14" font-weight="700" fill="var(--text)">D</text>
+<text x="147.8" y="132.0" font-size="12" font-weight="700" fill="var(--green)" text-anchor="middle">∠A</text>
+<text x="94.3" y="189.4" font-size="12" font-weight="700" fill="var(--green)" text-anchor="middle">∠B</text>
+<text x="254.6" y="171.2" font-size="12" font-weight="700" fill="var(--orange)" text-anchor="middle">∠ACD</text>
+<text x="160.0" y="12.1" font-size="12" font-weight="700" fill="var(--muted)" text-anchor="middle">∠ACD = ∠A + ∠B</text>
 </svg>
 </div>
     <div class="formula-big"><div class="f-title">📐 성질 2 — 완성된 문장으로 암기!</div>
@@ -424,30 +424,30 @@
     <p><strong>대각선</strong>은 다각형에서 <strong>이웃하지 않은 두 꼭짓점을 이은 선분</strong>이에요. (이웃한 두 꼭짓점을 이으면 그건 변이 돼요.)</p>
     <div class="diagram-wrap">
 <svg viewBox="0 -9 300 309" xmlns="http://www.w3.org/2000/svg">
-<polygon points="150.0,45.0 217.2,72.8 245.0,140.0 217.2,207.2 150.0,235.0 82.8,207.2 55.0,140.0 82.8,72.8" fill="rgba(148,163,184,0.05)" stroke="#9aa7bd" stroke-width="2.2"/>
-<line x1="150.0" y1="45.0" x2="245.0" y2="140.0" stroke="#fbbf24" stroke-width="1.8" stroke-dasharray="4,3"/>
-<line x1="150.0" y1="45.0" x2="217.2" y2="207.2" stroke="#fbbf24" stroke-width="1.8" stroke-dasharray="4,3"/>
-<line x1="150.0" y1="45.0" x2="150.0" y2="235.0" stroke="#fbbf24" stroke-width="1.8" stroke-dasharray="4,3"/>
-<line x1="150.0" y1="45.0" x2="82.8" y2="207.2" stroke="#fbbf24" stroke-width="1.8" stroke-dasharray="4,3"/>
-<line x1="150.0" y1="45.0" x2="55.0" y2="140.0" stroke="#fbbf24" stroke-width="1.8" stroke-dasharray="4,3"/>
-<circle cx="150.0" cy="45.0" r="3" fill="#34d399"/>
-<circle cx="217.2" cy="72.8" r="3" fill="#e7ecf3"/>
-<circle cx="245.0" cy="140.0" r="3" fill="#e7ecf3"/>
-<circle cx="217.2" cy="207.2" r="3" fill="#e7ecf3"/>
-<circle cx="150.0" cy="235.0" r="3" fill="#e7ecf3"/>
-<circle cx="82.8" cy="207.2" r="3" fill="#e7ecf3"/>
-<circle cx="55.0" cy="140.0" r="3" fill="#e7ecf3"/>
-<circle cx="82.8" cy="72.8" r="3" fill="#e7ecf3"/>
-<text x="151.1" y="22.1" font-size="13" font-weight="700" fill="#34d399" text-anchor="middle">A</text>
-<text x="234.1" y="55.9" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">B</text>
-<text x="269.0" y="140.0" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">C</text>
-<text x="234.1" y="224.1" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">D</text>
-<text x="150.0" y="259.0" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">E</text>
-<text x="65.9" y="224.1" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">F</text>
-<text x="31.0" y="140.0" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">G</text>
-<text x="65.9" y="55.9" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">H</text>
-<text x="150.0" y="3.9" font-size="12" font-weight="700" fill="#9aa7bd" text-anchor="middle">팔각형(8각형) 한 꼭짓점 A에서 그은 대각선 5개</text>
-<text x="150.0" y="280.0" font-size="12" font-weight="700" fill="#fbbf24" text-anchor="middle">n−3 = 8−3 = 5(개)</text>
+<polygon points="150.0,45.0 217.2,72.8 245.0,140.0 217.2,207.2 150.0,235.0 82.8,207.2 55.0,140.0 82.8,72.8" fill="rgba(148,163,184,0.05)" stroke="var(--muted)" stroke-width="2.2"/>
+<line x1="150.0" y1="45.0" x2="245.0" y2="140.0" stroke="var(--orange)" stroke-width="1.8" stroke-dasharray="4,3"/>
+<line x1="150.0" y1="45.0" x2="217.2" y2="207.2" stroke="var(--orange)" stroke-width="1.8" stroke-dasharray="4,3"/>
+<line x1="150.0" y1="45.0" x2="150.0" y2="235.0" stroke="var(--orange)" stroke-width="1.8" stroke-dasharray="4,3"/>
+<line x1="150.0" y1="45.0" x2="82.8" y2="207.2" stroke="var(--orange)" stroke-width="1.8" stroke-dasharray="4,3"/>
+<line x1="150.0" y1="45.0" x2="55.0" y2="140.0" stroke="var(--orange)" stroke-width="1.8" stroke-dasharray="4,3"/>
+<circle cx="150.0" cy="45.0" r="3" fill="var(--green)"/>
+<circle cx="217.2" cy="72.8" r="3" fill="var(--text)"/>
+<circle cx="245.0" cy="140.0" r="3" fill="var(--text)"/>
+<circle cx="217.2" cy="207.2" r="3" fill="var(--text)"/>
+<circle cx="150.0" cy="235.0" r="3" fill="var(--text)"/>
+<circle cx="82.8" cy="207.2" r="3" fill="var(--text)"/>
+<circle cx="55.0" cy="140.0" r="3" fill="var(--text)"/>
+<circle cx="82.8" cy="72.8" r="3" fill="var(--text)"/>
+<text x="151.1" y="22.1" font-size="13" font-weight="700" fill="var(--green)" text-anchor="middle">A</text>
+<text x="234.1" y="55.9" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">B</text>
+<text x="269.0" y="140.0" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">C</text>
+<text x="234.1" y="224.1" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">D</text>
+<text x="150.0" y="259.0" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">E</text>
+<text x="65.9" y="224.1" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">F</text>
+<text x="31.0" y="140.0" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">G</text>
+<text x="65.9" y="55.9" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">H</text>
+<text x="150.0" y="3.9" font-size="12" font-weight="700" fill="var(--muted)" text-anchor="middle">팔각형(8각형) 한 꼭짓점 A에서 그은 대각선 5개</text>
+<text x="150.0" y="280.0" font-size="12" font-weight="700" fill="var(--orange)" text-anchor="middle">n−3 = 8−3 = 5(개)</text>
 </svg>
 </div>
     <div class="box box-green"><div class="box-title">🔑 대각선 개수 공식 두 가지</div>
@@ -479,23 +479,23 @@
     <p>다각형의 한 꼭짓점에서 그을 수 있는 대각선을 <strong>모두</strong> 그으면, 그 다각형은 여러 개의 삼각형으로 쪼개져요.</p>
     <div class="diagram-wrap">
 <svg viewBox="0 -4 300 304" xmlns="http://www.w3.org/2000/svg">
-<polygon points="150.0,50.0 245.1,119.1 208.8,230.9 91.2,230.9 54.9,119.1" fill="rgba(148,163,184,0.05)" stroke="#9aa7bd" stroke-width="2.2"/>
-<line x1="150.0" y1="50.0" x2="208.8" y2="230.9" stroke="#c4b5fd" stroke-width="1.8" stroke-dasharray="4,3"/>
-<line x1="150.0" y1="50.0" x2="91.2" y2="230.9" stroke="#c4b5fd" stroke-width="1.8" stroke-dasharray="4,3"/>
-<text x="201.3" y="133.3" font-size="15" font-weight="700" fill="#c4b5fd" text-anchor="middle">1</text>
-<text x="150.0" y="170.6" font-size="15" font-weight="700" fill="#c4b5fd" text-anchor="middle">2</text>
-<text x="98.7" y="133.3" font-size="15" font-weight="700" fill="#c4b5fd" text-anchor="middle">3</text>
-<circle cx="150.0" cy="50.0" r="3" fill="#34d399"/>
-<circle cx="245.1" cy="119.1" r="3" fill="#e7ecf3"/>
-<circle cx="208.8" cy="230.9" r="3" fill="#e7ecf3"/>
-<circle cx="91.2" cy="230.9" r="3" fill="#e7ecf3"/>
-<circle cx="54.9" cy="119.1" r="3" fill="#e7ecf3"/>
-<text x="151.1" y="27.1" font-size="13" font-weight="700" fill="#34d399" text-anchor="middle">A</text>
-<text x="267.9" y="111.7" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">B</text>
-<text x="222.9" y="250.3" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">C</text>
-<text x="77.1" y="250.3" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">D</text>
-<text x="32.1" y="111.7" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">E</text>
-<text x="150.0" y="8.9" font-size="12" font-weight="700" fill="#9aa7bd" text-anchor="middle">오각형 = 삼각형 3개 (n−2 = 5−2 = 3)</text>
+<polygon points="150.0,50.0 245.1,119.1 208.8,230.9 91.2,230.9 54.9,119.1" fill="rgba(148,163,184,0.05)" stroke="var(--muted)" stroke-width="2.2"/>
+<line x1="150.0" y1="50.0" x2="208.8" y2="230.9" stroke="var(--purple)" stroke-width="1.8" stroke-dasharray="4,3"/>
+<line x1="150.0" y1="50.0" x2="91.2" y2="230.9" stroke="var(--purple)" stroke-width="1.8" stroke-dasharray="4,3"/>
+<text x="201.3" y="133.3" font-size="15" font-weight="700" fill="var(--purple)" text-anchor="middle">1</text>
+<text x="150.0" y="170.6" font-size="15" font-weight="700" fill="var(--purple)" text-anchor="middle">2</text>
+<text x="98.7" y="133.3" font-size="15" font-weight="700" fill="var(--purple)" text-anchor="middle">3</text>
+<circle cx="150.0" cy="50.0" r="3" fill="var(--green)"/>
+<circle cx="245.1" cy="119.1" r="3" fill="var(--text)"/>
+<circle cx="208.8" cy="230.9" r="3" fill="var(--text)"/>
+<circle cx="91.2" cy="230.9" r="3" fill="var(--text)"/>
+<circle cx="54.9" cy="119.1" r="3" fill="var(--text)"/>
+<text x="151.1" y="27.1" font-size="13" font-weight="700" fill="var(--green)" text-anchor="middle">A</text>
+<text x="267.9" y="111.7" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">B</text>
+<text x="222.9" y="250.3" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">C</text>
+<text x="77.1" y="250.3" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">D</text>
+<text x="32.1" y="111.7" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">E</text>
+<text x="150.0" y="8.9" font-size="12" font-weight="700" fill="var(--muted)" text-anchor="middle">오각형 = 삼각형 3개 (n−2 = 5−2 = 3)</text>
 </svg>
 </div>
     <div class="box box-green"><div class="box-title">🔑 삼각형 개수 = n − 2, 내각의 합 공식</div>
@@ -527,28 +527,28 @@
     <div class="formula-big"><div class="f-title">📐 핵심 공식 — n에 관계없이 항상 일정!</div><div class="f-body">n각형의 외각의 크기의 합은 언제나 360°이다.</div></div>
     <div class="diagram-wrap">
 <svg viewBox="0 0 340 320" xmlns="http://www.w3.org/2000/svg">
-<polygon points="150.0,50.0 260.0,120.0 210.0,230.0 80.0,200.0" fill="rgba(148,163,184,0.06)" stroke="#9aa7bd" stroke-width="2.2"/>
-<line x1="150.0" y1="50.0" x2="167.8" y2="11.9" stroke="#fbbf24" stroke-width="1.8" stroke-dasharray="4,3"/>
-<line x1="260.0" y1="120.0" x2="295.4" y2="142.5" stroke="#fbbf24" stroke-width="1.8" stroke-dasharray="4,3"/>
-<line x1="210.0" y1="230.0" x2="192.6" y2="268.2" stroke="#fbbf24" stroke-width="1.8" stroke-dasharray="4,3"/>
-<line x1="80.0" y1="200.0" x2="39.1" y2="190.6" stroke="#fbbf24" stroke-width="1.8" stroke-dasharray="4,3"/>
-<polyline points="166.9,60.7 167.9,58.9 168.8,56.9 169.4,54.9 169.8,52.8 170.0,50.7 169.9,48.6 169.7,46.5 169.2,44.4 168.5,42.4 167.6,40.5 166.5,38.7 165.2,37.0 163.7,35.4 162.1,34.1 160.3,32.9 158.5,31.9" fill="none" stroke="#fbbf24" stroke-width="1.8"/>
-<text x="182.6" y="40.5" font-size="12" font-weight="700" fill="#fbbf24" text-anchor="middle">a</text>
-<polyline points="251.7,138.2 253.4,138.9 255.1,139.4 256.8,139.7 258.6,140.0 260.4,140.0 262.2,139.9 264.0,139.6 265.7,139.2 267.4,138.6 269.0,137.9 270.6,137.0 272.0,136.0 273.4,134.8 274.7,133.6 275.8,132.2 276.9,130.7" fill="none" stroke="#fbbf24" stroke-width="1.8"/>
-<text x="271.2" y="156.8" font-size="12" font-weight="700" fill="#fbbf24" text-anchor="middle">b</text>
-<polyline points="190.5,225.5 190.2,227.2 190.0,228.9 190.0,230.6 190.1,232.3 190.4,234.0 190.8,235.7 191.4,237.3 192.1,238.9 192.9,240.4 193.8,241.8 194.9,243.1 196.1,244.4 197.4,245.5 198.7,246.5 200.2,247.4 201.7,248.2" fill="none" stroke="#fbbf24" stroke-width="1.8"/>
-<text x="179.5" y="245.1" font-size="12" font-weight="700" fill="#fbbf24" text-anchor="middle">c</text>
-<polyline points="88.5,181.9 86.4,181.0 84.2,180.5 82.1,180.1 79.8,180.0 77.6,180.1 75.4,180.5 73.3,181.2 71.2,182.0 69.3,183.1 67.5,184.4 65.8,185.9 64.3,187.5 63.1,189.4 62.0,191.3 61.1,193.4 60.5,195.5" fill="none" stroke="#fbbf24" stroke-width="1.8"/>
-<text x="65.1" y="169.4" font-size="12" font-weight="700" fill="#fbbf24" text-anchor="middle">d</text>
-<circle cx="150.0" cy="50.0" r="3" fill="#e7ecf3"/>
-<circle cx="260.0" cy="120.0" r="3" fill="#e7ecf3"/>
-<circle cx="210.0" cy="230.0" r="3" fill="#e7ecf3"/>
-<circle cx="80.0" cy="200.0" r="3" fill="#e7ecf3"/>
-<text x="136.4" y="47.1" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">A</text>
-<text x="278.0" y="116.0" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">B</text>
-<text x="224.0" y="246.0" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">C</text>
-<text x="27.1" y="193.0" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">D</text>
-<text x="150.0" y="300.0" font-size="12" font-weight="700" fill="#9aa7bd" text-anchor="middle">∠a + ∠b + ∠c + ∠d = 360°</text>
+<polygon points="150.0,50.0 260.0,120.0 210.0,230.0 80.0,200.0" fill="rgba(148,163,184,0.06)" stroke="var(--muted)" stroke-width="2.2"/>
+<line x1="150.0" y1="50.0" x2="167.8" y2="11.9" stroke="var(--orange)" stroke-width="1.8" stroke-dasharray="4,3"/>
+<line x1="260.0" y1="120.0" x2="295.4" y2="142.5" stroke="var(--orange)" stroke-width="1.8" stroke-dasharray="4,3"/>
+<line x1="210.0" y1="230.0" x2="192.6" y2="268.2" stroke="var(--orange)" stroke-width="1.8" stroke-dasharray="4,3"/>
+<line x1="80.0" y1="200.0" x2="39.1" y2="190.6" stroke="var(--orange)" stroke-width="1.8" stroke-dasharray="4,3"/>
+<polyline points="166.9,60.7 167.9,58.9 168.8,56.9 169.4,54.9 169.8,52.8 170.0,50.7 169.9,48.6 169.7,46.5 169.2,44.4 168.5,42.4 167.6,40.5 166.5,38.7 165.2,37.0 163.7,35.4 162.1,34.1 160.3,32.9 158.5,31.9" fill="none" stroke="var(--orange)" stroke-width="1.8"/>
+<text x="182.6" y="40.5" font-size="12" font-weight="700" fill="var(--orange)" text-anchor="middle">a</text>
+<polyline points="251.7,138.2 253.4,138.9 255.1,139.4 256.8,139.7 258.6,140.0 260.4,140.0 262.2,139.9 264.0,139.6 265.7,139.2 267.4,138.6 269.0,137.9 270.6,137.0 272.0,136.0 273.4,134.8 274.7,133.6 275.8,132.2 276.9,130.7" fill="none" stroke="var(--orange)" stroke-width="1.8"/>
+<text x="271.2" y="156.8" font-size="12" font-weight="700" fill="var(--orange)" text-anchor="middle">b</text>
+<polyline points="190.5,225.5 190.2,227.2 190.0,228.9 190.0,230.6 190.1,232.3 190.4,234.0 190.8,235.7 191.4,237.3 192.1,238.9 192.9,240.4 193.8,241.8 194.9,243.1 196.1,244.4 197.4,245.5 198.7,246.5 200.2,247.4 201.7,248.2" fill="none" stroke="var(--orange)" stroke-width="1.8"/>
+<text x="179.5" y="245.1" font-size="12" font-weight="700" fill="var(--orange)" text-anchor="middle">c</text>
+<polyline points="88.5,181.9 86.4,181.0 84.2,180.5 82.1,180.1 79.8,180.0 77.6,180.1 75.4,180.5 73.3,181.2 71.2,182.0 69.3,183.1 67.5,184.4 65.8,185.9 64.3,187.5 63.1,189.4 62.0,191.3 61.1,193.4 60.5,195.5" fill="none" stroke="var(--orange)" stroke-width="1.8"/>
+<text x="65.1" y="169.4" font-size="12" font-weight="700" fill="var(--orange)" text-anchor="middle">d</text>
+<circle cx="150.0" cy="50.0" r="3" fill="var(--text)"/>
+<circle cx="260.0" cy="120.0" r="3" fill="var(--text)"/>
+<circle cx="210.0" cy="230.0" r="3" fill="var(--text)"/>
+<circle cx="80.0" cy="200.0" r="3" fill="var(--text)"/>
+<text x="136.4" y="47.1" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">A</text>
+<text x="278.0" y="116.0" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">B</text>
+<text x="224.0" y="246.0" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">C</text>
+<text x="27.1" y="193.0" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">D</text>
+<text x="150.0" y="300.0" font-size="12" font-weight="700" fill="var(--muted)" text-anchor="middle">∠a + ∠b + ∠c + ∠d = 360°</text>
 </svg>
 </div>
     <div class="box box-green"><div class="box-title">🔑 왜 항상 360°일까? (증명)</div>
@@ -573,33 +573,33 @@
     <p>정n각형은 모든 내각이 서로 같고 모든 외각도 서로 같으므로, 각각의 <strong>총합을 n으로 나누면</strong> 한 내각·한 외각의 크기를 구할 수 있어요.</p>
     <div class="diagram-wrap">
 <svg viewBox="0 0 300 320" xmlns="http://www.w3.org/2000/svg">
-<polygon points="150.0,60.0 232.3,107.5 232.3,202.5 150.0,250.0 67.7,202.5 67.7,107.5" fill="rgba(148,163,184,0.05)" stroke="#9aa7bd" stroke-width="2.2"/>
-<line x1="150.0" y1="155.0" x2="150.0" y2="60.0" stroke="#c4b5fd" stroke-width="1.6" stroke-dasharray="3,3"/>
-<line x1="150.0" y1="155.0" x2="232.3" y2="107.5" stroke="#c4b5fd" stroke-width="1.6" stroke-dasharray="3,3"/>
-<line x1="150.0" y1="155.0" x2="232.3" y2="202.5" stroke="#c4b5fd" stroke-width="1.6" stroke-dasharray="3,3"/>
-<line x1="150.0" y1="155.0" x2="150.0" y2="250.0" stroke="#c4b5fd" stroke-width="1.6" stroke-dasharray="3,3"/>
-<line x1="150.0" y1="155.0" x2="67.7" y2="202.5" stroke="#c4b5fd" stroke-width="1.6" stroke-dasharray="3,3"/>
-<line x1="150.0" y1="155.0" x2="67.7" y2="107.5" stroke="#c4b5fd" stroke-width="1.6" stroke-dasharray="3,3"/>
-<polygon points="150.0,155.0 150.0,60.0 232.3,107.5" fill="rgba(196,181,253,0.14)" stroke="#c4b5fd" stroke-width="0"/>
-<polyline points="176.0,140.0 174.9,138.3 173.8,136.7 172.6,135.2 171.2,133.8 169.8,132.4 168.3,131.2 166.7,130.1 165.0,129.0 163.3,128.1 161.5,127.3 159.6,126.6 157.8,126.0 155.9,125.6 153.9,125.3 152.0,125.1 150.0,125.0" fill="none" stroke="#c4b5fd" stroke-width="1.8"/>
-<text x="172.3" y="119.5" font-size="12" font-weight="700" fill="#c4b5fd" text-anchor="middle">60°</text>
-<polyline points="125.8,74.0 127.8,77.0 130.2,79.8 133.0,82.2 136.0,84.2 139.3,85.9 142.8,87.0 146.3,87.8 150.0,88.0 153.7,87.8 157.2,87.0 160.7,85.9 164.0,84.2 167.0,82.2 169.8,79.8 172.2,77.0 174.2,74.0" fill="none" stroke="#34d399" stroke-width="2"/>
-<text x="130.6" y="104.9" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle">120°</text>
-<circle cx="150.0" cy="155.0" r="3" fill="#e7ecf3"/>
-<text x="132.0" y="185.0" font-size="12" font-weight="700" fill="#9aa7bd">O</text>
-<circle cx="150.0" cy="60.0" r="3" fill="#e7ecf3"/>
-<circle cx="232.3" cy="107.5" r="3" fill="#e7ecf3"/>
-<circle cx="232.3" cy="202.5" r="3" fill="#e7ecf3"/>
-<circle cx="150.0" cy="250.0" r="3" fill="#e7ecf3"/>
-<circle cx="67.7" cy="202.5" r="3" fill="#e7ecf3"/>
-<circle cx="67.7" cy="107.5" r="3" fill="#e7ecf3"/>
-<text x="151.9" y="43.2" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">A</text>
-<text x="249.6" y="97.5" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">B</text>
-<text x="249.6" y="212.5" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">C</text>
-<text x="150.0" y="270.0" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">D</text>
-<text x="50.4" y="212.5" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">E</text>
-<text x="50.4" y="97.5" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">F</text>
-<text x="150.0" y="25.0" font-size="12" font-weight="700" fill="#9aa7bd" text-anchor="middle">정육각형: 중심각(360°÷6=60°), 한 내각(120°)</text>
+<polygon points="150.0,60.0 232.3,107.5 232.3,202.5 150.0,250.0 67.7,202.5 67.7,107.5" fill="rgba(148,163,184,0.05)" stroke="var(--muted)" stroke-width="2.2"/>
+<line x1="150.0" y1="155.0" x2="150.0" y2="60.0" stroke="var(--purple)" stroke-width="1.6" stroke-dasharray="3,3"/>
+<line x1="150.0" y1="155.0" x2="232.3" y2="107.5" stroke="var(--purple)" stroke-width="1.6" stroke-dasharray="3,3"/>
+<line x1="150.0" y1="155.0" x2="232.3" y2="202.5" stroke="var(--purple)" stroke-width="1.6" stroke-dasharray="3,3"/>
+<line x1="150.0" y1="155.0" x2="150.0" y2="250.0" stroke="var(--purple)" stroke-width="1.6" stroke-dasharray="3,3"/>
+<line x1="150.0" y1="155.0" x2="67.7" y2="202.5" stroke="var(--purple)" stroke-width="1.6" stroke-dasharray="3,3"/>
+<line x1="150.0" y1="155.0" x2="67.7" y2="107.5" stroke="var(--purple)" stroke-width="1.6" stroke-dasharray="3,3"/>
+<polygon points="150.0,155.0 150.0,60.0 232.3,107.5" fill="rgba(196,181,253,0.14)" stroke="var(--purple)" stroke-width="0"/>
+<polyline points="176.0,140.0 174.9,138.3 173.8,136.7 172.6,135.2 171.2,133.8 169.8,132.4 168.3,131.2 166.7,130.1 165.0,129.0 163.3,128.1 161.5,127.3 159.6,126.6 157.8,126.0 155.9,125.6 153.9,125.3 152.0,125.1 150.0,125.0" fill="none" stroke="var(--purple)" stroke-width="1.8"/>
+<text x="172.3" y="119.5" font-size="12" font-weight="700" fill="var(--purple)" text-anchor="middle">60°</text>
+<polyline points="125.8,74.0 127.8,77.0 130.2,79.8 133.0,82.2 136.0,84.2 139.3,85.9 142.8,87.0 146.3,87.8 150.0,88.0 153.7,87.8 157.2,87.0 160.7,85.9 164.0,84.2 167.0,82.2 169.8,79.8 172.2,77.0 174.2,74.0" fill="none" stroke="var(--green)" stroke-width="2"/>
+<text x="130.6" y="104.9" font-size="12" font-weight="700" fill="var(--green)" text-anchor="middle">120°</text>
+<circle cx="150.0" cy="155.0" r="3" fill="var(--text)"/>
+<text x="132.0" y="185.0" font-size="12" font-weight="700" fill="var(--muted)">O</text>
+<circle cx="150.0" cy="60.0" r="3" fill="var(--text)"/>
+<circle cx="232.3" cy="107.5" r="3" fill="var(--text)"/>
+<circle cx="232.3" cy="202.5" r="3" fill="var(--text)"/>
+<circle cx="150.0" cy="250.0" r="3" fill="var(--text)"/>
+<circle cx="67.7" cy="202.5" r="3" fill="var(--text)"/>
+<circle cx="67.7" cy="107.5" r="3" fill="var(--text)"/>
+<text x="151.9" y="43.2" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">A</text>
+<text x="249.6" y="97.5" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">B</text>
+<text x="249.6" y="212.5" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">C</text>
+<text x="150.0" y="270.0" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">D</text>
+<text x="50.4" y="212.5" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">E</text>
+<text x="50.4" y="97.5" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">F</text>
+<text x="150.0" y="25.0" font-size="12" font-weight="700" fill="var(--muted)" text-anchor="middle">정육각형: 중심각(360°÷6=60°), 한 내각(120°)</text>
 </svg>
 </div>
     <div class="formula-big"><div class="f-title">📐 핵심 공식</div>
@@ -660,15 +660,15 @@
           <div class="pq"><span class="pnum">2.</span>한 내각의 크기가 200°인 다각형이 있다. 이 다각형은 볼록다각형인가, 오목다각형인가?</div>
 <div class="diagram-wrap">
 <svg viewBox="40 30 205 244" xmlns="http://www.w3.org/2000/svg">
-<polygon points="85.3,240.0 179.1,240.0 196.9,139.2 235.3,72.7 50.0,40.0" fill="rgba(248,113,113,0.08)" stroke="#f87171" stroke-width="2.2"/>
-<polyline points="211.9,113.2 208.0,111.3 203.8,110.0 199.5,109.3 195.2,109.2 190.8,109.8 186.6,111.0 182.7,112.8 179.0,115.1 175.7,118.0 172.8,121.3 170.5,124.9 168.7,128.9 167.5,133.1 166.9,137.4 167.0,141.8 167.7,146.1 169.0,150.2 170.9,154.2 173.4,157.8 176.3,161.0 179.7,163.7 183.4,166.0 187.5,167.6 191.7,168.7" fill="none" stroke="#f87171" stroke-width="2"/>
-<text x="147.0" y="124.4" font-size="13" font-weight="700" fill="#f87171" text-anchor="middle">200°</text>
-<circle cx="85.3" cy="240.0" r="3" fill="#e7ecf3"/>
-<circle cx="179.1" cy="240.0" r="3" fill="#e7ecf3"/>
-<circle cx="196.9" cy="139.2" r="3" fill="#e7ecf3"/>
-<circle cx="235.3" cy="72.7" r="3" fill="#e7ecf3"/>
-<circle cx="50.0" cy="40.0" r="3" fill="#e7ecf3"/>
-<text x="142.6" y="268.0" font-size="12" font-weight="700" fill="#9aa7bd" text-anchor="middle">표시된 각의 크기가 200°</text>
+<polygon points="85.3,240.0 179.1,240.0 196.9,139.2 235.3,72.7 50.0,40.0" fill="rgba(248,113,113,0.08)" stroke="var(--red)" stroke-width="2.2"/>
+<polyline points="211.9,113.2 208.0,111.3 203.8,110.0 199.5,109.3 195.2,109.2 190.8,109.8 186.6,111.0 182.7,112.8 179.0,115.1 175.7,118.0 172.8,121.3 170.5,124.9 168.7,128.9 167.5,133.1 166.9,137.4 167.0,141.8 167.7,146.1 169.0,150.2 170.9,154.2 173.4,157.8 176.3,161.0 179.7,163.7 183.4,166.0 187.5,167.6 191.7,168.7" fill="none" stroke="var(--red)" stroke-width="2"/>
+<text x="147.0" y="124.4" font-size="13" font-weight="700" fill="var(--red)" text-anchor="middle">200°</text>
+<circle cx="85.3" cy="240.0" r="3" fill="var(--text)"/>
+<circle cx="179.1" cy="240.0" r="3" fill="var(--text)"/>
+<circle cx="196.9" cy="139.2" r="3" fill="var(--text)"/>
+<circle cx="235.3" cy="72.7" r="3" fill="var(--text)"/>
+<circle cx="50.0" cy="40.0" r="3" fill="var(--text)"/>
+<text x="142.6" y="268.0" font-size="12" font-weight="700" fill="var(--muted)" text-anchor="middle">표시된 각의 크기가 200°</text>
 </svg>
 </div>
           <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
@@ -688,32 +688,32 @@
           <div class="pq"><span class="pnum">5.</span>구각형(9각형)의 한 꼭짓점에서 그을 수 있는 대각선의 개수는? (단위: 개)</div>
 <div class="diagram-wrap">
 <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-<polygon points="150.0,50.0 211.1,72.2 243.6,128.5 232.3,192.5 182.5,234.3 117.5,234.3 67.7,192.5 56.4,128.5 88.9,72.2" fill="rgba(148,163,184,0.05)" stroke="#9aa7bd" stroke-width="2.2"/>
-<line x1="150.0" y1="50.0" x2="243.6" y2="128.5" stroke="#fbbf24" stroke-width="1.6" stroke-dasharray="4,3"/>
-<line x1="150.0" y1="50.0" x2="232.3" y2="192.5" stroke="#fbbf24" stroke-width="1.6" stroke-dasharray="4,3"/>
-<line x1="150.0" y1="50.0" x2="182.5" y2="234.3" stroke="#fbbf24" stroke-width="1.6" stroke-dasharray="4,3"/>
-<line x1="150.0" y1="50.0" x2="117.5" y2="234.3" stroke="#fbbf24" stroke-width="1.6" stroke-dasharray="4,3"/>
-<line x1="150.0" y1="50.0" x2="67.7" y2="192.5" stroke="#fbbf24" stroke-width="1.6" stroke-dasharray="4,3"/>
-<line x1="150.0" y1="50.0" x2="56.4" y2="128.5" stroke="#fbbf24" stroke-width="1.6" stroke-dasharray="4,3"/>
-<circle cx="150.0" cy="50.0" r="3" fill="#34d399"/>
-<circle cx="211.1" cy="72.2" r="3" fill="#e7ecf3"/>
-<circle cx="243.6" cy="128.5" r="3" fill="#e7ecf3"/>
-<circle cx="232.3" cy="192.5" r="3" fill="#e7ecf3"/>
-<circle cx="182.5" cy="234.3" r="3" fill="#e7ecf3"/>
-<circle cx="117.5" cy="234.3" r="3" fill="#e7ecf3"/>
-<circle cx="67.7" cy="192.5" r="3" fill="#e7ecf3"/>
-<circle cx="56.4" cy="128.5" r="3" fill="#e7ecf3"/>
-<circle cx="88.9" cy="72.2" r="3" fill="#e7ecf3"/>
-<text x="149.6" y="19.4" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle">V</text>
-<text x="231.5" y="53.5" font-size="12" font-weight="700" fill="#e7ecf3" text-anchor="middle">P1</text>
-<text x="273.1" y="123.3" font-size="12" font-weight="700" fill="#e7ecf3" text-anchor="middle">P2</text>
-<text x="258.3" y="207.5" font-size="12" font-weight="700" fill="#e7ecf3" text-anchor="middle">P3</text>
-<text x="192.8" y="262.5" font-size="12" font-weight="700" fill="#e7ecf3" text-anchor="middle">P4</text>
-<text x="107.2" y="262.5" font-size="12" font-weight="700" fill="#e7ecf3" text-anchor="middle">P5</text>
-<text x="41.7" y="207.5" font-size="12" font-weight="700" fill="#e7ecf3" text-anchor="middle">P6</text>
-<text x="26.9" y="123.3" font-size="12" font-weight="700" fill="#e7ecf3" text-anchor="middle">P7</text>
-<text x="70.9" y="53.5" font-size="12" font-weight="700" fill="#e7ecf3" text-anchor="middle">P8</text>
-<text x="150.0" y="36.4" font-size="12" font-weight="700" fill="#9aa7bd" text-anchor="middle">구각형(9각형)의 한 꼭짓점 V에서 그은 대각선</text>
+<polygon points="150.0,50.0 211.1,72.2 243.6,128.5 232.3,192.5 182.5,234.3 117.5,234.3 67.7,192.5 56.4,128.5 88.9,72.2" fill="rgba(148,163,184,0.05)" stroke="var(--muted)" stroke-width="2.2"/>
+<line x1="150.0" y1="50.0" x2="243.6" y2="128.5" stroke="var(--orange)" stroke-width="1.6" stroke-dasharray="4,3"/>
+<line x1="150.0" y1="50.0" x2="232.3" y2="192.5" stroke="var(--orange)" stroke-width="1.6" stroke-dasharray="4,3"/>
+<line x1="150.0" y1="50.0" x2="182.5" y2="234.3" stroke="var(--orange)" stroke-width="1.6" stroke-dasharray="4,3"/>
+<line x1="150.0" y1="50.0" x2="117.5" y2="234.3" stroke="var(--orange)" stroke-width="1.6" stroke-dasharray="4,3"/>
+<line x1="150.0" y1="50.0" x2="67.7" y2="192.5" stroke="var(--orange)" stroke-width="1.6" stroke-dasharray="4,3"/>
+<line x1="150.0" y1="50.0" x2="56.4" y2="128.5" stroke="var(--orange)" stroke-width="1.6" stroke-dasharray="4,3"/>
+<circle cx="150.0" cy="50.0" r="3" fill="var(--green)"/>
+<circle cx="211.1" cy="72.2" r="3" fill="var(--text)"/>
+<circle cx="243.6" cy="128.5" r="3" fill="var(--text)"/>
+<circle cx="232.3" cy="192.5" r="3" fill="var(--text)"/>
+<circle cx="182.5" cy="234.3" r="3" fill="var(--text)"/>
+<circle cx="117.5" cy="234.3" r="3" fill="var(--text)"/>
+<circle cx="67.7" cy="192.5" r="3" fill="var(--text)"/>
+<circle cx="56.4" cy="128.5" r="3" fill="var(--text)"/>
+<circle cx="88.9" cy="72.2" r="3" fill="var(--text)"/>
+<text x="149.6" y="19.4" font-size="12" font-weight="700" fill="var(--green)" text-anchor="middle">V</text>
+<text x="231.5" y="53.5" font-size="12" font-weight="700" fill="var(--text)" text-anchor="middle">P1</text>
+<text x="273.1" y="123.3" font-size="12" font-weight="700" fill="var(--text)" text-anchor="middle">P2</text>
+<text x="258.3" y="207.5" font-size="12" font-weight="700" fill="var(--text)" text-anchor="middle">P3</text>
+<text x="192.8" y="262.5" font-size="12" font-weight="700" fill="var(--text)" text-anchor="middle">P4</text>
+<text x="107.2" y="262.5" font-size="12" font-weight="700" fill="var(--text)" text-anchor="middle">P5</text>
+<text x="41.7" y="207.5" font-size="12" font-weight="700" fill="var(--text)" text-anchor="middle">P6</text>
+<text x="26.9" y="123.3" font-size="12" font-weight="700" fill="var(--text)" text-anchor="middle">P7</text>
+<text x="70.9" y="53.5" font-size="12" font-weight="700" fill="var(--text)" text-anchor="middle">P8</text>
+<text x="150.0" y="36.4" font-size="12" font-weight="700" fill="var(--muted)" text-anchor="middle">구각형(9각형)의 한 꼭짓점 V에서 그은 대각선</text>
 </svg>
 </div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="개"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
@@ -743,23 +743,23 @@
           <div class="pq"><span class="pnum">10.</span>다음 그림과 같이 △ABC에서 변 BC를 연장하여 점 D를 잡았다. ∠A=40°, ∠B=75°일 때 ∠ACD(=x)의 크기는? (단위: 도)</div>
 <div class="diagram-wrap">
 <svg viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg">
-<line x1="55.0" y1="215.0" x2="178.4" y2="215.0" stroke="#9aa7bd" stroke-width="2.2"/>
-<line x1="178.4" y1="215.0" x2="240.4" y2="215.0" stroke="#9aa7bd" stroke-width="2.2" stroke-dasharray="5,4"/>
-<line x1="100.0" y1="47.0" x2="55.0" y2="215.0" stroke="#34d399" stroke-width="2.2"/>
-<line x1="100.0" y1="47.0" x2="178.4" y2="215.0" stroke="#34d399" stroke-width="2.2"/>
-<polyline points="92.3,76.0 93.2,76.2 94.1,76.4 95.0,76.6 96.0,76.7 96.9,76.8 97.9,76.9 98.8,77.0 99.8,77.0 100.7,77.0 101.7,77.0 102.6,76.9 103.6,76.8 104.5,76.7 105.5,76.5 106.4,76.3 107.3,76.1 108.2,75.9 109.2,75.6 110.1,75.3 110.9,74.9 111.8,74.6 112.7,74.2" fill="none" stroke="#34d399" stroke-width="2"/>
-<polyline points="62.2,188.0 63.8,188.4 65.4,189.0 66.9,189.7 68.4,190.4 69.9,191.3 71.2,192.2 72.6,193.2 73.8,194.3 75.0,195.4 76.2,196.7 77.2,198.0 78.2,199.3 79.1,200.7 79.9,202.2 80.6,203.7 81.2,205.2 81.8,206.8 82.2,208.4 82.6,210.0 82.8,211.7 83.0,213.3 83.0,215.0" fill="none" stroke="#34d399" stroke-width="2"/>
-<polyline points="167.4,191.4 169.6,190.5 171.8,189.8 174.1,189.3 176.5,189.1 178.9,189.0 181.2,189.2 183.6,189.5 185.9,190.1 188.1,190.9 190.3,191.9 192.3,193.1 194.3,194.4 196.1,196.0 197.7,197.7 199.2,199.5 200.6,201.5 201.7,203.5 202.6,205.7 203.4,208.0 203.9,210.3 204.2,212.6 204.4,215.0" fill="none" stroke="#fbbf24" stroke-width="2"/>
-<circle cx="100.0" cy="47.0" r="3" fill="#e7ecf3"/>
-<circle cx="55.0" cy="215.0" r="3" fill="#e7ecf3"/>
-<circle cx="178.4" cy="215.0" r="3" fill="#e7ecf3"/>
-<text x="100.0" y="34.7" font-size="14" font-weight="700" fill="#e7ecf3" text-anchor="middle">A</text>
-<text x="40.0" y="232.7" font-size="14" font-weight="700" fill="#e7ecf3" text-anchor="middle">B</text>
-<text x="182.4" y="236.7" font-size="14" font-weight="700" fill="#e7ecf3" text-anchor="middle">C</text>
-<text x="252.4" y="218.7" font-size="14" font-weight="700" fill="#e7ecf3" text-anchor="middle">D</text>
-<text x="104.7" y="104.6" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle">40°</text>
-<text x="90.7" y="190.8" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle">75°</text>
-<text x="199.1" y="186.0" font-size="14" font-weight="700" fill="#fbbf24" text-anchor="middle">x</text>
+<line x1="55.0" y1="215.0" x2="178.4" y2="215.0" stroke="var(--muted)" stroke-width="2.2"/>
+<line x1="178.4" y1="215.0" x2="240.4" y2="215.0" stroke="var(--muted)" stroke-width="2.2" stroke-dasharray="5,4"/>
+<line x1="100.0" y1="47.0" x2="55.0" y2="215.0" stroke="var(--green)" stroke-width="2.2"/>
+<line x1="100.0" y1="47.0" x2="178.4" y2="215.0" stroke="var(--green)" stroke-width="2.2"/>
+<polyline points="92.3,76.0 93.2,76.2 94.1,76.4 95.0,76.6 96.0,76.7 96.9,76.8 97.9,76.9 98.8,77.0 99.8,77.0 100.7,77.0 101.7,77.0 102.6,76.9 103.6,76.8 104.5,76.7 105.5,76.5 106.4,76.3 107.3,76.1 108.2,75.9 109.2,75.6 110.1,75.3 110.9,74.9 111.8,74.6 112.7,74.2" fill="none" stroke="var(--green)" stroke-width="2"/>
+<polyline points="62.2,188.0 63.8,188.4 65.4,189.0 66.9,189.7 68.4,190.4 69.9,191.3 71.2,192.2 72.6,193.2 73.8,194.3 75.0,195.4 76.2,196.7 77.2,198.0 78.2,199.3 79.1,200.7 79.9,202.2 80.6,203.7 81.2,205.2 81.8,206.8 82.2,208.4 82.6,210.0 82.8,211.7 83.0,213.3 83.0,215.0" fill="none" stroke="var(--green)" stroke-width="2"/>
+<polyline points="167.4,191.4 169.6,190.5 171.8,189.8 174.1,189.3 176.5,189.1 178.9,189.0 181.2,189.2 183.6,189.5 185.9,190.1 188.1,190.9 190.3,191.9 192.3,193.1 194.3,194.4 196.1,196.0 197.7,197.7 199.2,199.5 200.6,201.5 201.7,203.5 202.6,205.7 203.4,208.0 203.9,210.3 204.2,212.6 204.4,215.0" fill="none" stroke="var(--orange)" stroke-width="2"/>
+<circle cx="100.0" cy="47.0" r="3" fill="var(--text)"/>
+<circle cx="55.0" cy="215.0" r="3" fill="var(--text)"/>
+<circle cx="178.4" cy="215.0" r="3" fill="var(--text)"/>
+<text x="100.0" y="34.7" font-size="14" font-weight="700" fill="var(--text)" text-anchor="middle">A</text>
+<text x="40.0" y="232.7" font-size="14" font-weight="700" fill="var(--text)" text-anchor="middle">B</text>
+<text x="182.4" y="236.7" font-size="14" font-weight="700" fill="var(--text)" text-anchor="middle">C</text>
+<text x="252.4" y="218.7" font-size="14" font-weight="700" fill="var(--text)" text-anchor="middle">D</text>
+<text x="104.7" y="104.6" font-size="12" font-weight="700" fill="var(--green)" text-anchor="middle">40°</text>
+<text x="90.7" y="190.8" font-size="12" font-weight="700" fill="var(--green)" text-anchor="middle">75°</text>
+<text x="199.1" y="186.0" font-size="14" font-weight="700" fill="var(--orange)" text-anchor="middle">x</text>
 </svg>
 </div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
@@ -782,28 +782,28 @@
           <div class="pq"><span class="pnum">2.</span>다음 그림과 같은 오각형 ABCDE에서 ∠A=100°, ∠B=95°, ∠C=130°이고 꼭짓점 D의 외각의 크기가 72°일 때, ∠x(=∠E)의 크기는? (단위: 도)</div>
 <div class="diagram-wrap">
 <svg viewBox="0 0 320 300" xmlns="http://www.w3.org/2000/svg">
-<polygon points="84.3,265.0 221.2,265.0 231.6,145.7 140.9,55.0 55.0,98.8" fill="rgba(148,163,184,0.06)" stroke="#9aa7bd" stroke-width="2.2"/>
-<line x1="140.9" y1="55.0" x2="104.1" y2="18.2" stroke="#fbbf24" stroke-width="1.8" stroke-dasharray="4,3"/>
-<polyline points="79.8,239.4 81.8,239.1 83.9,239.0 86.0,239.1 88.0,239.3 90.0,239.6 92.0,240.2 94.0,240.9 95.9,241.7 97.7,242.7 99.4,243.8 101.0,245.1 102.6,246.5 104.0,248.0 105.3,249.6 106.4,251.3 107.4,253.1 108.3,255.0 109.0,256.9 109.6,258.9 110.0,260.9 110.2,262.9 110.3,265.0" fill="none" stroke="#34d399" stroke-width="1.8"/>
-<text x="113.9" y="233.0" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle">100°</text>
-<polyline points="195.2,265.0 195.2,263.0 195.5,261.1 195.8,259.2 196.3,257.3 197.0,255.4 197.8,253.6 198.7,251.9 199.7,250.3 200.9,248.7 202.2,247.2 203.6,245.8 205.1,244.6 206.7,243.4 208.3,242.4 210.1,241.5 211.9,240.7 213.7,240.1 215.6,239.6 217.6,239.3 219.5,239.1 221.5,239.0 223.4,239.1" fill="none" stroke="#34d399" stroke-width="1.8"/>
-<text x="192.6" y="237.1" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle">95°</text>
-<polyline points="229.3,171.6 226.7,171.2 224.1,170.6 221.5,169.7 219.1,168.5 216.9,167.1 214.7,165.5 212.8,163.7 211.0,161.6 209.5,159.4 208.2,157.1 207.2,154.6 206.4,152.0 205.9,149.4 205.6,146.7 205.6,144.1 206.0,141.4 206.5,138.8 207.4,136.2 208.5,133.8 209.8,131.5 211.4,129.3 213.2,127.3" fill="none" stroke="#34d399" stroke-width="1.8"/>
-<text x="186.7" y="165.4" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle">130°</text>
-<polyline points="78.2,87.0 79.1,89.0 79.8,91.0 80.4,93.2 80.8,95.3 81.0,97.5 81.0,99.7 80.8,101.9 80.4,104.1 79.9,106.3 79.2,108.3 78.3,110.4 77.2,112.3 76.0,114.1 74.6,115.8 73.1,117.4 71.4,118.9 69.7,120.2 67.8,121.4 65.8,122.4 63.8,123.2 61.7,123.9 59.5,124.4" fill="none" stroke="#c4b5fd" stroke-width="1.8"/>
-<text x="88.3" y="119.1" font-size="14" font-weight="700" fill="#c4b5fd" text-anchor="middle">x</text>
-<polyline points="119.5,65.9 118.9,64.7 118.4,63.4 117.9,62.1 117.6,60.8 117.3,59.4 117.1,58.1 116.9,56.7 116.9,55.3 116.9,54.0 117.0,52.6 117.2,51.2 117.4,49.9 117.8,48.6 118.2,47.3 118.6,46.0 119.2,44.7 119.8,43.5 120.5,42.3 121.3,41.2 122.1,40.1 123.0,39.0 123.9,38.0" fill="none" stroke="#fbbf24" stroke-width="1.8"/>
-<text x="101.1" y="51.9" font-size="12" font-weight="700" fill="#fbbf24" text-anchor="middle">72°</text>
-<text x="75.3" y="282.8" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">A</text>
-<circle cx="84.3" cy="265.0" r="3" fill="#e7ecf3"/>
-<text x="231.4" y="282.0" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">B</text>
-<circle cx="221.2" cy="265.0" r="3" fill="#e7ecf3"/>
-<text x="248.1" y="145.2" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">C</text>
-<circle cx="231.6" cy="145.7" r="3" fill="#e7ecf3"/>
-<text x="140.8" y="41.5" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">D</text>
-<circle cx="140.9" cy="55.0" r="3" fill="#e7ecf3"/>
-<text x="41.3" y="92.2" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">E</text>
-<circle cx="55.0" cy="98.8" r="3" fill="#e7ecf3"/>
+<polygon points="84.3,265.0 221.2,265.0 231.6,145.7 140.9,55.0 55.0,98.8" fill="rgba(148,163,184,0.06)" stroke="var(--muted)" stroke-width="2.2"/>
+<line x1="140.9" y1="55.0" x2="104.1" y2="18.2" stroke="var(--orange)" stroke-width="1.8" stroke-dasharray="4,3"/>
+<polyline points="79.8,239.4 81.8,239.1 83.9,239.0 86.0,239.1 88.0,239.3 90.0,239.6 92.0,240.2 94.0,240.9 95.9,241.7 97.7,242.7 99.4,243.8 101.0,245.1 102.6,246.5 104.0,248.0 105.3,249.6 106.4,251.3 107.4,253.1 108.3,255.0 109.0,256.9 109.6,258.9 110.0,260.9 110.2,262.9 110.3,265.0" fill="none" stroke="var(--green)" stroke-width="1.8"/>
+<text x="113.9" y="233.0" font-size="12" font-weight="700" fill="var(--green)" text-anchor="middle">100°</text>
+<polyline points="195.2,265.0 195.2,263.0 195.5,261.1 195.8,259.2 196.3,257.3 197.0,255.4 197.8,253.6 198.7,251.9 199.7,250.3 200.9,248.7 202.2,247.2 203.6,245.8 205.1,244.6 206.7,243.4 208.3,242.4 210.1,241.5 211.9,240.7 213.7,240.1 215.6,239.6 217.6,239.3 219.5,239.1 221.5,239.0 223.4,239.1" fill="none" stroke="var(--green)" stroke-width="1.8"/>
+<text x="192.6" y="237.1" font-size="12" font-weight="700" fill="var(--green)" text-anchor="middle">95°</text>
+<polyline points="229.3,171.6 226.7,171.2 224.1,170.6 221.5,169.7 219.1,168.5 216.9,167.1 214.7,165.5 212.8,163.7 211.0,161.6 209.5,159.4 208.2,157.1 207.2,154.6 206.4,152.0 205.9,149.4 205.6,146.7 205.6,144.1 206.0,141.4 206.5,138.8 207.4,136.2 208.5,133.8 209.8,131.5 211.4,129.3 213.2,127.3" fill="none" stroke="var(--green)" stroke-width="1.8"/>
+<text x="186.7" y="165.4" font-size="12" font-weight="700" fill="var(--green)" text-anchor="middle">130°</text>
+<polyline points="78.2,87.0 79.1,89.0 79.8,91.0 80.4,93.2 80.8,95.3 81.0,97.5 81.0,99.7 80.8,101.9 80.4,104.1 79.9,106.3 79.2,108.3 78.3,110.4 77.2,112.3 76.0,114.1 74.6,115.8 73.1,117.4 71.4,118.9 69.7,120.2 67.8,121.4 65.8,122.4 63.8,123.2 61.7,123.9 59.5,124.4" fill="none" stroke="var(--purple)" stroke-width="1.8"/>
+<text x="88.3" y="119.1" font-size="14" font-weight="700" fill="var(--purple)" text-anchor="middle">x</text>
+<polyline points="119.5,65.9 118.9,64.7 118.4,63.4 117.9,62.1 117.6,60.8 117.3,59.4 117.1,58.1 116.9,56.7 116.9,55.3 116.9,54.0 117.0,52.6 117.2,51.2 117.4,49.9 117.8,48.6 118.2,47.3 118.6,46.0 119.2,44.7 119.8,43.5 120.5,42.3 121.3,41.2 122.1,40.1 123.0,39.0 123.9,38.0" fill="none" stroke="var(--orange)" stroke-width="1.8"/>
+<text x="101.1" y="51.9" font-size="12" font-weight="700" fill="var(--orange)" text-anchor="middle">72°</text>
+<text x="75.3" y="282.8" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">A</text>
+<circle cx="84.3" cy="265.0" r="3" fill="var(--text)"/>
+<text x="231.4" y="282.0" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">B</text>
+<circle cx="221.2" cy="265.0" r="3" fill="var(--text)"/>
+<text x="248.1" y="145.2" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">C</text>
+<circle cx="231.6" cy="145.7" r="3" fill="var(--text)"/>
+<text x="140.8" y="41.5" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">D</text>
+<circle cx="140.9" cy="55.0" r="3" fill="var(--text)"/>
+<text x="41.3" y="92.2" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">E</text>
+<circle cx="55.0" cy="98.8" r="3" fill="var(--text)"/>
 </svg>
 </div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
@@ -820,24 +820,24 @@
           <div class="pq"><span class="pnum">4.</span>다음 그림과 같이 정오각형 ABCDE의 변 AB를 한 변으로 하는 정삼각형 ABF를 오각형 바깥쪽에 그렸다. ∠FBC(=x)의 크기는? (단위: 도)</div>
 <div class="diagram-wrap">
 <svg viewBox="0 -2 320 302" xmlns="http://www.w3.org/2000/svg">
-<polygon points="160.0,65.0 240.8,123.7 210.0,218.8 110.0,218.8 79.2,123.7" fill="rgba(148,163,184,0.05)" stroke="#9aa7bd" stroke-width="2.2"/>
-<line x1="160.0" y1="65.0" x2="251.3" y2="24.4" stroke="#c4b5fd" stroke-width="2.0"/>
-<line x1="240.8" y1="123.7" x2="251.3" y2="24.4" stroke="#c4b5fd" stroke-width="2.0"/>
-<polyline points="244.4,89.9 238.2,89.8 232.0,90.9 226.2,93.0 220.9,96.2 216.2,100.3 212.3,105.2 209.4,110.7 207.6,116.7 206.9,122.8 207.3,129.1 208.8,135.1 211.4,140.7 215.0,145.8 219.4,150.2 224.6,153.6 230.3,156.1" fill="none" stroke="#fbbf24" stroke-width="2"/>
-<text x="196.6" y="118.1" font-size="14" font-weight="700" fill="#fbbf24" text-anchor="middle">x</text>
-<circle cx="160.0" cy="65.0" r="3" fill="#e7ecf3"/>
-<circle cx="240.8" cy="123.7" r="3" fill="#e7ecf3"/>
-<circle cx="210.0" cy="218.8" r="3" fill="#e7ecf3"/>
-<circle cx="110.0" cy="218.8" r="3" fill="#e7ecf3"/>
-<circle cx="79.2" cy="123.7" r="3" fill="#e7ecf3"/>
-<circle cx="251.3" cy="24.4" r="3" fill="#e7ecf3"/>
-<text x="142.0" y="59.0" font-size="13" font-weight="700" fill="#e7ecf3">A</text>
-<text x="252.8" y="135.7" font-size="13" font-weight="700" fill="#e7ecf3">B</text>
-<text x="224.0" y="222.8" font-size="13" font-weight="700" fill="#e7ecf3">C</text>
-<text x="94.1" y="231.5" font-size="13" font-weight="700" fill="#e7ecf3">D</text>
-<text x="59.2" y="133.7" font-size="13" font-weight="700" fill="#e7ecf3">E</text>
-<text x="243.3" y="12.4" font-size="13" font-weight="700" fill="#c4b5fd">F</text>
-<text x="160.0" y="290.0" font-size="12" font-weight="700" fill="#9aa7bd" text-anchor="middle">정오각형 ABCDE + 정삼각형 ABF(바깥쪽)</text>
+<polygon points="160.0,65.0 240.8,123.7 210.0,218.8 110.0,218.8 79.2,123.7" fill="rgba(148,163,184,0.05)" stroke="var(--muted)" stroke-width="2.2"/>
+<line x1="160.0" y1="65.0" x2="251.3" y2="24.4" stroke="var(--purple)" stroke-width="2.0"/>
+<line x1="240.8" y1="123.7" x2="251.3" y2="24.4" stroke="var(--purple)" stroke-width="2.0"/>
+<polyline points="244.4,89.9 238.2,89.8 232.0,90.9 226.2,93.0 220.9,96.2 216.2,100.3 212.3,105.2 209.4,110.7 207.6,116.7 206.9,122.8 207.3,129.1 208.8,135.1 211.4,140.7 215.0,145.8 219.4,150.2 224.6,153.6 230.3,156.1" fill="none" stroke="var(--orange)" stroke-width="2"/>
+<text x="196.6" y="118.1" font-size="14" font-weight="700" fill="var(--orange)" text-anchor="middle">x</text>
+<circle cx="160.0" cy="65.0" r="3" fill="var(--text)"/>
+<circle cx="240.8" cy="123.7" r="3" fill="var(--text)"/>
+<circle cx="210.0" cy="218.8" r="3" fill="var(--text)"/>
+<circle cx="110.0" cy="218.8" r="3" fill="var(--text)"/>
+<circle cx="79.2" cy="123.7" r="3" fill="var(--text)"/>
+<circle cx="251.3" cy="24.4" r="3" fill="var(--text)"/>
+<text x="142.0" y="59.0" font-size="13" font-weight="700" fill="var(--text)">A</text>
+<text x="252.8" y="135.7" font-size="13" font-weight="700" fill="var(--text)">B</text>
+<text x="224.0" y="222.8" font-size="13" font-weight="700" fill="var(--text)">C</text>
+<text x="94.1" y="231.5" font-size="13" font-weight="700" fill="var(--text)">D</text>
+<text x="59.2" y="133.7" font-size="13" font-weight="700" fill="var(--text)">E</text>
+<text x="243.3" y="12.4" font-size="13" font-weight="700" fill="var(--purple)">F</text>
+<text x="160.0" y="290.0" font-size="12" font-weight="700" fill="var(--muted)" text-anchor="middle">정오각형 ABCDE + 정삼각형 ABF(바깥쪽)</text>
 </svg>
 </div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
@@ -866,24 +866,24 @@
           <div class="pq"><span class="pnum">8.</span>다음 그림과 같은 정오각형 ABCDE에서 직선 l은 변 AB를 포함하는 직선이고, 직선 m은 꼭짓점 D를 지나며 l∥m이다. 직선 m과 변 CD가 이루는 예각 x의 크기는? (단위: 도)</div>
 <div class="diagram-wrap">
 <svg viewBox="0 -5 340 305" xmlns="http://www.w3.org/2000/svg">
-<polygon points="160.0,65.0 240.8,123.7 210.0,218.8 110.0,218.8 79.2,123.7" fill="rgba(148,163,184,0.05)" stroke="#9aa7bd" stroke-width="2.2"/>
-<line x1="111.5" y1="29.7" x2="289.4" y2="159.0" stroke="#34d399" stroke-width="2.0"/>
-<line x1="65.5" y1="186.4" x2="154.5" y2="251.1" stroke="#34d399" stroke-width="2.0" stroke-dasharray="6,4"/>
-<polyline points="131.1,234.0 131.7,233.2 132.2,232.4 132.7,231.5 133.2,230.6 133.6,229.7 134.1,228.7 134.4,227.8 134.8,226.8 135.1,225.8 135.3,224.8 135.5,223.8 135.7,222.8 135.9,221.8 136.0,220.8 136.0,219.8 136.0,218.8" fill="none" stroke="#fbbf24" stroke-width="2"/>
-<text x="155.7" y="239.2" font-size="14" font-weight="700" fill="#fbbf24" text-anchor="middle">x</text>
-<circle cx="160.0" cy="65.0" r="3" fill="#e7ecf3"/>
-<circle cx="240.8" cy="123.7" r="3" fill="#e7ecf3"/>
-<circle cx="210.0" cy="218.8" r="3" fill="#e7ecf3"/>
-<circle cx="110.0" cy="218.8" r="3" fill="#e7ecf3"/>
-<circle cx="79.2" cy="123.7" r="3" fill="#e7ecf3"/>
-<text x="160.0" y="49.0" font-size="13" font-weight="700" fill="#e7ecf3">A</text>
-<text x="250.8" y="117.7" font-size="13" font-weight="700" fill="#e7ecf3">B</text>
-<text x="222.0" y="224.8" font-size="13" font-weight="700" fill="#e7ecf3">C</text>
-<text x="114.0" y="248.8" font-size="13" font-weight="700" fill="#e7ecf3">D</text>
-<text x="61.2" y="131.7" font-size="13" font-weight="700" fill="#e7ecf3">E</text>
-<text x="89.0" y="9.5" font-size="13" font-weight="700" fill="#34d399">l</text>
-<text x="49.5" y="192.4" font-size="13" font-weight="700" fill="#34d399">m</text>
-<text x="170.0" y="269.7" font-size="11" font-weight="700" fill="#9aa7bd" text-anchor="middle">정오각형 ABCDE, l=직선AB, m은 D를 지나며 l∥m</text>
+<polygon points="160.0,65.0 240.8,123.7 210.0,218.8 110.0,218.8 79.2,123.7" fill="rgba(148,163,184,0.05)" stroke="var(--muted)" stroke-width="2.2"/>
+<line x1="111.5" y1="29.7" x2="289.4" y2="159.0" stroke="var(--green)" stroke-width="2.0"/>
+<line x1="65.5" y1="186.4" x2="154.5" y2="251.1" stroke="var(--green)" stroke-width="2.0" stroke-dasharray="6,4"/>
+<polyline points="131.1,234.0 131.7,233.2 132.2,232.4 132.7,231.5 133.2,230.6 133.6,229.7 134.1,228.7 134.4,227.8 134.8,226.8 135.1,225.8 135.3,224.8 135.5,223.8 135.7,222.8 135.9,221.8 136.0,220.8 136.0,219.8 136.0,218.8" fill="none" stroke="var(--orange)" stroke-width="2"/>
+<text x="155.7" y="239.2" font-size="14" font-weight="700" fill="var(--orange)" text-anchor="middle">x</text>
+<circle cx="160.0" cy="65.0" r="3" fill="var(--text)"/>
+<circle cx="240.8" cy="123.7" r="3" fill="var(--text)"/>
+<circle cx="210.0" cy="218.8" r="3" fill="var(--text)"/>
+<circle cx="110.0" cy="218.8" r="3" fill="var(--text)"/>
+<circle cx="79.2" cy="123.7" r="3" fill="var(--text)"/>
+<text x="160.0" y="49.0" font-size="13" font-weight="700" fill="var(--text)">A</text>
+<text x="250.8" y="117.7" font-size="13" font-weight="700" fill="var(--text)">B</text>
+<text x="222.0" y="224.8" font-size="13" font-weight="700" fill="var(--text)">C</text>
+<text x="114.0" y="248.8" font-size="13" font-weight="700" fill="var(--text)">D</text>
+<text x="61.2" y="131.7" font-size="13" font-weight="700" fill="var(--text)">E</text>
+<text x="89.0" y="9.5" font-size="13" font-weight="700" fill="var(--green)">l</text>
+<text x="49.5" y="192.4" font-size="13" font-weight="700" fill="var(--green)">m</text>
+<text x="170.0" y="269.7" font-size="11" font-weight="700" fill="var(--muted)" text-anchor="middle">정오각형 ABCDE, l=직선AB, m은 D를 지나며 l∥m</text>
 </svg>
 </div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
@@ -901,32 +901,32 @@
 <div class="diagram-wrap">
 <svg viewBox="40 -4 225 283" xmlns="http://www.w3.org/2000/svg">
 <polygon points="145.9,32.3 70.0,175.0 149.2,224.5 235.0,175.0" fill="rgba(148,163,184,0.05)" stroke="none"/>
-<line x1="145.9" y1="32.3" x2="70.0" y2="175.0" stroke="#9aa7bd" stroke-width="2.2"/>
-<line x1="145.9" y1="32.3" x2="235.0" y2="175.0" stroke="#9aa7bd" stroke-width="2.2"/>
-<line x1="70.0" y1="175.0" x2="149.2" y2="224.5" stroke="#9aa7bd" stroke-width="1.6" stroke-dasharray="5,4" opacity=".65"/>
-<line x1="149.2" y1="224.5" x2="235.0" y2="175.0" stroke="#9aa7bd" stroke-width="1.6" stroke-dasharray="5,4" opacity=".65"/>
-<line x1="70.0" y1="175.0" x2="235.0" y2="175.0" stroke="#fbbf24" stroke-width="2" stroke-dasharray="6,4"/>
-<line x1="70.0" y1="175.0" x2="149.2" y2="125.5" stroke="#fbbf24" stroke-width="2.2"/>
-<line x1="235.0" y1="175.0" x2="149.2" y2="125.5" stroke="#fbbf24" stroke-width="2.2"/>
-<polyline points="133.6,55.3 135.2,56.0 136.7,56.7 138.4,57.2 140.0,57.7 141.7,58.0 143.4,58.2 145.1,58.3 146.8,58.3 148.5,58.2 150.1,58.0 151.8,57.6 153.5,57.2 155.1,56.7 156.6,56.0 158.2,55.2 159.6,54.4" fill="none" stroke="#34d399" stroke-width="1.8"/>
-<text x="147.4" y="76.7" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle">60°</text>
-<polyline points="95.4,159.1 94.9,158.3 94.3,157.5 93.8,156.7 93.1,155.9 92.5,155.2 91.9,154.4 91.2,153.7 90.5,153.1 89.7,152.4 89.0,151.8 88.2,151.2 87.4,150.6 86.6,150.0 85.8,149.5 84.9,149.0 84.1,148.5" fill="none" stroke="#34d399" stroke-width="1.8"/>
-<text x="119.8" y="124.9" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle">30°</text>
-<polyline points="219.1,149.6 218.3,150.1 217.6,150.6 216.8,151.1 216.1,151.7 215.4,152.3 214.7,152.9 214.1,153.5 213.4,154.2 212.8,154.8 212.2,155.5 211.6,156.2 211.0,156.9 210.5,157.7 210.0,158.4 209.5,159.2 209.0,160.0" fill="none" stroke="#34d399" stroke-width="1.8"/>
-<text x="182.5" y="130.1" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle">28°</text>
-<polyline points="134.8,134.5 136.1,136.3 137.6,137.9 139.3,139.3 141.1,140.5 143.1,141.4 145.2,142.0 147.4,142.4 149.6,142.5 151.7,142.3 153.9,141.8 155.9,141.1 157.8,140.1 159.7,138.9 161.3,137.4 162.7,135.8 163.9,134.0" fill="none" stroke="#fbbf24" stroke-width="1.8"/>
-<text x="149.9" y="165.4" font-size="14" font-weight="700" fill="#fbbf24" text-anchor="middle">x</text>
-<circle cx="145.9" cy="32.3" r="3" fill="#e7ecf3"/>
-<text x="145.9" y="14.3" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">A</text>
-<circle cx="70.0" cy="175.0" r="3" fill="#e7ecf3"/>
-<text x="52.0" y="183.0" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">B</text>
-<circle cx="149.2" cy="224.5" r="3" fill="#e7ecf3"/>
-<text x="149.2" y="244.5" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">C</text>
-<circle cx="235.0" cy="175.0" r="3" fill="#e7ecf3"/>
-<text x="253.0" y="183.0" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">D</text>
-<circle cx="149.2" cy="125.5" r="3" fill="#e7ecf3"/>
-<text x="163.2" y="118.5" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">E</text>
-<text x="152.5" y="273.4" font-size="12" font-weight="700" fill="#9aa7bd" text-anchor="middle">꼭짓점 C를 BD를 따라 접어 올린 것</text>
+<line x1="145.9" y1="32.3" x2="70.0" y2="175.0" stroke="var(--muted)" stroke-width="2.2"/>
+<line x1="145.9" y1="32.3" x2="235.0" y2="175.0" stroke="var(--muted)" stroke-width="2.2"/>
+<line x1="70.0" y1="175.0" x2="149.2" y2="224.5" stroke="var(--muted)" stroke-width="1.6" stroke-dasharray="5,4" opacity=".65"/>
+<line x1="149.2" y1="224.5" x2="235.0" y2="175.0" stroke="var(--muted)" stroke-width="1.6" stroke-dasharray="5,4" opacity=".65"/>
+<line x1="70.0" y1="175.0" x2="235.0" y2="175.0" stroke="var(--orange)" stroke-width="2" stroke-dasharray="6,4"/>
+<line x1="70.0" y1="175.0" x2="149.2" y2="125.5" stroke="var(--orange)" stroke-width="2.2"/>
+<line x1="235.0" y1="175.0" x2="149.2" y2="125.5" stroke="var(--orange)" stroke-width="2.2"/>
+<polyline points="133.6,55.3 135.2,56.0 136.7,56.7 138.4,57.2 140.0,57.7 141.7,58.0 143.4,58.2 145.1,58.3 146.8,58.3 148.5,58.2 150.1,58.0 151.8,57.6 153.5,57.2 155.1,56.7 156.6,56.0 158.2,55.2 159.6,54.4" fill="none" stroke="var(--green)" stroke-width="1.8"/>
+<text x="147.4" y="76.7" font-size="12" font-weight="700" fill="var(--green)" text-anchor="middle">60°</text>
+<polyline points="95.4,159.1 94.9,158.3 94.3,157.5 93.8,156.7 93.1,155.9 92.5,155.2 91.9,154.4 91.2,153.7 90.5,153.1 89.7,152.4 89.0,151.8 88.2,151.2 87.4,150.6 86.6,150.0 85.8,149.5 84.9,149.0 84.1,148.5" fill="none" stroke="var(--green)" stroke-width="1.8"/>
+<text x="119.8" y="124.9" font-size="12" font-weight="700" fill="var(--green)" text-anchor="middle">30°</text>
+<polyline points="219.1,149.6 218.3,150.1 217.6,150.6 216.8,151.1 216.1,151.7 215.4,152.3 214.7,152.9 214.1,153.5 213.4,154.2 212.8,154.8 212.2,155.5 211.6,156.2 211.0,156.9 210.5,157.7 210.0,158.4 209.5,159.2 209.0,160.0" fill="none" stroke="var(--green)" stroke-width="1.8"/>
+<text x="182.5" y="130.1" font-size="12" font-weight="700" fill="var(--green)" text-anchor="middle">28°</text>
+<polyline points="134.8,134.5 136.1,136.3 137.6,137.9 139.3,139.3 141.1,140.5 143.1,141.4 145.2,142.0 147.4,142.4 149.6,142.5 151.7,142.3 153.9,141.8 155.9,141.1 157.8,140.1 159.7,138.9 161.3,137.4 162.7,135.8 163.9,134.0" fill="none" stroke="var(--orange)" stroke-width="1.8"/>
+<text x="149.9" y="165.4" font-size="14" font-weight="700" fill="var(--orange)" text-anchor="middle">x</text>
+<circle cx="145.9" cy="32.3" r="3" fill="var(--text)"/>
+<text x="145.9" y="14.3" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">A</text>
+<circle cx="70.0" cy="175.0" r="3" fill="var(--text)"/>
+<text x="52.0" y="183.0" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">B</text>
+<circle cx="149.2" cy="224.5" r="3" fill="var(--text)"/>
+<text x="149.2" y="244.5" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">C</text>
+<circle cx="235.0" cy="175.0" r="3" fill="var(--text)"/>
+<text x="253.0" y="183.0" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">D</text>
+<circle cx="149.2" cy="125.5" r="3" fill="var(--text)"/>
+<text x="163.2" y="118.5" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">E</text>
+<text x="152.5" y="273.4" font-size="12" font-weight="700" fill="var(--muted)" text-anchor="middle">꼭짓점 C를 BD를 따라 접어 올린 것</text>
 </svg>
 </div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
@@ -947,25 +947,25 @@
           <div class="sol-q">다음 그림과 같은 △ABC에서 AD, CD는 각각 ∠A, ∠C의 외각의 이등분선이고 ∠B=68°일 때, ∠ADC의 크기를 구하시오.</div>
 <div class="diagram-wrap">
 <svg viewBox="-6 0 355 292" xmlns="http://www.w3.org/2000/svg">
-<line x1="15.0" y1="260.5" x2="215.0" y2="260.5" stroke="#9aa7bd" stroke-width="2.0"/>
-<line x1="15.0" y1="260.5" x2="91.7" y2="70.6" stroke="#9aa7bd" stroke-width="2.0"/>
-<line x1="91.7" y1="70.6" x2="215.0" y2="260.5" stroke="#9aa7bd" stroke-width="2.0"/>
-<line x1="91.7" y1="70.6" x2="114.2" y2="15.0" stroke="#9aa7bd" stroke-width="1.6" stroke-dasharray="5,4"/>
-<line x1="215.0" y1="260.5" x2="285.0" y2="260.5" stroke="#9aa7bd" stroke-width="1.6" stroke-dasharray="5,4"/>
-<line x1="91.7" y1="70.6" x2="330.6" y2="47.6" stroke="#c4b5fd" stroke-width="1.8"/>
-<line x1="215.0" y1="260.5" x2="330.6" y2="47.6" stroke="#c4b5fd" stroke-width="1.8"/>
-<polyline points="41.0,260.5 40.9,258.6 40.7,256.6 40.4,254.7 39.9,252.9 39.2,251.1 38.5,249.3 37.6,247.6 36.6,245.9 35.4,244.4 34.2,242.9 32.8,241.5 31.4,240.3 29.8,239.1 28.2,238.1 26.5,237.2 24.7,236.4" fill="none" stroke="#34d399" stroke-width="2"/>
-<polyline points="302.7,50.3 302.9,52.0 303.2,53.7 303.7,55.3 304.2,57.0 304.8,58.6 305.5,60.1 306.3,61.6 307.2,63.1 308.2,64.5 309.3,65.8 310.4,67.1 311.7,68.3 313.0,69.4 314.3,70.4 315.7,71.4 317.2,72.2" fill="none" stroke="#fbbf24" stroke-width="2"/>
-<text x="50.4" y="240.0" font-size="13" font-weight="700" fill="#34d399" text-anchor="middle">68°</text>
-<text x="294.9" y="74.8" font-size="14" font-weight="700" fill="#fbbf24" text-anchor="middle">x</text>
-<circle cx="91.7" cy="70.6" r="3" fill="#e7ecf3"/>
-<circle cx="15.0" cy="260.5" r="3" fill="#e7ecf3"/>
-<circle cx="215.0" cy="260.5" r="3" fill="#e7ecf3"/>
-<circle cx="330.6" cy="47.6" r="3" fill="#e7ecf3"/>
-<text x="69.7" y="66.6" font-size="14" font-weight="700" fill="#e7ecf3">A</text>
-<text x="-1.7" y="268.2" font-size="14" font-weight="700" fill="#e7ecf3">B</text>
-<text x="215.0" y="284.5" font-size="14" font-weight="700" fill="#e7ecf3">C</text>
-<text x="336.6" y="37.6" font-size="14" font-weight="700" fill="#c4b5fd">D</text>
+<line x1="15.0" y1="260.5" x2="215.0" y2="260.5" stroke="var(--muted)" stroke-width="2.0"/>
+<line x1="15.0" y1="260.5" x2="91.7" y2="70.6" stroke="var(--muted)" stroke-width="2.0"/>
+<line x1="91.7" y1="70.6" x2="215.0" y2="260.5" stroke="var(--muted)" stroke-width="2.0"/>
+<line x1="91.7" y1="70.6" x2="114.2" y2="15.0" stroke="var(--muted)" stroke-width="1.6" stroke-dasharray="5,4"/>
+<line x1="215.0" y1="260.5" x2="285.0" y2="260.5" stroke="var(--muted)" stroke-width="1.6" stroke-dasharray="5,4"/>
+<line x1="91.7" y1="70.6" x2="330.6" y2="47.6" stroke="var(--purple)" stroke-width="1.8"/>
+<line x1="215.0" y1="260.5" x2="330.6" y2="47.6" stroke="var(--purple)" stroke-width="1.8"/>
+<polyline points="41.0,260.5 40.9,258.6 40.7,256.6 40.4,254.7 39.9,252.9 39.2,251.1 38.5,249.3 37.6,247.6 36.6,245.9 35.4,244.4 34.2,242.9 32.8,241.5 31.4,240.3 29.8,239.1 28.2,238.1 26.5,237.2 24.7,236.4" fill="none" stroke="var(--green)" stroke-width="2"/>
+<polyline points="302.7,50.3 302.9,52.0 303.2,53.7 303.7,55.3 304.2,57.0 304.8,58.6 305.5,60.1 306.3,61.6 307.2,63.1 308.2,64.5 309.3,65.8 310.4,67.1 311.7,68.3 313.0,69.4 314.3,70.4 315.7,71.4 317.2,72.2" fill="none" stroke="var(--orange)" stroke-width="2"/>
+<text x="50.4" y="240.0" font-size="13" font-weight="700" fill="var(--green)" text-anchor="middle">68°</text>
+<text x="294.9" y="74.8" font-size="14" font-weight="700" fill="var(--orange)" text-anchor="middle">x</text>
+<circle cx="91.7" cy="70.6" r="3" fill="var(--text)"/>
+<circle cx="15.0" cy="260.5" r="3" fill="var(--text)"/>
+<circle cx="215.0" cy="260.5" r="3" fill="var(--text)"/>
+<circle cx="330.6" cy="47.6" r="3" fill="var(--text)"/>
+<text x="69.7" y="66.6" font-size="14" font-weight="700" fill="var(--text)">A</text>
+<text x="-1.7" y="268.2" font-size="14" font-weight="700" fill="var(--text)">B</text>
+<text x="215.0" y="284.5" font-size="14" font-weight="700" fill="var(--text)">C</text>
+<text x="336.6" y="37.6" font-size="14" font-weight="700" fill="var(--purple)">D</text>
 </svg>
 </div>
           <div class="step"><span class="s-label">STEP 1</span><br>∠DAC=a, ∠DCA=b라 하면, AD가 ∠A의 외각을 이등분하므로 ∠A의 외각=2a, 즉 <strong>∠BAC = 180°−2a</strong>. 마찬가지로 <strong>∠BCA = 180°−2b</strong>.</div>
@@ -978,25 +978,25 @@
           <div class="pq"><span class="pnum">1.</span>다음 그림과 같은 △ABC에서 AD, CD는 각각 ∠A, ∠C의 외각의 이등분선이고 ∠B=74°일 때, ∠ADC(=x)의 크기는? (단위: 도)</div>
 <div class="diagram-wrap">
 <svg viewBox="-6 -5 352 292" xmlns="http://www.w3.org/2000/svg">
-<line x1="15.0" y1="255.1" x2="215.0" y2="255.1" stroke="#9aa7bd" stroke-width="2.0"/>
-<line x1="15.0" y1="255.1" x2="67.3" y2="72.7" stroke="#9aa7bd" stroke-width="2.0"/>
-<line x1="67.3" y1="72.7" x2="215.0" y2="255.1" stroke="#9aa7bd" stroke-width="2.0"/>
-<line x1="67.3" y1="72.7" x2="83.8" y2="15.0" stroke="#9aa7bd" stroke-width="1.6" stroke-dasharray="5,4"/>
-<line x1="215.0" y1="255.1" x2="285.0" y2="255.1" stroke="#9aa7bd" stroke-width="1.6" stroke-dasharray="5,4"/>
-<line x1="67.3" y1="72.7" x2="327.2" y2="19.8" stroke="#c4b5fd" stroke-width="1.8"/>
-<line x1="215.0" y1="255.1" x2="327.2" y2="19.8" stroke="#c4b5fd" stroke-width="1.8"/>
-<polyline points="41.0,255.1 40.9,253.0 40.7,250.9 40.2,248.8 39.7,246.8 38.9,244.9 38.0,243.0 37.0,241.1 35.8,239.4 34.4,237.8 33.0,236.3 31.4,234.9 29.7,233.6 28.0,232.5 26.1,231.6 24.2,230.7 22.2,230.1" fill="none" stroke="#34d399" stroke-width="2"/>
-<polyline points="299.8,25.4 300.2,27.0 300.6,28.5 301.2,30.0 301.8,31.5 302.5,33.0 303.3,34.4 304.2,35.7 305.2,37.0 306.2,38.3 307.3,39.5 308.5,40.6 309.7,41.6 311.0,42.6 312.3,43.5 313.7,44.3 315.2,45.1" fill="none" stroke="#fbbf24" stroke-width="2"/>
-<text x="49.1" y="232.8" font-size="13" font-weight="700" fill="#34d399" text-anchor="middle">74°</text>
-<text x="293.0" y="49.9" font-size="14" font-weight="700" fill="#fbbf24" text-anchor="middle">x</text>
-<circle cx="67.3" cy="72.7" r="3" fill="#e7ecf3"/>
-<circle cx="15.0" cy="255.1" r="3" fill="#e7ecf3"/>
-<circle cx="215.0" cy="255.1" r="3" fill="#e7ecf3"/>
-<circle cx="327.2" cy="19.8" r="3" fill="#e7ecf3"/>
-<text x="45.3" y="68.7" font-size="14" font-weight="700" fill="#e7ecf3">A</text>
-<text x="-2.4" y="263.8" font-size="14" font-weight="700" fill="#e7ecf3">B</text>
-<text x="215.0" y="279.1" font-size="14" font-weight="700" fill="#e7ecf3">C</text>
-<text x="333.2" y="9.8" font-size="14" font-weight="700" fill="#c4b5fd">D</text>
+<line x1="15.0" y1="255.1" x2="215.0" y2="255.1" stroke="var(--muted)" stroke-width="2.0"/>
+<line x1="15.0" y1="255.1" x2="67.3" y2="72.7" stroke="var(--muted)" stroke-width="2.0"/>
+<line x1="67.3" y1="72.7" x2="215.0" y2="255.1" stroke="var(--muted)" stroke-width="2.0"/>
+<line x1="67.3" y1="72.7" x2="83.8" y2="15.0" stroke="var(--muted)" stroke-width="1.6" stroke-dasharray="5,4"/>
+<line x1="215.0" y1="255.1" x2="285.0" y2="255.1" stroke="var(--muted)" stroke-width="1.6" stroke-dasharray="5,4"/>
+<line x1="67.3" y1="72.7" x2="327.2" y2="19.8" stroke="var(--purple)" stroke-width="1.8"/>
+<line x1="215.0" y1="255.1" x2="327.2" y2="19.8" stroke="var(--purple)" stroke-width="1.8"/>
+<polyline points="41.0,255.1 40.9,253.0 40.7,250.9 40.2,248.8 39.7,246.8 38.9,244.9 38.0,243.0 37.0,241.1 35.8,239.4 34.4,237.8 33.0,236.3 31.4,234.9 29.7,233.6 28.0,232.5 26.1,231.6 24.2,230.7 22.2,230.1" fill="none" stroke="var(--green)" stroke-width="2"/>
+<polyline points="299.8,25.4 300.2,27.0 300.6,28.5 301.2,30.0 301.8,31.5 302.5,33.0 303.3,34.4 304.2,35.7 305.2,37.0 306.2,38.3 307.3,39.5 308.5,40.6 309.7,41.6 311.0,42.6 312.3,43.5 313.7,44.3 315.2,45.1" fill="none" stroke="var(--orange)" stroke-width="2"/>
+<text x="49.1" y="232.8" font-size="13" font-weight="700" fill="var(--green)" text-anchor="middle">74°</text>
+<text x="293.0" y="49.9" font-size="14" font-weight="700" fill="var(--orange)" text-anchor="middle">x</text>
+<circle cx="67.3" cy="72.7" r="3" fill="var(--text)"/>
+<circle cx="15.0" cy="255.1" r="3" fill="var(--text)"/>
+<circle cx="215.0" cy="255.1" r="3" fill="var(--text)"/>
+<circle cx="327.2" cy="19.8" r="3" fill="var(--text)"/>
+<text x="45.3" y="68.7" font-size="14" font-weight="700" fill="var(--text)">A</text>
+<text x="-2.4" y="263.8" font-size="14" font-weight="700" fill="var(--text)">B</text>
+<text x="215.0" y="279.1" font-size="14" font-weight="700" fill="var(--text)">C</text>
+<text x="333.2" y="9.8" font-size="14" font-weight="700" fill="var(--purple)">D</text>
 </svg>
 </div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
@@ -1013,29 +1013,29 @@
           <div class="pq"><span class="pnum">3.</span>다음 그림은 정오각형 ABCDE의 변 AB를 한 변으로 하는 정사각형 ABGH와, 변 BC를 한 변으로 하는 정삼각형 BCK를 각각 오각형 바깥쪽에 그린 것이다. ∠GBK(=x)의 크기는? (단위: 도)</div>
 <div class="diagram-wrap">
 <svg viewBox="0 -36 330 336" xmlns="http://www.w3.org/2000/svg">
-<polygon points="160.0,65.0 240.8,123.7 210.0,218.8 110.0,218.8 79.2,123.7" fill="rgba(148,163,184,0.05)" stroke="#9aa7bd" stroke-width="2.2"/>
-<polygon points="160.0,65.0 240.8,123.7 299.6,42.9 218.7,-15.8" fill="rgba(96,165,250,0.08)" stroke="#60a5fa" stroke-width="2.2"/>
-<line x1="240.8" y1="123.7" x2="307.7" y2="198.0" stroke="#c4b5fd" stroke-width="2.0"/>
-<line x1="210.0" y1="218.8" x2="307.7" y2="198.0" stroke="#c4b5fd" stroke-width="2.0"/>
-<polyline points="260.9,146.0 263.3,143.7 265.3,141.0 267.1,138.2 268.6,135.2 269.7,132.1 270.4,128.8 270.8,125.5 270.8,122.2 270.4,118.8 269.7,115.6 268.6,112.4 267.2,109.4 265.5,106.6 263.4,104.0 261.1,101.6 258.5,99.5" fill="none" stroke="#fbbf24" stroke-width="2"/>
-<text x="282.0" y="125.4" font-size="14" font-weight="700" fill="#fbbf24" text-anchor="middle">x</text>
-<circle cx="160.0" cy="65.0" r="3" fill="#e7ecf3"/>
-<circle cx="240.8" cy="123.7" r="3" fill="#e7ecf3"/>
-<circle cx="210.0" cy="218.8" r="3" fill="#e7ecf3"/>
-<circle cx="110.0" cy="218.8" r="3" fill="#e7ecf3"/>
-<circle cx="79.2" cy="123.7" r="3" fill="#e7ecf3"/>
-<circle cx="299.6" cy="42.9" r="3" fill="#e7ecf3"/>
-<circle cx="218.7" cy="-15.8" r="3" fill="#e7ecf3"/>
-<circle cx="307.7" cy="198.0" r="3" fill="#e7ecf3"/>
-<text x="142.0" y="59.0" font-size="13" font-weight="700" fill="#e7ecf3">A</text>
-<text x="216.8" y="137.7" font-size="13" font-weight="700" fill="#e7ecf3">B</text>
-<text x="210.0" y="239.8" font-size="13" font-weight="700" fill="#e7ecf3">C</text>
-<text x="94.1" y="231.5" font-size="13" font-weight="700" fill="#e7ecf3">D</text>
-<text x="59.2" y="133.7" font-size="13" font-weight="700" fill="#e7ecf3">E</text>
-<text x="309.6" y="52.9" font-size="13" font-weight="700" fill="#60a5fa">G</text>
-<text x="202.7" y="-21.8" font-size="13" font-weight="700" fill="#60a5fa">H</text>
-<text x="317.7" y="208.0" font-size="13" font-weight="700" fill="#c4b5fd">K</text>
-<text x="160.0" y="292.0" font-size="11" font-weight="700" fill="#9aa7bd" text-anchor="middle">정오각형+정사각형(AB)+정삼각형(BC), 모두 바깥쪽</text>
+<polygon points="160.0,65.0 240.8,123.7 210.0,218.8 110.0,218.8 79.2,123.7" fill="rgba(148,163,184,0.05)" stroke="var(--muted)" stroke-width="2.2"/>
+<polygon points="160.0,65.0 240.8,123.7 299.6,42.9 218.7,-15.8" fill="rgba(96,165,250,0.08)" stroke="var(--blue)" stroke-width="2.2"/>
+<line x1="240.8" y1="123.7" x2="307.7" y2="198.0" stroke="var(--purple)" stroke-width="2.0"/>
+<line x1="210.0" y1="218.8" x2="307.7" y2="198.0" stroke="var(--purple)" stroke-width="2.0"/>
+<polyline points="260.9,146.0 263.3,143.7 265.3,141.0 267.1,138.2 268.6,135.2 269.7,132.1 270.4,128.8 270.8,125.5 270.8,122.2 270.4,118.8 269.7,115.6 268.6,112.4 267.2,109.4 265.5,106.6 263.4,104.0 261.1,101.6 258.5,99.5" fill="none" stroke="var(--orange)" stroke-width="2"/>
+<text x="282.0" y="125.4" font-size="14" font-weight="700" fill="var(--orange)" text-anchor="middle">x</text>
+<circle cx="160.0" cy="65.0" r="3" fill="var(--text)"/>
+<circle cx="240.8" cy="123.7" r="3" fill="var(--text)"/>
+<circle cx="210.0" cy="218.8" r="3" fill="var(--text)"/>
+<circle cx="110.0" cy="218.8" r="3" fill="var(--text)"/>
+<circle cx="79.2" cy="123.7" r="3" fill="var(--text)"/>
+<circle cx="299.6" cy="42.9" r="3" fill="var(--text)"/>
+<circle cx="218.7" cy="-15.8" r="3" fill="var(--text)"/>
+<circle cx="307.7" cy="198.0" r="3" fill="var(--text)"/>
+<text x="142.0" y="59.0" font-size="13" font-weight="700" fill="var(--text)">A</text>
+<text x="216.8" y="137.7" font-size="13" font-weight="700" fill="var(--text)">B</text>
+<text x="210.0" y="239.8" font-size="13" font-weight="700" fill="var(--text)">C</text>
+<text x="94.1" y="231.5" font-size="13" font-weight="700" fill="var(--text)">D</text>
+<text x="59.2" y="133.7" font-size="13" font-weight="700" fill="var(--text)">E</text>
+<text x="309.6" y="52.9" font-size="13" font-weight="700" fill="var(--blue)">G</text>
+<text x="202.7" y="-21.8" font-size="13" font-weight="700" fill="var(--blue)">H</text>
+<text x="317.7" y="208.0" font-size="13" font-weight="700" fill="var(--purple)">K</text>
+<text x="160.0" y="292.0" font-size="11" font-weight="700" fill="var(--muted)" text-anchor="middle">정오각형+정사각형(AB)+정삼각형(BC), 모두 바깥쪽</text>
 </svg>
 </div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
@@ -1046,24 +1046,24 @@
           <div class="pq"><span class="pnum">4.</span>다음 그림과 같은 오목사각형 ABDC에서 ∠D는 우각(반사각)이고, ∠A=40°, ∠B=60°, ∠C=50°일 때 ∠D(우각)의 크기는? (단위: 도)</div>
 <div class="diagram-wrap">
 <svg viewBox="0 0 336 406" xmlns="http://www.w3.org/2000/svg">
-<polygon points="168.1,42.0 56.0,350.0 207.1,323.4 280.1,350.0" fill="rgba(248,113,113,0.08)" stroke="#f87171" stroke-width="2.2"/>
-<polyline points="153.7,81.5 155.5,82.0 157.2,82.6 159.0,83.0 160.9,83.3 162.7,83.6 164.5,83.9 166.3,84.0 168.1,84.0 170.0,84.0 171.8,83.9 173.6,83.6 175.4,83.3 177.2,83.0 178.9,82.6 180.7,82.0 182.4,81.5" fill="none" stroke="#34d399" stroke-width="2"/>
-<polyline points="91.8,343.7 91.4,341.3 90.7,339.1 89.9,336.8 89.0,334.6 87.9,332.5 86.7,330.4 85.4,328.4 83.9,326.6 82.3,324.8 80.6,323.1 78.8,321.6 76.9,320.2 74.9,318.9 72.8,317.7 70.7,316.7 68.5,315.8" fill="none" stroke="#34d399" stroke-width="2"/>
-<polyline points="267.8,315.8 265.9,316.5 264.0,317.4 262.4,318.2 260.7,319.3 259.0,320.5 257.5,321.6 255.9,322.8 254.5,324.2 253.1,325.6 251.9,327.2 250.6,328.9 249.5,330.4 248.5,332.1 247.5,333.9 246.7,335.7 246.0,337.5" fill="none" stroke="#34d399" stroke-width="2"/>
-<polyline points="221.5,328.7 222.2,326.3 222.5,324.1 222.3,321.7 221.9,319.3 221.1,317.1 220.1,315.1 218.5,313.2 217.0,311.5 215.0,310.2 212.9,309.1 210.7,308.4 208.3,308.1 205.9,308.0 203.7,308.4 201.5,309.0 199.4,310.0 197.4,311.4 195.7,313.0 194.3,314.9 193.1,316.8 192.2,319.1 191.8,321.4 191.7,323.7 191.8,326.1" fill="none" stroke="#fbbf24" stroke-width="2"/>
-<text x="168.1" y="102.4" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle">40°</text>
-<text x="97.4" y="318.4" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle">60°</text>
-<text x="242.7" y="315.5" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle">50°</text>
-<text x="209.2" y="300.6" font-size="14" font-weight="700" fill="#fbbf24" text-anchor="middle">x</text>
-<circle cx="168.1" cy="42.0" r="4.2" fill="#e7ecf3"/>
-<circle cx="56.0" cy="350.0" r="4.2" fill="#e7ecf3"/>
-<circle cx="280.1" cy="350.0" r="4.2" fill="#e7ecf3"/>
-<circle cx="207.1" cy="323.4" r="4.2" fill="#e7ecf3"/>
-<text x="176.5" y="28.0" font-size="14" font-weight="700" fill="#e7ecf3">A</text>
-<text x="30.8" y="344.4" font-size="14" font-weight="700" fill="#e7ecf3">B</text>
-<text x="294.1" y="344.4" font-size="14" font-weight="700" fill="#e7ecf3">C</text>
-<text x="198.9" y="352.2" font-size="14" font-weight="700" fill="#e7ecf3">D</text>
-<text x="168.1" y="392.0" font-size="12" font-weight="700" fill="#9aa7bd" text-anchor="middle">오목사각형 ABDC, ∠D는 우각(반사각)</text>
+<polygon points="168.1,42.0 56.0,350.0 207.1,323.4 280.1,350.0" fill="rgba(248,113,113,0.08)" stroke="var(--red)" stroke-width="2.2"/>
+<polyline points="153.7,81.5 155.5,82.0 157.2,82.6 159.0,83.0 160.9,83.3 162.7,83.6 164.5,83.9 166.3,84.0 168.1,84.0 170.0,84.0 171.8,83.9 173.6,83.6 175.4,83.3 177.2,83.0 178.9,82.6 180.7,82.0 182.4,81.5" fill="none" stroke="var(--green)" stroke-width="2"/>
+<polyline points="91.8,343.7 91.4,341.3 90.7,339.1 89.9,336.8 89.0,334.6 87.9,332.5 86.7,330.4 85.4,328.4 83.9,326.6 82.3,324.8 80.6,323.1 78.8,321.6 76.9,320.2 74.9,318.9 72.8,317.7 70.7,316.7 68.5,315.8" fill="none" stroke="var(--green)" stroke-width="2"/>
+<polyline points="267.8,315.8 265.9,316.5 264.0,317.4 262.4,318.2 260.7,319.3 259.0,320.5 257.5,321.6 255.9,322.8 254.5,324.2 253.1,325.6 251.9,327.2 250.6,328.9 249.5,330.4 248.5,332.1 247.5,333.9 246.7,335.7 246.0,337.5" fill="none" stroke="var(--green)" stroke-width="2"/>
+<polyline points="221.5,328.7 222.2,326.3 222.5,324.1 222.3,321.7 221.9,319.3 221.1,317.1 220.1,315.1 218.5,313.2 217.0,311.5 215.0,310.2 212.9,309.1 210.7,308.4 208.3,308.1 205.9,308.0 203.7,308.4 201.5,309.0 199.4,310.0 197.4,311.4 195.7,313.0 194.3,314.9 193.1,316.8 192.2,319.1 191.8,321.4 191.7,323.7 191.8,326.1" fill="none" stroke="var(--orange)" stroke-width="2"/>
+<text x="168.1" y="102.4" font-size="12" font-weight="700" fill="var(--green)" text-anchor="middle">40°</text>
+<text x="97.4" y="318.4" font-size="12" font-weight="700" fill="var(--green)" text-anchor="middle">60°</text>
+<text x="242.7" y="315.5" font-size="12" font-weight="700" fill="var(--green)" text-anchor="middle">50°</text>
+<text x="209.2" y="300.6" font-size="14" font-weight="700" fill="var(--orange)" text-anchor="middle">x</text>
+<circle cx="168.1" cy="42.0" r="4.2" fill="var(--text)"/>
+<circle cx="56.0" cy="350.0" r="4.2" fill="var(--text)"/>
+<circle cx="280.1" cy="350.0" r="4.2" fill="var(--text)"/>
+<circle cx="207.1" cy="323.4" r="4.2" fill="var(--text)"/>
+<text x="176.5" y="28.0" font-size="14" font-weight="700" fill="var(--text)">A</text>
+<text x="30.8" y="344.4" font-size="14" font-weight="700" fill="var(--text)">B</text>
+<text x="294.1" y="344.4" font-size="14" font-weight="700" fill="var(--text)">C</text>
+<text x="198.9" y="352.2" font-size="14" font-weight="700" fill="var(--text)">D</text>
+<text x="168.1" y="392.0" font-size="12" font-weight="700" fill="var(--muted)" text-anchor="middle">오목사각형 ABDC, ∠D는 우각(반사각)</text>
 </svg>
 </div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
@@ -1080,35 +1080,35 @@
           <div class="pq"><span class="pnum">6.</span>다음 그림과 같은 칠각별(7개의 꼭짓점을 가진 별 모양)에서 일곱 개의 뾰족한 각 ∠A+∠B+∠C+∠D+∠E+∠F+∠G의 크기의 합은? (단위: 도)</div>
 <div class="diagram-wrap">
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
-<line x1="160.0" y1="45.0" x2="207.7" y2="254.1" stroke="#c4b5fd" stroke-width="2.0"/>
-<line x1="246.0" y1="86.4" x2="112.3" y2="254.1" stroke="#c4b5fd" stroke-width="2.0"/>
-<line x1="267.2" y1="179.5" x2="52.8" y2="179.5" stroke="#c4b5fd" stroke-width="2.0"/>
-<line x1="207.7" y1="254.1" x2="74.0" y2="86.4" stroke="#c4b5fd" stroke-width="2.0"/>
-<line x1="112.3" y1="254.1" x2="160.0" y2="45.0" stroke="#c4b5fd" stroke-width="2.0"/>
-<line x1="52.8" y1="179.5" x2="246.0" y2="86.4" stroke="#c4b5fd" stroke-width="2.0"/>
-<line x1="74.0" y1="86.4" x2="267.2" y2="179.5" stroke="#c4b5fd" stroke-width="2.0"/>
-<polyline points="155.5,64.5 156.1,64.6 156.6,64.7 157.2,64.8 157.8,64.9 158.3,64.9 158.9,65.0 159.4,65.0 160.0,65.0 160.6,65.0 161.1,65.0 161.7,64.9 162.2,64.9 162.8,64.8 163.4,64.7 163.9,64.6 164.5,64.5" fill="none" stroke="#fbbf24" stroke-width="1.8"/>
-<polyline points="228.0,95.1 228.2,95.6 228.5,96.1 228.8,96.6 229.1,97.1 229.4,97.5 229.7,98.0 230.0,98.4 230.4,98.9 230.7,99.3 231.1,99.7 231.5,100.2 231.9,100.6 232.3,100.9 232.7,101.3 233.1,101.7 233.5,102.1" fill="none" stroke="#fbbf24" stroke-width="1.8"/>
-<polyline points="249.2,170.8 249.0,171.3 248.8,171.8 248.6,172.3 248.4,172.9 248.2,173.4 248.0,173.9 247.9,174.5 247.7,175.0 247.6,175.6 247.5,176.1 247.4,176.7 247.4,177.2 247.3,177.8 247.3,178.4 247.2,178.9 247.2,179.5" fill="none" stroke="#fbbf24" stroke-width="1.8"/>
-<polyline points="203.3,234.6 202.7,234.7 202.2,234.9 201.7,235.1 201.1,235.2 200.6,235.4 200.1,235.6 199.6,235.9 199.0,236.1 198.5,236.3 198.1,236.6 197.6,236.9 197.1,237.2 196.6,237.5 196.2,237.8 195.7,238.1 195.3,238.5" fill="none" stroke="#fbbf24" stroke-width="1.8"/>
-<polyline points="124.7,238.5 124.3,238.1 123.8,237.8 123.4,237.5 122.9,237.2 122.4,236.9 121.9,236.6 121.5,236.3 121.0,236.1 120.4,235.9 119.9,235.6 119.4,235.4 118.9,235.2 118.3,235.1 117.8,234.9 117.3,234.7 116.7,234.6" fill="none" stroke="#fbbf24" stroke-width="1.8"/>
-<polyline points="72.8,179.5 72.8,178.9 72.7,178.4 72.7,177.8 72.6,177.2 72.6,176.7 72.5,176.1 72.4,175.6 72.3,175.0 72.1,174.5 72.0,173.9 71.8,173.4 71.6,172.9 71.4,172.3 71.2,171.8 71.0,171.3 70.8,170.8" fill="none" stroke="#fbbf24" stroke-width="1.8"/>
-<polyline points="86.5,102.1 86.9,101.7 87.3,101.3 87.7,100.9 88.1,100.6 88.5,100.2 88.9,99.7 89.3,99.3 89.6,98.9 90.0,98.4 90.3,98.0 90.6,97.5 90.9,97.1 91.2,96.6 91.5,96.1 91.8,95.6 92.0,95.1" fill="none" stroke="#fbbf24" stroke-width="1.8"/>
-<text x="160.0" y="25.0" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">A</text>
-<text x="261.6" y="73.9" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">B</text>
-<text x="286.7" y="183.9" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">C</text>
-<text x="216.4" y="272.1" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">D</text>
-<text x="103.6" y="272.1" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">E</text>
-<text x="33.3" y="183.9" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">F</text>
-<text x="58.4" y="73.9" font-size="13" font-weight="700" fill="#e7ecf3" text-anchor="middle">G</text>
-<circle cx="160.0" cy="45.0" r="3" fill="#e7ecf3"/>
-<circle cx="246.0" cy="86.4" r="3" fill="#e7ecf3"/>
-<circle cx="267.2" cy="179.5" r="3" fill="#e7ecf3"/>
-<circle cx="207.7" cy="254.1" r="3" fill="#e7ecf3"/>
-<circle cx="112.3" cy="254.1" r="3" fill="#e7ecf3"/>
-<circle cx="52.8" cy="179.5" r="3" fill="#e7ecf3"/>
-<circle cx="74.0" cy="86.4" r="3" fill="#e7ecf3"/>
-<text x="160.0" y="308.0" font-size="12" font-weight="700" fill="#9aa7bd" text-anchor="middle">칠각별 — 일곱 개의 뾰족한 각 A~G</text>
+<line x1="160.0" y1="45.0" x2="207.7" y2="254.1" stroke="var(--purple)" stroke-width="2.0"/>
+<line x1="246.0" y1="86.4" x2="112.3" y2="254.1" stroke="var(--purple)" stroke-width="2.0"/>
+<line x1="267.2" y1="179.5" x2="52.8" y2="179.5" stroke="var(--purple)" stroke-width="2.0"/>
+<line x1="207.7" y1="254.1" x2="74.0" y2="86.4" stroke="var(--purple)" stroke-width="2.0"/>
+<line x1="112.3" y1="254.1" x2="160.0" y2="45.0" stroke="var(--purple)" stroke-width="2.0"/>
+<line x1="52.8" y1="179.5" x2="246.0" y2="86.4" stroke="var(--purple)" stroke-width="2.0"/>
+<line x1="74.0" y1="86.4" x2="267.2" y2="179.5" stroke="var(--purple)" stroke-width="2.0"/>
+<polyline points="155.5,64.5 156.1,64.6 156.6,64.7 157.2,64.8 157.8,64.9 158.3,64.9 158.9,65.0 159.4,65.0 160.0,65.0 160.6,65.0 161.1,65.0 161.7,64.9 162.2,64.9 162.8,64.8 163.4,64.7 163.9,64.6 164.5,64.5" fill="none" stroke="var(--orange)" stroke-width="1.8"/>
+<polyline points="228.0,95.1 228.2,95.6 228.5,96.1 228.8,96.6 229.1,97.1 229.4,97.5 229.7,98.0 230.0,98.4 230.4,98.9 230.7,99.3 231.1,99.7 231.5,100.2 231.9,100.6 232.3,100.9 232.7,101.3 233.1,101.7 233.5,102.1" fill="none" stroke="var(--orange)" stroke-width="1.8"/>
+<polyline points="249.2,170.8 249.0,171.3 248.8,171.8 248.6,172.3 248.4,172.9 248.2,173.4 248.0,173.9 247.9,174.5 247.7,175.0 247.6,175.6 247.5,176.1 247.4,176.7 247.4,177.2 247.3,177.8 247.3,178.4 247.2,178.9 247.2,179.5" fill="none" stroke="var(--orange)" stroke-width="1.8"/>
+<polyline points="203.3,234.6 202.7,234.7 202.2,234.9 201.7,235.1 201.1,235.2 200.6,235.4 200.1,235.6 199.6,235.9 199.0,236.1 198.5,236.3 198.1,236.6 197.6,236.9 197.1,237.2 196.6,237.5 196.2,237.8 195.7,238.1 195.3,238.5" fill="none" stroke="var(--orange)" stroke-width="1.8"/>
+<polyline points="124.7,238.5 124.3,238.1 123.8,237.8 123.4,237.5 122.9,237.2 122.4,236.9 121.9,236.6 121.5,236.3 121.0,236.1 120.4,235.9 119.9,235.6 119.4,235.4 118.9,235.2 118.3,235.1 117.8,234.9 117.3,234.7 116.7,234.6" fill="none" stroke="var(--orange)" stroke-width="1.8"/>
+<polyline points="72.8,179.5 72.8,178.9 72.7,178.4 72.7,177.8 72.6,177.2 72.6,176.7 72.5,176.1 72.4,175.6 72.3,175.0 72.1,174.5 72.0,173.9 71.8,173.4 71.6,172.9 71.4,172.3 71.2,171.8 71.0,171.3 70.8,170.8" fill="none" stroke="var(--orange)" stroke-width="1.8"/>
+<polyline points="86.5,102.1 86.9,101.7 87.3,101.3 87.7,100.9 88.1,100.6 88.5,100.2 88.9,99.7 89.3,99.3 89.6,98.9 90.0,98.4 90.3,98.0 90.6,97.5 90.9,97.1 91.2,96.6 91.5,96.1 91.8,95.6 92.0,95.1" fill="none" stroke="var(--orange)" stroke-width="1.8"/>
+<text x="160.0" y="25.0" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">A</text>
+<text x="261.6" y="73.9" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">B</text>
+<text x="286.7" y="183.9" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">C</text>
+<text x="216.4" y="272.1" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">D</text>
+<text x="103.6" y="272.1" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">E</text>
+<text x="33.3" y="183.9" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">F</text>
+<text x="58.4" y="73.9" font-size="13" font-weight="700" fill="var(--text)" text-anchor="middle">G</text>
+<circle cx="160.0" cy="45.0" r="3" fill="var(--text)"/>
+<circle cx="246.0" cy="86.4" r="3" fill="var(--text)"/>
+<circle cx="267.2" cy="179.5" r="3" fill="var(--text)"/>
+<circle cx="207.7" cy="254.1" r="3" fill="var(--text)"/>
+<circle cx="112.3" cy="254.1" r="3" fill="var(--text)"/>
+<circle cx="52.8" cy="179.5" r="3" fill="var(--text)"/>
+<circle cx="74.0" cy="86.4" r="3" fill="var(--text)"/>
+<text x="160.0" y="308.0" font-size="12" font-weight="700" fill="var(--muted)" text-anchor="middle">칠각별 — 일곱 개의 뾰족한 각 A~G</text>
 </svg>
 </div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
